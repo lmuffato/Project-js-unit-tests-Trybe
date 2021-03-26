@@ -42,7 +42,11 @@ describe('#createMenu', () => {
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
     // ```
     // const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
+<<<<<<< HEAD
     // ``` 
+=======
+    // ```
+>>>>>>> 3fdc81524f5dc501d328d19ce3aae2aa1d41d3ea
     assert.strictEqual(createMenu({}), {fetchMenu: () => {}})
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`, 
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
