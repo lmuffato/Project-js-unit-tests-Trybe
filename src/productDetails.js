@@ -38,5 +38,8 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+console.log(productDetails('Alcool gel', 'Máscara')[0].details.productId.match(/123$/g) == ['123']);
+console.log(productDetails('Alcool gel', 'Máscara')[0].details.productId.split("").reverse().join("").includes(321, 0));
+
 
 module.exports = productDetails;
