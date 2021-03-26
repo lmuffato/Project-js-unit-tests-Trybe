@@ -5,7 +5,6 @@
   recebe seu nome e sua idade e retorna o parágrafo descrito abaixo.
   Caso a função seja chamada sem nenhum parâmetro, o valor undefined deve ser retornado.
 
-
   Parâmetros:
     - Uma string;
     - Um número.
@@ -18,8 +17,9 @@
 */
 
 const vqv = (nome, idade) => {
+  const trabalho = 'trabalho na Trybe e mando muito em programação!';
   if ((nome, idade) === undefined) return undefined;
-  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`
+  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\n${trabalho}\n#VQV!`;
 };
 
 module.exports = vqv;
