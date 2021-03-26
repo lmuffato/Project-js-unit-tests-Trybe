@@ -22,6 +22,7 @@
     "url": "https://github.com/betrybe/sd-0x-block8-project-js-unit-test/issues"
   },
   "homepage": "https://github.com/betrybe/sd-0x-block8-project-js-unit-test#readme",
+<<<<<<< HEAD
   "devDependencies": {
 <<<<<<< HEAD
     "jest": "^24.9.0",
@@ -43,4 +44,7 @@
     "eslint-config-trybe-fundamentals": "1.1.0"
 >>>>>>> cfcec1580ad269ee5379fd7c2f0f1e75f3a7d975
   }
+=======
+  "devDependencies": {}
+>>>>>>> 45eedeec45e59086b784041bf662fa0d28cae8df
 }
