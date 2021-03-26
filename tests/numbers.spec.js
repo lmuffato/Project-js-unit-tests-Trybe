@@ -22,7 +22,7 @@ describe('#numbers', () => {
     assert.strictEqual(numbers([1, 2, 3, 4, 5]), true, 'when the argument is [1, 2, 3, 4, 5] the expect return is true');
     assert.strictEqual(numbers([1, 2, '3', 4, 5]), false, 'when the argument is [1, 2, "3", 4, 5] the expect return is false');
     assert.strictEqual(numbers([1, 'a', 3]), false, 'when the argument is [1, "a", 3] the expect return is false');
-    assert.strictEqual(numbers([' ']), true, 'when the argument is [" "] the expect return is false');
+    assert.strictEqual(numbers([' ']), false, 'when the argument is [" "] the expect return is false');
 
     // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
