@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { create } = require('domain');
 const createMenu = require('../src/restaurant');
 
 /*
@@ -139,6 +140,7 @@ describe('#createMenu', () => {
     comidasR.forEach(e => menuComidasR.order(e));
 
     assert.deepStrictEqual(comidasR, menuComidasR.consumption);
+    
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
@@ -147,7 +149,10 @@ describe('#createMenu', () => {
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
-    // ```
+    const menuComidasP = createMenu();
+    const comidasP = ['coxinha', 'agua', 'coxinha'];
+    comidasP.forEach(e => menuComidasP.order(e));
+    assert.deepStrictEqual(menuComidasP.pay(), sum);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });

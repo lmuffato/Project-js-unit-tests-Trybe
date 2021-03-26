@@ -81,14 +81,33 @@
 // const toConsumption = (string) => string;
 const assert = require('assert');
 const createMenu = (menu) => {
-  const arrayConsumption = []
+  // const arrayConsumption = []
   return {
     fetchMenu: () => menu,
-    consumption: arrayConsumption,
+    consumption: [],
     order: function order(value) {
       this.consumption.push(value);
     },
+    pay: function(){
+      const price = Object.entries({coxinha: 3.90, água: 3.90});
+      const foods = Object.values(this.consumption);
+      let total = 0;
+      foods.forEach(e => {
+        for (let index = 0; index < price.length; index += 1){
+          if(e === price[index][0]){
+            total += price[index][1];
+          }
+        }
+      })
+      return total;
+    }
   }
 };
 
+const menuComidasP = createMenu();
+const comidasP = ['coxinha', 'agua', 'coxinha'];
+comidasP.forEach(e => menuComidasP.order(e));
+console.log(menuComidasP.pay());
+
+// assert.deepStrictEqual(menuComidasP.pay(), sum);
 // module.exports = createMenu;
