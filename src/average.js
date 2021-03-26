@@ -17,20 +17,16 @@ const average = (numbers) => {
 
   if (numbers.length === 0) {
     return undefined;
-  } else {
-    for (number of numbers) {
-      if (typeof (number) !== 'number') {
-        return undefined;
-      } else {
-        sum += number;
-      }
+  }
+  for (let number of numbers) {
+    if (typeof (number) !== 'number') {
+      return undefined;
     }
+    sum += number;
+
     /** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round */
     return Math.round(sum / numbers.length);
   }
-
 };
-
-
 
 module.exports = average;
