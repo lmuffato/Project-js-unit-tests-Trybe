@@ -24,7 +24,12 @@ const average = (array) => {
     }
   }
 
-  return Math.round(soma / arrayN.length);
+  if (typeof soma === 'number') {
+    soma =  Math.round(soma / arrayN.length);
+  } else {
+    soma = undefined; 
+  }
+  return soma
 };
 
 module.exports = average;
