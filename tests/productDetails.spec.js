@@ -45,8 +45,10 @@ describe('#productDetails', () => {
     assert.notStrictEqual(productDetails()[0], productDetails()[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     const result = productDetails('uno', 'dos');
-    const productId0 = result[0].details.productId
-    const productId1 = result[1].details.productId
-    assert.strictEqual(productId0.substring(productId0.length - 3), productId1.substring(productId1.length - 3))
+    const productId0 = result[0].details.productId;
+    const productId0EndString = productId0.substring(productId0.length - 3);
+    const productId1 = result[1].details.productId;
+    const productId1EndString = productId1.substring(productId1.length - 3);
+    assert.strictEqual(productId0EndString, productId1EndString)
   });
 });
