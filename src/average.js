@@ -14,10 +14,13 @@
 
 const average = (array) => {
   let sum = 0;
+  if (array.length === undefined) {
+    throw new Error('undefined');
+  }
   for (let index = 0; index < array.length; index += 1) {
     const element = array[index];
     if (typeof (element) !== 'number') {
-      throw new Error('Insert some numbers');
+      throw new Error('undefined');
     }
     sum += element;
   }
