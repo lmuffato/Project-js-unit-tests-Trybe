@@ -22,6 +22,9 @@ describe('#numbers', () => {
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
     // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
     // Escreva um teste em que a função recebe [' '] e retorna false
+    
+    // Consultei o link a seguir para me ajudar nesse requisito:
+    // https://nodejs.org/api/assert.html
     assert.strictEqual(numbers([1, 2, 3, 4, 5]), true);
     assert.strictEqual(numbers([1, 2, '3', 4, 5]), false);
     assert.strictEqual(numbers([1, 'a', 3]), false);
