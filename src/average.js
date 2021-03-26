@@ -13,9 +13,15 @@
 */
 
 const average = (number) => {
-  for (let index=0;index < number.length;index+=1) {
-    
+let sum;
+if (typeof(number) !== 'number' || number.length === 0 ) {
+    return sum;
   }
-};
+for (let index = 0; index < number.length; index += 1) {
+  sum += number[index];
+}
+sum = sum/number.length;
+return sum;
+}
 
 module.exports = average;
