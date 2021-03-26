@@ -26,21 +26,18 @@
 
 const productDetails = (firstProduct, secondProduct) => {
   const array = [{
-      name: firstProduct,
-      details: {
-        productId: `${firstProduct}123`,
-      },
+    name: firstProduct,
+    details: {
+      productId: `${firstProduct}123`,
     },
-    {
-      name: secondProduct,
-      details: {
-        productId: `${secondProduct}123`,
-      },
+  },
+  {
+    name: secondProduct,
+    details: {
+      productId: `${secondProduct}123`,
     },
-  ];
+  }];
   return array;
-}
+};
+
 module.exports = productDetails;
-const assert = require('assert');
-assert.strictEqual(productDetails('a', 'b')[0].details.productId.endsWith('123'), true);
-assert.strictEqual(productDetails('a', 'b')[1].details.productId.endsWith('123'), true);

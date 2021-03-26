@@ -36,8 +36,8 @@ describe('#productDetails', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     assert.strictEqual(Array.isArray(productDetails('a', 'b')), true);
     assert.strictEqual(productDetails('a', 'b').length, 2);
-    assert.strictEqual(typeof(productDetails('a', 'b')[0]), 'object');
-    assert.strictEqual(typeof(productDetails('a', 'b')[1]), 'object');
+    assert.strictEqual(typeof (productDetails('a', 'b')[0]), 'object');
+    assert.strictEqual(typeof (productDetails('a', 'b')[1]), 'object');
     assert.notDeepStrictEqual(productDetails('a', 'a')[0], productDetails('a', 'b')[1]);
     assert.strictEqual(productDetails('a', 'b')[0].details.productId.endsWith('123'), true);
     assert.strictEqual(productDetails('a', 'b')[1].details.productId.endsWith('123'), true);

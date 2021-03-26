@@ -82,3 +82,7 @@
 const createMenu = () => {};
 
 module.exports = createMenu;
+
+const assert = require('assert');
+
+assert.strictEqual(typeof (createMenu), 'function');
