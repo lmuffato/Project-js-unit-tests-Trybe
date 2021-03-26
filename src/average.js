@@ -23,7 +23,7 @@ function check2(array) {
     const element = array[index];
     if (typeof element === 'number') {
       return true;
-    } return false;
+    } else return false;
   }
 }
 
