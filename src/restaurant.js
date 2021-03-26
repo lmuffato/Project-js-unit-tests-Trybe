@@ -67,26 +67,28 @@
 
 const menu = () => {};
 
+const soma = () => {
+  let sum = 0;
+  const { drink } = menu.fetchMenu;
+  const { food } = menu.fetchMenu;
+  for (let index = 0; index < menu.consumption.length; index += 1) {
+    if (Object.keys(drink).includes(menu.consumption[index])) {
+      sum += drink[menu.consumption[index]];
+    }
+    if (Object.keys(food).includes(menu.consumption[index])) {
+      sum += food[menu.consumption[index]];
+    }
+  }
+  return sum * 1.1;
+};
+
 const createMenu = (myMenu) => {
   menu.fetchMenu = myMenu;
   menu.consumption = [];
   menu.order = (string) => {
     menu.consumption.push(string);
   };
-  menu.pay = () => {
-    let sum = 0;
-    const { drink } = menu.fetchMenu;
-    const { food } = menu.fetchMenu;
-    for (let index = 0; index < menu.consumption.length; index += 1) {
-      if (Object.keys(drink).includes(menu.consumption[index])) {
-        sum += drink[menu.consumption[index]];
-      }
-      if (Object.keys(food).includes(menu.consumption[index])) {
-        sum += food[menu.consumption[index]];
-      }
-    }
-    return sum * 1.1;
-  };
+  menu.pay = soma();
 };
 
 module.exports = createMenu;

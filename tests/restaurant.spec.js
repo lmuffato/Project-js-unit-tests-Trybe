@@ -74,7 +74,7 @@ describe('#createMenu', () => {
     objetoRetornado.order('coxinha');
     // objetoRetornado.consumption; // Retorno: ["coxinha"]
     // ```
-    assert.strictEqual(objetoRetornado.consumption, ['coxinha']);
+    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha']);
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 6: Verifique que as três orders seguintes, de bebidas e comidas mescladas, somam três itens no array `objetoRetornado.consumption` conforme os itens pedidos.
@@ -89,7 +89,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order("sashimi");
     objetoRetornado6.order('sashimi');
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
-    assert.strictEqual(objetoRetornado6.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
+    assert.deepStrictEqual(objetoRetornado6.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
     // ```
     // Agora faça o TESTE 7 deste arquivo.
     // --------------------------------------------------------------------------------------
@@ -103,7 +103,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     objetoRetornado7.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
-    assert.strictEqual(objetoRetornado7.consumption, ['coxinha', 'agua', 'coxinha']);
+    assert.deepStrictEqual(objetoRetornado7.consumption, ['coxinha', 'agua', 'coxinha']);
     // ```
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
