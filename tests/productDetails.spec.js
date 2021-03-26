@@ -38,7 +38,8 @@ describe('#productDetails', () => {
     const param2 = 'Máscara';
     // Teste que o retorno da função é um array.
     assert.strictEqual(Array.isArray(productDetails(param1, param2)), true);
-    // consultado método Array em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+    // consultado método Array em: https://developer.mozilla.org/pt-BR/docs/
+    // Web/JavaScript/Reference/Global_Objects/Array/isArray
     // Teste que o array retornado pela função contém dois itens dentro.
     assert.strictEqual(productDetails(param1, param2).length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
