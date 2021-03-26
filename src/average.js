@@ -21,8 +21,8 @@ const average = (arrayNumber) => {
     if (typeof arrayNumber[index] !== 'number') {
       return undefined;
     }
-      media += arrayNumber[index];
-    }
+    media += arrayNumber[index];
+  }
   return Math.round(media / arrayNumber.length);
 };
 module.exports = average;
