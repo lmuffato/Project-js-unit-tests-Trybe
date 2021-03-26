@@ -17,13 +17,17 @@ const average = (array) => {
   if (array.length === 0) {
     return undefined;
   }
-  for (let key in array){
+  for (let key in array) {
     if (typeof(key) !== 'number') {
       return undefined;
     }
-    else avg += key / array.length;
+    else {
+    avg += key / array.length;
+    }
   }
-  return parseInt(avg);
-};
+  if (typeof(avg) === 'number') {
+    return parseInt(avg);
+  }
+}
 
 module.exports = average;
