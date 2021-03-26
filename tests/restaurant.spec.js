@@ -115,7 +115,7 @@ describe('#createMenu', () => {
     objetoRetornado8.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     assert.strictEqual(objetoRetornado8.pay(), 12.870000000000001);
-    // ``` 
+    // ```  
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
