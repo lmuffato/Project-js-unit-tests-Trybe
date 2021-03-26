@@ -10,9 +10,27 @@
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
-    beatriz
 */
 
-const average = () => {};
+const average = (array) => {
+
+  if (typeof(array) !== 'object' || array.length === 0) {
+    return undefined;
+  }
+
+  let soma = 0;
+  let media = 0;
+  for (let index = 0; index < array.length; index += 1) {
+
+    if (typeof(array[index]) === 'string') {
+      return undefined;
+    }
+
+    soma += array[index];
+    media = Math.round(soma / array.length);
+  }
+  return media;
+};
+
 
 module.exports = average;
