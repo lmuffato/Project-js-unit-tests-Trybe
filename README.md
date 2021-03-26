@@ -20,7 +20,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
 - [Requisitos do projeto](#requisitos-do-projeto)
 - [Lista de requisitos](#lista-de-requisitos)
-  - [Implemente a função numbers](#implemente-a-função-numbers)
+  - [Implemente a função average](#implemente-a-função-average)
   - [Implemente os casos de teste para a função numbers](#implemente-os-casos-de-teste-para-a-função-numbers)
   - [Implemente a função vqv](#implemente-a-função-vqv)
   - [Implemente os casos de teste para a função circle](#implemente-os-casos-de-teste-para-a-função-circle)
@@ -170,9 +170,9 @@ Seu projeto só será avaliado se estiver passando pelos _checks_ do **ESLint**.
 
 ### Lista de requisitos
 
-### 1 - Implemente a função `numbers`
+### 1 - Implemente a função `average`
 
-A função numbers recebe um array (tamanho variável) e retorna a média dos valores recebidos. Caso a função receba algum valor não númerico ou um array vazio, o valor undefined deve ser retornado. Todos os resultados devem ser arredondados para valores inteiros. Ex: 4,6 vira 5; 1,3 vira 1. O arquivo `numbers.spec.js` contém os testes para `numbers` já implementados. Implemente a função no arquivo `src/numbers.js` de forma que ela atenda aos testes propostos.  
+A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos. Caso a função receba algum valor não númerico ou um array vazio, o valor undefined deve ser retornado. Todos os resultados devem ser arredondados para valores inteiros. Ex: 4,6 vira 5; 1,3 vira 1. O arquivo `average.spec.js` contém os testes para `average` já implementados. Implemente a função no arquivo `src/average.js` de forma que ela atenda aos testes propostos.  
 
 ### 2 - Implemente os casos de teste para a função `numbers`
 

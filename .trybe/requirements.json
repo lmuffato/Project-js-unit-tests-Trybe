@@ -1,7 +1,7 @@
 {
   "requirements": [
     {
-      "description": "#numbers",
+      "description": "#average",
       "bonus": false
     },
     {
