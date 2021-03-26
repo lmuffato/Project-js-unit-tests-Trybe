@@ -16,6 +16,17 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {};
+const vqv = (nome, idade) => {
+
+  /** Source: https://stackoverflow.com/questions/13019640/how-to-test-if-a-parameter-is-provided-to-a-function */
+  if (nome !== undefined && idade !== undefined) {
+    return `Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+  }
+  return undefined;
+
+};
 
 module.exports = vqv;
