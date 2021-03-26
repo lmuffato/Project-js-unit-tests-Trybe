@@ -13,18 +13,18 @@
 */
 
 const average = (arrayNumber) => {
-  let media = 0
+  let media = 0;
   if (arrayNumber.length < 1) {
-    return undefined
+    return undefined;
   } else {
     for (let index = 0; index < arrayNumber.length; index += 1) {
       if (typeof arrayNumber[index] !== 'number') {
-        return undefined
+        return undefined;
       } else {
-        media += arrayNumber[index]
+        media += arrayNumber[index];
       }
-    } 
-    return Math.round(media / arrayNumber.length) 
+    }
+    return Math.round(media / arrayNumber.length);
   }
 };
 module.exports = average;
