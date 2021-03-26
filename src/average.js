@@ -17,7 +17,7 @@ const average = (numbers) => {
   if (numbers.length === 0) {
     return undefined;
   }
-  for (let number in numbers) {
+  for (let number = 0; number < numbers.length; number += 1) {
     if (typeof (numbers[number]) !== 'number') {
       return undefined;
     }
@@ -27,4 +27,3 @@ const average = (numbers) => {
 };
 
 module.exports = average;
-
