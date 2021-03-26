@@ -13,18 +13,19 @@
 */
 
 const average = (param) => {
-  let list = param;
-
+  let list = param; 
+  if (list === undefined) {
+    return undefined;
+  } else if (list.length === 0) {
+    return undefined;
+  }
   for (let key = 0; key < list.length; key += 1) {
-    if (typeof list[key] === 'number' && list.length > 0) {
-      const test = list.reduce((acc, curr) => acc + curr);
-      return Math.round(test / list.length);
+    if (typeof list[key] !== 'number') {
+      return undefined;
     } 
-    if (typeof list[key] === 'string' || list.length === 0) {
-      return 'undefined';
-    }
-  } 
-};
+  }
+  const test = list.reduce((acc, curr) => acc + curr);
+  return Math.round(test / list.length);
+}
 
 module.exports = average;
-
