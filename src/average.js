@@ -13,12 +13,16 @@
 */
 
 const average = (array) => {
-  const sum = 0;
-  for (let key of array) {
-    let elementsArray = array[key];
-    console.log(elementsArray)
+  let sum = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    let elementsArray = array[index];
+    sum += Math.round(elementsArray);
   }
+  let media = sum / array.length;
+  if (media === NaN) {
+    return undefined;
+  }
+  return media;
 };
-average([2, 2])
 
 module.exports = average;
