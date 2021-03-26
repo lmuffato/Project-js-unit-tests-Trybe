@@ -39,12 +39,6 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-
+console.log(productDetails('primeiro', 'segundo'));
 
 module.exports = productDetails;
-
-const eita = ['Opa', 'Nois'];
-console.log(typeof(eita))
-
-const uer = {opa: 'opa', ira: 'ira'};
-console.log(typeof(uer));
