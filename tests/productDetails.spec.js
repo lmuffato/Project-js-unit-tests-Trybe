@@ -36,11 +36,11 @@ describe('#productDetails', () => {
     // assert.fail();
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara'), 'array');
     assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
-    // assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
-    // assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
-    // assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
-    // assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.split("").reverse().join("").includes(321, 0), true);
-    // assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.split("").reverse().join("").includes(321, 0), true);    
+    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
+    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
+    assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.split("").reverse().join("").includes(321, 0), true);
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.split("").reverse().join("").includes(321, 0), true);    
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
