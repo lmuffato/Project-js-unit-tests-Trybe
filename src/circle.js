@@ -28,5 +28,4 @@ const circle = (radius) => {
   };
 };
 
-console.log(Object.values(circle(2)).includes([12,56]));
 module.exports = circle;
