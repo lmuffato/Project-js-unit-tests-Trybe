@@ -1,5 +1,4 @@
 /*
-
   A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos.
   Caso a função receba algum valor não númerico ou um array vazio,
   o valor undefined deve ser retornado.
@@ -13,6 +12,15 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (arr) => {
+  if (
+    arr === "" ||
+    arr.length === 0 ||
+    arr.filter((value) => typeof value !== "number").length > 0
+  ) {
+    return undefined;
+  }
+  return Math.round(arr.reduce((acc, cur) => acc + cur) / arr.length);
+};
 
 module.exports = average;
