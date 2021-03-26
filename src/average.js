@@ -27,4 +27,4 @@ const average = (arr) => {
   return sum;
 };
 
-// module.exports = average;
+module.exports = average;
