@@ -36,12 +36,11 @@ describe('#circle', () => {
     assert.strictEqual(Object.entries(circle(3)).length, 3);
     assert.strictEqual(circle(), undefined);
     const circleFunc1 = circle(2);
-    assert.strictEqual(circleFunc1.circumference, 2*2*3.14);
+    assert.strictEqual(circleFunc1.circumference, 2 * 2 * 3.14);
     const circleFunc2 = circle(3);
     const PI = 3.14;
-    assert.strictEqual(circleFunc2.area, PI*3*3);
-    assert.strictEqual(circleFunc2.circumference, 3*PI*2);
-    assert.strictEqual(circleFunc2.radius,3);
-
+    assert.strictEqual(circleFunc2.area, PI * 3 * 3);
+    assert.strictEqual(circleFunc2.circumference, 3 * PI * 2);
+    assert.strictEqual(circleFunc2.radius, 3);
   });
 });
