@@ -11,9 +11,31 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const verifyArray = (array) => {
+  if (array.length === 0) return 1;
 
-const average = () => {
-  //aqui entrará minha implementação
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof (array[i]) == 'string') {
+      return 1;
+    }
+  }
+}
+
+const createAverage = (array) => {
+  let sum = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    sum += array[i];
+  }
+  return sum / array.length;
+}
+
+const average = (array) => {
+  let averageReturn = 0; // definindo a média que será retornada
+  if (verifyArray(array)) {
+    return undefined;
+  }
+  averageReturn = createAverage(array);
+  return Math.round(averageReturn);
 };
 
 module.exports = average;
