@@ -31,10 +31,11 @@ const productDetails = require('../src/productDetails');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
+const callAssert = assert.deepStrictEqual;
+const callFunction = productDetails('Alcool gel', 'Máscara');
+
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    const callAssert = assert.deepStrictEqual;
-    const callFunction = productDetails('Alcool gel', 'Máscara');
     callAssert(typeof productDetails(), 'array');
     callAssert(callFunction.length, 2);
     callAssert(typeof callFunction[0], 'object');
