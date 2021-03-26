@@ -12,7 +12,7 @@
     {
       name: 'Alcool gel'
       details: {
-        productId: 'Alcool gel123   edbeuude'
+        productId: 'Alcool gel123'
       }
     },
     {
