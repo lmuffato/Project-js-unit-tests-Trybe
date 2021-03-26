@@ -24,10 +24,9 @@
   "homepage": "https://github.com/betrybe/sd-0x-block8-project-js-unit-test#readme",
   "devDependencies": {
     "acorn": ">=5.7.4",
+    "eslint": "^7.22.0",
+    "eslint-plugin-react": "^7.23.1",
     "jest": "^24.9.0",
     "minimist": ">=1.2.2"
-  },
-  "dependencies": {
-    "eslint": "^7.22.0"
   }
 }
