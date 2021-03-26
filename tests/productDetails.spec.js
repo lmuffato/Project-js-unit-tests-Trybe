@@ -1,8 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
-const call = require('assert');
-const { assert } = require('console');
+const assert = require('assert');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -34,11 +33,11 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    const call = call.deepStrictEqual;
-    call.deepStrictEqual(typeof productDetails(), 'array');
-    call.deepStrictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
-    call.deepStrictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
-    call.deepStrictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
+    const callAssert = assert.deepStrictEqual;
+    callAssert(typeof productDetails(), 'array');
+    callAssert(productDetails('Alcool gel', 'Máscara').length, 2);
+    callAssert(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
+    callAssert(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
     assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
     assert.strictEqual(productDetails()[0].details, productDetails()[1].details);
     // ESCREVA SEUS TESTES ABAIXO:
