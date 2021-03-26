@@ -13,7 +13,12 @@
 */
 
 const average = (array) => {
-  let result = 0;
+  let sum = 0;
+  let arrayLenght = array.length;
+
+  if (!arrayLenght) {
+    return undefined;
+  }
 
   for (let index = 0; index < array.length; index += 1) {
     const element = array[index];
@@ -21,10 +26,7 @@ const average = (array) => {
       return undefined;
     } sum += element;
   }
-  if (array.length === 0) {
-    return undefined;
-  }
-  result = Math.round(result / array.length);
+  result = Math.round(sum / arrayLenght);
   return result;
 };
 
