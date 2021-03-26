@@ -12,7 +12,7 @@
     {
       name: 'Alcool gel'
       details: {
-        productId: 'Alcool gel123'
+        productId: 'Alcool gel123   edbeuude'
       }
     },
     {
@@ -40,4 +40,3 @@ const productDetails = (firstProduct, secondProduct) => [
 ];
 
 module.exports = productDetails;
-
