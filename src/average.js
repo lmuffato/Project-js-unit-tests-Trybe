@@ -13,14 +13,22 @@
 */
 
 const average = (array) => {
-  if (typeof array !== 'number') {
-    throw new undefined;
+
+  let soma = 0;
+
+  if(array.length === 0){
+    return undefined;
+  }
+
+  for(let index = 0; index < array.length; index +=1){
+    if (typeof array[index] !== 'number') {
+      return undefined;
+    };
+    soma += array[index];
+  }
+
+  return Math.round(soma / array.length);
+
 };
-let numeros = 0;
-for(let index = 0; index < array.length; index +=1){
- numeros = numeros[index] / array.length -1;
-}
-return math.round(numeros);
-}
 
 module.exports = average;
