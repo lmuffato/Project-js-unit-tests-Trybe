@@ -88,7 +88,7 @@ const createMenu = (myMenu) => {
   menu.order = (string) => {
     menu.consumption.push(string);
   };
-  menu.pay = soma();
+  menu.pay = soma;
 };
 
 module.exports = createMenu;
