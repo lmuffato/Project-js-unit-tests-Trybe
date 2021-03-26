@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+/* eslint-disable max-lines-per-function */
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
@@ -52,7 +53,8 @@ const createMenu = require('../src/restaurant');
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
-    // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui, 
+    
+    // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui,
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
     // const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
     const checkFecth = Object.keys(createMenu()).includes('fetchMenu');
@@ -88,7 +90,7 @@ describe('#createMenu', () => {
     const assert = require('assert');
     const frutas = {
       fruta: 'banana',
-      suco: 'abacaxi'
+      suco: 'abacaxi',
     };
     const objetoFrutas = createMenu(frutas);
 
@@ -96,7 +98,7 @@ describe('#createMenu', () => {
 
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
-    // TESTE 5: Verifique que chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro, 
+    // TESTE 5: Verifique que chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro,
     // como `objetoRetornado.order('coxinha')`, tal string é adicionada ao array retornado em `objetoRetornado.consumption
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
@@ -151,7 +153,9 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     const menuComidasP = createMenu();
     const comidasP = ['coxinha', 'agua', 'coxinha'];
-    comidasP.forEach(e => menuComidasP.order(e));
+    const sum = 7.80;
+    comidasP.forEach((e) => menuComidasP.order(e));
+    console.log(menuComidasP.pay());
     assert.deepStrictEqual(menuComidasP.pay(), sum);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
