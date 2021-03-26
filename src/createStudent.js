@@ -14,14 +14,12 @@
 
 const createStudent = (name) => {
   const estudante = {
-    nome: name,
+    nome: 'name',
     feedback: () => 'Eita pessoa boa!',
   };
   return estudante;
 };
 
-const estudante = createStudent('Leandrão, o Lobo Solitário');
-console.log(estudante.nome);
-console.log(estudante.feedback());
+const estudante = createStudent();
 
 module.exports = createStudent;
