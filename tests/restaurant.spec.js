@@ -7,38 +7,43 @@ const createMenu = require('../src/restaurant');
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
+    assert.strictEqual(typeof (createMenu({}).fetchMenu()), 'object');
 
-    assert.strictEqual(typeof(createMenu({}).fetchMenu()), 'object');
+    const receivedKeys = Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu());
+    const expectedKeys = ['food', 'drink'];
+    assert.deepStrictEqual(receivedKeys, expectedKeys);
 
-    assert.deepStrictEqual(Object.keys(createMenu({food: {}, drink: {}}).fetchMenu()), ['food', 'drink']);
+    const receivedMenu = createMenu({ food: {}, drink: {}, desset: {} }).fetchMenu();
+    const expectedMenu = { food: {}, drink: {}, desset: {} };
+    assert.deepStrictEqual(receivedMenu, expectedMenu);
 
-    assert.deepStrictEqual(createMenu({food: {}, drink: {}, desset: {} }).fetchMenu(), {food: {}, drink: {}, desset: {}})
-
-    assert.deepStrictEqual(createMenu({}).consumption, [])
+    assert.deepStrictEqual(createMenu({}).consumption, []);
 
     assert.deepStrictEqual(createMenu().order('coxinha'), ['coxinha']);
 
     const newOrder = (arr) => {
       const menu = createMenu();
-      arr.forEach(element => {
-        menu.order(element)
+      arr.forEach((element) => {
+        menu.order(element);
       });
 
       return menu.consumption;
-    }
+    };
 
-    assert.deepStrictEqual(newOrder(["coxinha", "agua", "sopa", "sashimi"]), ["coxinha", "agua", "sopa", "sashimi"])
+    const firstOrder = ['coxinha', 'agua', 'sopa', 'sashimi'];
+    assert.deepStrictEqual(newOrder(firstOrder), firstOrder);
 
-    assert.deepStrictEqual(newOrder(['coxinha', 'agua', 'coxinha']), ['coxinha', 'agua', 'coxinha'])
-  
-    const menu = () => {
-      const menu = createMenu({ food: { coxinha: 1.25 }, drink: { agua: 2.5 } })
+    const secondOrder = ['coxinha', 'agua', 'coxinha'];
+    assert.deepStrictEqual(newOrder(secondOrder), secondOrder);
+
+    const newMenu = () => {
+      const menu = createMenu({ food: { coxinha: 1.25 }, drink: { agua: 2.5 } });
       menu.order('coxinha');
       menu.order('agua');
       menu.order('coxinha');
       return menu;
-    }
+    };
 
-    assert.strictEqual(menu().pay(), 5.5)
+    assert.strictEqual(newMenu().pay(), 5.5);
   });
 });
