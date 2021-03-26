@@ -12,9 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
-
-const average = (numbers) => {
+const average = () => {
   let answer = 0;
   if (numbers.length < 1) { return undefined;    
   }
