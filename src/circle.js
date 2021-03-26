@@ -28,5 +28,5 @@ const circle = (radius) => {
   };
 };
 
-console.log(circle(3).area)
+console.log(circle(3).area);
 module.exports = circle;
