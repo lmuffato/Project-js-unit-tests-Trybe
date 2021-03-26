@@ -14,7 +14,7 @@
 
 const average = (array) => {
   if (array.length === 0 || array === undefined) return undefined;
-  for (let index = 0; array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') return undefined;
   }
   const med = array.reduce((a, b) => a + b) / array.length;
