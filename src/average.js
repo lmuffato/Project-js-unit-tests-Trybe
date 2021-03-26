@@ -18,18 +18,14 @@ const average = (array) => {
   for (let index = 0; index < array.length; index += 1) {
     const element = array[index];
     if (typeof (element) !== 'number') {
-      result = undefined;
-      return result;
+      return undefined;
     } sum += element;
   }
-
   if (array.length === 0) {
-    result = undefined;
-    return result;
+    return undefined;
   }
-
   result = Math.round(result / array.length);
   return result;
 };
-console.log(average([]));
+
 module.exports = average;
