@@ -15,11 +15,11 @@ const verifyArray = (array) => {
   if (array.length === 0) return 1;
 
   for (let i = 0; i < array.length; i += 1) {
-    if (typeof (array[i]) == 'string') {
+    if (typeof (array[i]) === 'string') {
       return 1;
     }
   }
-}
+};
 
 const createAverage = (array) => {
   let sum = 0;
@@ -27,7 +27,7 @@ const createAverage = (array) => {
     sum += array[i];
   }
   return sum / array.length;
-}
+};
 
 const average = (array) => {
   let averageReturn = 0; // definindo a média que será retornada
