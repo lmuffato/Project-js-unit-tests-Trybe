@@ -12,24 +12,23 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
+const assert = require ('assert');
+
 const array = (array) => {
-  if (typeof array !== 'number') {
-    return 'undefined';
-  }
-
+  
   let somaNumeros = 0;
-  let mediaNumeros = 0;
-  
+    
   for (let index = 0; index < array.length; index += 1) {
-    somaNumeros = somaNumeros + array[index];
+    if (array[index] === 'number') {
+      somaNumeros = somaNumeros + array[index];
+    } else {
+      return undefined;
+    }
+    
+    const mediaNumeros = Math.round(somaNumeros / array.length);
+    return mediaNumeros;
+
   }
-  
-  mediaNumeros = somaNumeros / array.length;
-
-  const arredondar = Math.round(mediaNumeros);
-
-  return arredondar;
-
 };
 
 module.exports = array;
