@@ -26,7 +26,6 @@ const obj = { radius: 3, area: 28.259999999999998, circumference: 18.84 };
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
@@ -37,8 +36,8 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle(''), 'object');
     assert.strictEqual(circle('').length, 3);
     assert.strictEqual(circle(), undefined);
-    assert.strictEqual(circle(2)[0],2);
-    assert.strictEqual(circle(3)[1],28.259999999999998);
-    assert.strictEqual(circle(3),obj);
+    assert.strictEqual(circle(2)[0], 2);
+    assert.strictEqual(circle(3)[1], 28.259999999999998);
+    assert.strictEqual(circle(3), obj);
   });
 });
