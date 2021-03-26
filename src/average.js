@@ -14,22 +14,19 @@
 
 const average = (array) => {
   let media;
-  let soma=0;
+  let soma = 0;
 
-  if(array.length === 0){
+  if (array.length === 0) {
     return undefined;
   }
 
-  for(let index=0; index < array.length; index+=1){
-    if(typeof array[index] !== 'number'){
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
       return undefined;
     }
-   
-    soma = soma + array[index];
-
+    soma += array[index];
   }
-  media=soma/array.length;
-
+  media = soma / array.length;
   return Math.round(media);
 };
 
