@@ -12,17 +12,29 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
+function check (array) {
+  if (array.length === 0) {
+    return false;
+  } return true;
+}
+
+function check2 (array) {
+  for (let index = 0; index < array.length; index += 1) {
+    const element = array[index];
+    if (typeof element === 'number') {
+      return true;
+    } return false;    
+  }
+}
+
 const average = (array) => {
   let sum = 0;
-  const length = array.length;
-  if (length >= 1) {
+  if (check(array) === true && check2(array) === true) {
     for (let index = 0; index < array.length; index += 1) {
       const element = array[index];
-      if (typeof element === 'number') {
-        sum += element;
-      } else return undefined;
+      sum += element;
     }
-    return Math.round(sum/length);
+    return Math.round(sum / length);
   } return undefined;
 };
 
