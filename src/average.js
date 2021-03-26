@@ -13,10 +13,10 @@
 */
 
 const average = (array) => {
-  let somatorio = 0
+  let somatorio = 0;
   let media = 0;
 
-  if(array.length === 0) return undefined;
+  if (array.length === 0) return undefined;
 
   for (let index of array) {
     if (typeof index !== 'number') {
