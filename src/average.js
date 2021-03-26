@@ -11,14 +11,17 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const isAllValuesNumber = (array) => {
+  const noNumberElement = array.find((element) => typeof element !== 'number');
+  if (noNumberElement === undefined) return true;
+};
 
-const average = (arr) => {
-  const hasValue = arr.length > 0;
-  const isAllValuesNumber = arr.find((element) => typeof element !== 'number') === undefined;
+const isArrayEmpty = (array) => array.length === 0;
 
-  if (hasValue && isAllValuesNumber) {
-    const sum = arr.reduce((value, total) => value + total);
-    const result = sum / arr.length;
+const average = (array) => {
+  if (!isArrayEmpty(array) && isAllValuesNumber(array)) {
+    const sum = array.reduce((value, total) => value + total);
+    const result = sum / array.length;
 
     return Math.round(result);
   }
