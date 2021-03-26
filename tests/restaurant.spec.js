@@ -53,12 +53,7 @@ const createMenu = require('../src/restaurant');
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     assert.fail();
-<<<<<<< HEAD
-    
-    // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui, 
-=======
     // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui,
->>>>>>> f66ff3b0800bd3ee822c38478ea9c80de6373d70
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
     // ```
     // const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
