@@ -24,9 +24,8 @@ const average = (array) => {
     }
     somatorio += index;
   }
-  media = somatorio / array.length
+  media = somatorio / array.length;
   const mediaArredondada = Math.round(media);
   return mediaArredondada;
 };
-// console.log(average([3, 4, 5]));
 module.exports = average;
