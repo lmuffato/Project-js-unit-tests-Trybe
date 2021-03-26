@@ -16,6 +16,19 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {};
+const vqv = (nome, idade) => {
+  /**
+   * Estava com um pouco de duvida sobre como chamar a função sem paramentros e 
+   * retornar undefined, então consultei o repositorio do palenske para encontrar a solução.
+   * Link do repositório: https://github.com/tryber/sd-09-project-js-unit-tests/tree/c4ddd421b00cab31c89ce6dbe1936af3465b637b
+   */
+  if (!nome || !idade) return undefined;
+
+  return `Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+  
+};
 
 module.exports = vqv;
