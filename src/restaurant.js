@@ -85,10 +85,9 @@ const createMenu = (menu) => {
   return {
     fetchMenu: () => menu,
     consumption: arrayConsumption,
-    order:
-      function order(value) {
-        this.consumption.push(value);
-      },
+    order: function order(value) {
+      this.consumption.push(value);
+    },
   }
 };
 
