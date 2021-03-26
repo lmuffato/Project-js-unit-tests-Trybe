@@ -28,18 +28,18 @@ describe('#circle', () => {
     // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    assert.deepStrictEqual(typeof(circle(1)), 'object');
+    assert.deepStrictEqual(typeof (circle(1)), 'object');
     // Teste se o objeto retornado tem 3 entradas.
     assert.deepStrictEqual(Object.keys(circle(1)).length, 3);
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.deepStrictEqual(circle(), undefined);
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.deepStrictEqual(Object.values(circle(2))[2], 12.56)
+    assert.deepStrictEqual(Object.values(circle(2))[2], 12.56);
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.deepStrictEqual(Object.values(circle(3))[1], (3.14*3*3))
+    assert.deepStrictEqual(Object.values(circle(3))[1], (3.14 * 3 * 3));
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.deepStrictEqual(Object.entries(circle(3))[0], ['radius', 3]);
-    assert.deepStrictEqual(Object.entries(circle(3))[1], ['area', (3.14*3*3)]);
-    assert.deepStrictEqual(Object.entries(circle(3))[2], ['circumference', (2*3.14*3)]);
+    assert.deepStrictEqual(Object.entries(circle(3))[1], ['area', (3.14 * 3 * 3)]);
+    assert.deepStrictEqual(Object.entries(circle(3))[2], ['circumference', (2 * 3.14 * 3)]);
   });
 });
