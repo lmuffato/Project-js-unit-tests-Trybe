@@ -25,10 +25,9 @@ const circle = require('../src/circle');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    assert.strictEqual(typeof(circle(1)), 'object');
+    assert.strictEqual(typeof (circle(1)), 'object');
 
     // Teste se o objeto retornado tem 3 entradas.
     assert.strictEqual(Object.keys(circle(1)).length, 3);
@@ -40,7 +39,7 @@ describe('#circle', () => {
     assert.strictEqual(Object.values(circle(2))[2], 12.56);
 
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.strictEqual(Object.values(circle(3))[1], 28.259999999999998)
+    assert.strictEqual(Object.values(circle(3))[1], 28.259999999999998);
 
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.strictEqual(Object.values(circle(3))[0], 3);
@@ -48,5 +47,3 @@ describe('#circle', () => {
     assert.strictEqual(Object.values(circle(3))[2], 18.84);
   });
 });
-
-//Ideia de usar o Object.values encontrada no código do Beto cfg da turma 7
