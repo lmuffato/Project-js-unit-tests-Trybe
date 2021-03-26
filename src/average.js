@@ -17,7 +17,7 @@ const isValid = (array) => {
     test = false;
   } else{
     for (let index = 0; index < array.length; index += 1) {
-      if (typeof array[index] !== 'number');{
+      if (typeof array[index] !== 'number') {
         test = false;
       }    
     }
@@ -35,6 +35,5 @@ const average = (array) => {
     return undefined;
   }
 };
-console.log(average([1, '2']));
 
 module.exports = average;
