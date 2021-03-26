@@ -15,12 +15,11 @@
 const average = (array) => {
   let total = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) !== 'number') {
+    if (typeof (array[index]) !== 'number') {
       return undefined;
-    } else {
-      total += array[index];
-      console.log(total);
     }
+    total += array[index];
+    console.log(total);
   }
   return Math.round(total / array.length);
 };
