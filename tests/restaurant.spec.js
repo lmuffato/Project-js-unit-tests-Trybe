@@ -129,8 +129,5 @@ describe('#createMenu', () => {
     }
 
     assert.strictEqual(newMenu().pay(), 5.5)
-
-
-    // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
