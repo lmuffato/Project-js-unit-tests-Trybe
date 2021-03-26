@@ -19,16 +19,16 @@ const average = (numbersArray) => {
   if (numbersArray.length === 0) {
     return undefined;
   }
-  numbersArray.forEach((element) => {
+  for (element of numbersArray) {
     if (typeof element !== 'number') {
       return undefined;
     }
     sum += element;
-  });
-  averageNumber = sum / numbersArray.length;
+    averageNumber = sum / numbersArray.length;
+  };
   // Para saber como atender ao requisito de arredondar o número consultei o link: 
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round;
+  // Contei com o auxílio do Luan Ramalho nesse exercício;
   return Math.round(averageNumber);
 };
 module.exports = average;
-console.log(average([2, 2]));
