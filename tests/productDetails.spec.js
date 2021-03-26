@@ -47,6 +47,7 @@ describe('#productDetails', () => {
     assert.notDeepStrictEqual(productDetails('oi', 'turubao?'[0]), productDetails('oi', 'turubao?')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.deepStrictEqual(productDetails('oi', 'turubao?')[0].details.productId, 'oi123');
+    
     assert.deepStrictEqual(productDetails('oi', 'turubao?')[1].details.productId, 'turubao?123');
   });
 });
