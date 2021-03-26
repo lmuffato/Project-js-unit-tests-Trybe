@@ -14,10 +14,12 @@
 
 const average = (numbers) => {
   let answer = 0;
-  if (numbers.length < 1) { return undefined;    
+  if (numbers.length < 1) {
+    return undefined;
   }
   for (let index = 0; index < numbers.length; index += 1) {
-    if (typeof numbers[index] !== 'number') { return undefined;      
+    if (typeof numbers[index] !== 'number') {
+      return undefined;
     }
   }
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
@@ -27,6 +29,6 @@ const average = (numbers) => {
   return answer;
 };
 
-console.log(average([2,2]));
+console.log(average([2, 2]));
 
 module.exports = average;
