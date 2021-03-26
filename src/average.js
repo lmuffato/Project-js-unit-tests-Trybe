@@ -20,7 +20,7 @@ const average = (arr) => {
     const sum = arr.reduce((value, total) => value + total);
     const average = sum / arr.length;
 
-    return average;
+    return Math.round(average);
   }
   return undefined;
 };
