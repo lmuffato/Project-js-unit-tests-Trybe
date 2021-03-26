@@ -28,8 +28,13 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle, 'function');
     assert.strictEqual(Object.entries(circle(2)).length, 3);
     assert.strictEqual(circle(), undefined);
-    assert.strictEqual(circle(2).circumference, 12.56)
+    assert.strictEqual(circle(2).circumference, 12.56);
     assert.strictEqual(parseFloat((circle(3).area).toPrecision(4)), 28.26);
-    assert.deepStrictEqual(circle(3), {radius: 3, area: 28.26, circumference: 18.84});
+
+    // Consegui resolver com um clareamento de ideias que obtive no plantão enquanto o instrutor ajudava uma outra 
+    // pessoa em um outro problema.
+    const cir = circle(3);
+    const circleCopy = {radius: cir.radius, area: parseFloat(cir.area.toPrecision(4)), circumference: cir.circumference};
+    assert.deepStrictEqual(circleCopy, {radius: 3, area: 28.26, circumference: 18.84});
   });
 });

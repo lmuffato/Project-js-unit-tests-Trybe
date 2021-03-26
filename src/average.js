@@ -16,8 +16,9 @@ const average = arr => {
   let total = 0;
   let len = arr.length;
   let media;
-  if (arr.length === 0) return undefined;
-  for (let index = 0; index < arr.length; index += 1) {
+
+  if (len === 0) return undefined;
+  for (let index = 0; index < len; index += 1) {
     if (typeof arr[index] !== 'number') return undefined;
     total += arr[index];
   }
