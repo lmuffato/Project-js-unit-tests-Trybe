@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
-const assert = require("assert");
-const circle = require("../src/circle");
+const assert = require('assert');
+const circle = require('../src/circle');
 
 /*
   Essa função recebe o raio de um círculo e retorna um objeto contendo suas informações (Raio, Área e Circunferência).
@@ -23,13 +23,13 @@ const circle = require("../src/circle");
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-describe("#circle", () => {
-  it("given a radius, should return an object with circles info", () => {
-    assert.ok(typeof circle(1) === "object");
+describe('#circle', () => {
+  it('given a radius, should return an object with circles info', () => {
+    assert.ok(typeof circle(1) === 'object');
     assert.ok(Object.entries(circle(1)).length === 3);
     assert.strictEqual(circle(), undefined);
-    assert.ok(circle(2).circumference.toFixed(2) == 12.56);
-    assert.ok(circle(3).area.toFixed(2) == 28.26);
+    assert.equal(circle(2).circumference, 12.56);
+    assert.equal(circle(3).area.toFixed(2), 28.26);
     assert.ok(circle(3).radius === 3);
     assert.ok(circle(3).circumference === 18.84);
     // ESCREVA SEUS TESTES ABAIXO:

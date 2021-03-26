@@ -14,9 +14,9 @@
 
 const average = (arr) => {
   if (
-    arr === "" ||
-    arr.length === 0 ||
-    arr.filter((value) => typeof value !== "number").length > 0
+    arr === ''
+    || arr.length === 0
+    || arr.filter((value) => typeof value !== 'number').length > 0
   ) {
     return undefined;
   }
