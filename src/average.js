@@ -26,7 +26,7 @@ const average = (numbersArray) => {
     sum += element;
     averageNumber = sum / numbersArray.length;
   }
-  // Para saber como atender ao requisito de arredondar o número consultei o link:
+  // Para saber como atender ao requisito de arred ondar o número consultei o link:
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round;
   // Contei com o auxílio do Luan Ramalho nesse exercício;
   return Math.round(averageNumber);
