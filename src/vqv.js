@@ -16,6 +16,11 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {};
+const vqv = (nome, idade) => {
+`Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mano muito em programação!
+#VQV!`
+};
 
 module.exports = vqv;
