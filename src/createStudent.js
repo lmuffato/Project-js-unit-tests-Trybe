@@ -16,14 +16,14 @@
 */
 
 const createStudent = (theName) => {
-  let obj = {};
+  let obj = {
+    name: theName,
+    feedback: () => 'Eita pessoa boa!',
+  };
 
-  obj.name = theName;
-  obj.feedback = () => 'Eita pessoa boa!';
-  
   return obj;
-}
+};
 
-console.log(typeof(createStudent('flavio').feedback));
+console.log(typeof (createStudent('flavio').feedback));
 
 module.exports = createStudent;

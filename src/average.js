@@ -16,12 +16,12 @@ const average = (arr) => {
   let sum = 0;
   let count = 0;
 
- const myArray = Object.assign(arr);
+  const myArray = Object.assign(arr);
 
- if(arr === null) {
-   return('ola mundo');
- }
-  
+  if (arr === null) {
+    return ('ola mundo');
+  }
+
   for (let key of myArray) {
     if (typeof key !== 'number') {
       return undefined;
@@ -29,9 +29,10 @@ const average = (arr) => {
     count += 1;
     sum += key;
   }
-     if (count) {
-      return Math.round(sum/count);
-     }
+
+  if (count) {
+    return Math.round(sum / count);
+  }
 };
 
 console.log(average([]));
