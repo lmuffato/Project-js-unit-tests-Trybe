@@ -34,16 +34,18 @@ const productDetails = require('../src/productDetails');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
+    const alcool = 'Alcool gel';
     // Teste que o retorno da função é um array.
-    assert.strictEqual(typeof(productDetails('Alcool gel', 'Mascara')), 'object');
+    assert.strictEqual(typeof (productDetails(alcool, 'Mascara')), 'object');
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(Object.keys(productDetails('Alcool gel', 'Mascara')).length, 2);
+    assert.strictEqual(Object.keys(productDetails(alcool, 'Mascara')).length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.strictEqual(typeof(Object.keys(productDetails('Alcool gel', 'Mascara'))), 'object');
+    assert.strictEqual(typeof (Object.keys(productDetails(alcool, 'Mascara'))), 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(Object.keys(productDetails('Alcool gel', 'Mascara'))[0], Object.keys(productDetails('Alcool gel', 'Mascara'))[1]);
+    assert.notStrictEqual(Object.keys(productDetails(alcool, 'Mascara'))[0],
+      Object.keys(productDetails(alcool, 'Mascara'))[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(productDetails('Alcool gel', 'Mascara')[0].details.productId.slice(-3), '123');
-    assert.strictEqual(productDetails('Alcool gel', 'Mascara')[1].details.productId.slice(-3), '123');
+    assert.strictEqual(productDetails(alcool, 'Mascara')[0].details.productId.slice(-3), '123');
+    assert.strictEqual(productDetails(alcool, 'Mascara')[1].details.productId.slice(-3), '123');
   });
 });

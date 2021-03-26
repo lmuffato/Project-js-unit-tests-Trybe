@@ -13,15 +13,14 @@
 */
 
 const verifyArray = (array) => {
-  
-}
+};
 const average = (array) => {
   let sumOfArray = 0;
   if (array.length < 1) {
     return undefined;
   }
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) !== 'number') {
+    if (typeof (array[index]) !== 'number') {
       return undefined;
     }
   }
