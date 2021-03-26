@@ -22,10 +22,9 @@ const average = (arr) => {
 
     return average;
   }
-
   return undefined;
 };
 
-console.log(average(['']))
+console.log(average([3, 4, 5]))
 
 module.exports = average;
