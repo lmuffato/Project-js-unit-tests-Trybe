@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = arr => {
+const average = (arr) => {
   let total = 0;
   let len = arr.length;
   let media;
@@ -23,7 +23,7 @@ const average = arr => {
     total += arr[index];
   }
 
-  media = total/len;
+  media = total / len;
   return Math.round(media);
 };
 
