@@ -106,7 +106,7 @@ describe('#createMenu', () => {
       refrigerante: 'soda'
     });
     const toConsumption = 'coxinha';
-    
+
     objetoCoxinha.order(toConsumption);
 
     assert.deepStrictEqual(objetoCoxinha.consumption[0], toConsumption);
@@ -120,7 +120,12 @@ describe('#createMenu', () => {
     // objetoRetornado.order("sopa");
     // objetoRetornado.order("sashimi");
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
-    // ```
+    const menuComidas = createMenu();
+    const comidas = ['coxinha', 'agua', 'sopa', 'sashimi'];
+    comidas.forEach(e => menuComidas.order(e));
+
+    assert.deepStrictEqual(menuComidas.consumption, comidas);
+   
     // Agora faça o TESTE 7 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 7: Verifique que a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
