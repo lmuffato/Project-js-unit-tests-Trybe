@@ -33,12 +33,22 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
+    assert.strictEqual(typeof(productDetails('num1', 'num2')), 'object');
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(productDetails('a', 'b').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.strictEqual(typeof(productDetails('a', 'b')[0]), 'object');
+    assert.strictEqual(typeof(productDetails('a', 'b')[1]), 'object')
     // Teste que os dois objetos são diferentes entre si.
+    assert.notStrictEqual(productDetails('a', 'b')[0], productDetails('a', 'b')[1])
     // (Difícil) Teste que os dois productIds terminam com 123.
+    const productId1 = productDetails('a', 'b')[0].details.productId;
+    const productId2 = productDetails('a', 'b')[1].details.productId;
+    const last3 = `${productId1[productId1.length - 3]}${productId1[productId1.length - 2]}${productId1[productId1.length - 1]}`;
+    assert.strictEqual(last3, '123');
+    const last32 = `${productId2[productId2.length - 3]}${productId2[productId2.length - 2]}${productId2[productId2.length - 1]}`;
+    assert.strictEqual(last32, '123');
   });
 });
