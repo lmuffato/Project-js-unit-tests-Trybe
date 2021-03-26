@@ -13,7 +13,7 @@
 */
 
 const average = (array) => {
-  if (array.length === []) {
+  if (array.length === 0) {
     console.log('vazio');
     return undefined;
   }
@@ -28,6 +28,6 @@ const average = (array) => {
   return Math.round(numbersRound);
 };
 
-console.log(average([-11, -5, 2]));
+console.log(average([]));
 
 module.exports = average;
