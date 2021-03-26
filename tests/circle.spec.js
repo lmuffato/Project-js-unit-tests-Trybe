@@ -41,6 +41,5 @@ describe('#circle', () => {
     const PI = 3.14;
     assert.strictEqual(circleFunc2.area, PI * 3 * 3);
     assert.strictEqual(circleFunc2.circumference, 3 * PI * 2);
-    assert.strictEqual(circleFunc2.radius, 3);
   });
 });
