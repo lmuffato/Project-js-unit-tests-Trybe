@@ -18,15 +18,15 @@ const emptyArray = (array) => {
   }
 };
 
-const average = () => {
+const average = (array) => {
   let averageArray = 0
   emptyArray(array)
   for (let i = 0; i < array.length; i += 1) {
     if (typeof(array[i]) !== "number") {
       return undefined;
     }
-    average += array[i];
-    return Math.round(average / array.length)
+    averageArray += array[i];
+    return Math.round(averageArray / array.length)
   }
 };
 
