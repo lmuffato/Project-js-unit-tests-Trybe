@@ -12,18 +12,19 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-
-  if (typeof average !== 'number') {
+const array = (array) => {
+  if (typeof array !== 'number') {
     return 'undefined';
   }
 
   let somaNumeros = 0;
+  let mediaNumeros = 0;
   
-  for (let index = 0; index < average.length; index += 1) {
-    somaNumeros = somaNumeros + average[index];
+  for (let index = 0; index < array.length; index += 1) {
+    somaNumeros = somaNumeros + array[index];
   }
-  let mediaNumeros = somaNumeros / average.length;
+  
+  mediaNumeros = somaNumeros / array.length;
 
   const arredondar = Math.round(mediaNumeros);
 
@@ -31,4 +32,4 @@ const average = () => {
 
 };
 
-module.exports = average;
+module.exports = array;
