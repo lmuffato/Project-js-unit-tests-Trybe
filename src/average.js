@@ -26,4 +26,4 @@ const average = (array) => {
 };
 
 module.exports = average;
-console.log(average([1,2]));
+console.log('oi');
