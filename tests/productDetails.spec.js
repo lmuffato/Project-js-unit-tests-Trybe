@@ -35,14 +35,16 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(Object.prototype.toString.call(productDetails('Alcool gel', 'Máscara')), '[object Array]');
+    const teste = productDetails('Alcool gel', 'Máscara');
+    const teste2 = [{ name: undefined,
+      details: { productId: 'undefined123' } },
+    { name: undefined, details: { productId: 'undefined123' } }];
+    assert.strictEqual(Object.prototype.toString.call(productDetails(teste)), '[object Array]');
     // Teste que o array retornado pela função contém dois itens dentro.
     assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.deepStrictEqual(productDetails(), [ { name: undefined, details: { productId: 'undefined123' } }, { name: undefined, details: { productId: 'undefined123' }}]
-  );
+    assert.deepStrictEqual(productDetails(), teste2);
     // Teste que os dois objetos são diferentes entre si.
-    
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });
