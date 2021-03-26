@@ -27,5 +27,3 @@ return `Oi, meu nome é ${nome}!
 }
 
 module.exports = vqv;
-
-console.log(typeof vqv('Hamaji', 29));
