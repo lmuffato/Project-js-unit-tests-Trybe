@@ -15,6 +15,14 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+/* Source: https://github.com/tryber/sd-09-project-js-unit-tests/tree/a9fc982fded1130542008348e57f498cb6360787 */
+const createStudent = (name) => {
+  const obj = {
+    name,
+    feedback: () => 'Eita pessoa boa!',
+  };
+
+  return obj;
+};
 
 module.exports = createStudent;
