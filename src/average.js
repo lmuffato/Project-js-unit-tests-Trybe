@@ -13,12 +13,9 @@
 */
 
 const average = (array) => {
-  const isNotNumber = (item) => typeof(item) !== 'number';
-  if (array.some(isNotNumber) || array.length === 0) {
-    return undefined;
-  } else {
-    return Math.round(array.reduce((a, b) => a + b) / array.length);
-  }
+  const isNotNumber = (item) => typeof (item) !== 'number';
+  if (array.some(isNotNumber) || array.length === 0) return undefined;
+  return Math.round(array.reduce((a, b) => a + b) / array.length);
 };
 
 module.exports = average;
