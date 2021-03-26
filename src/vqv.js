@@ -17,7 +17,8 @@
 */
 
 const vqv = (nome, idade) => {
-  if (!nome && !idade) { return undefined; // (nome === undefined && idade === undefined) - https://pt.stackoverflow.com/questions/157145/qual-a-utilidade-do-ponto-de-exclama%C3%A7%C3%A3o-antes-de-se-declarar-fun%C3%A7%C3%B5es-em-java //
+  if (nome === undefined && idade === undefined) { 
+    return undefined;
   } return `Oi, meu nome é ${nome}!
   Tenho ${idade} anos,
   trabalho na Trybe e mando muito em programação!
