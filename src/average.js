@@ -14,15 +14,15 @@
 
 const average = (array) => {
   if (array.length === 0) return undefined;
-  
+
   for (let index = 0; index < array.length; index += 1) {
     if (typeof (array[index]) !== 'number') {
       return undefined;
     }
   }
   let sum = array.reduce((accumulator, index) => accumulator + index, 0);
-  let average = sum / array.length;
-  return Math.round(average);
+  let result = sum / array.length;
+  return Math.round(result);
 };
 
 console.log(average([]));
