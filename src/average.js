@@ -12,20 +12,19 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-// const average = (array) => {
-//   let sum = 0;
-//   if (array.length < 1) {
-//     return undefined;
-//   }
-//   for (let index = 0; index < array.length; index += 1) {
-//     if (typeof array[index] !== 'number') {
-//       return undefined;
-//     }
-//     sum += array[index];
-//   }
-//   sum = Math.round(sum / (array.length));
-//   return sum;
-// };
-// eslint-disable-next-line editorconfig/editorconfig
+const average = (array) => {
+  let sum = 0;
+  if (array.length < 1) {
+    return undefined;
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
+      return undefined;
+    }
+    sum += array[index];
+  }
+  sum = Math.round(sum / (array.length));
+  return sum;
+};
 
-// module.exports = average;
+module.exports = average;
