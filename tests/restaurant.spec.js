@@ -55,7 +55,11 @@ describe('#createMenu', () => {
     // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui, 
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
     // ```
-    const objTest = { food: {}, drink: {} };
+    const objTest = {
+      food: {'coxinha': 4.00, 'sanduiche': 9.99, 'sopa': 5.00, 'sashimi': 15.00},
+      drinks: {'agua': 4.90, 'cerveja': 5.99}
+    };
+
     let objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
     const hasFetchMenu = objetoRetornado.fetchMenu !== undefined
                           && objetoRetornado.fetchMenu !== null
@@ -65,8 +69,14 @@ describe('#createMenu', () => {
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`, 
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
     // ```
-//    objetoRetornado = createMenu({ food: {}, drink: {} });
-//    assert.deepStrictEqual(objetoRetornado.fetchMenu)
+    objetoRetornado = createMenu({ food: {}, drink: {} });
+    const hasOnlyFoodAndDrink = () => {
+      for (const key in objetoRetornado.fetchMenu()) {
+        if (key !== 'food' && key !== 'drink') return false;
+      }
+      return true;
+    }
+    assert.strictEqual(hasOnlyFoodAndDrink(), true)
     // const objetoRetornado = createMenu({ food: {}, drink: {} });
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
     // ```
@@ -75,6 +85,8 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu() // Retorno: objetoQualquer
     // ```
+    objetoRetornado = createMenu(objTest);
+    assert.strictEqual(objTest, objetoRetornado.fetchMenu())
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
@@ -113,6 +125,11 @@ describe('#createMenu', () => {
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
+    objetoRetornado.order("coxinha");
+    const hasTwoCoxinhas = () => {
+      return objetoRetornado.consumption.filter(x => x === 'coxinha').length === 2;
+    };
+    assert.strictEqual(hasTwoCoxinhas(), true);
     // ```
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
@@ -123,6 +140,8 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
+    assert.strictEqual(objetoRetornado.pay(), 32.90)
+    
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
