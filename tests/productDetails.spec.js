@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len*/
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
@@ -46,7 +46,9 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof(productDetails('nome', 'nome'))[1], 'object');
 
     // Teste que os dois objetos são diferentes entre si.
-    assert.strictEqual( , );
+    
+    
+    assert.notStrictEqual(productDetails('nome', 'nome'), ['nome', 'nome']);
 
     // (Difícil) Teste que os dois productIds terminam com 123.
 
