@@ -25,8 +25,8 @@ const isValid = (array) => {
   return test;
 }
 const average = (array) => {
-  let sum = 0
-  if (isValid) { 
+  if (isValid(array)) { 
+    let sum = 0
     for (let index = 0; index < array.length; index +=1) {
       sum += array[index];    
     }
@@ -35,5 +35,6 @@ const average = (array) => {
     return undefined;
   }
 };
+console.log(average([1, '2']));
 
 module.exports = average;
