@@ -13,10 +13,10 @@
 */
 
 const average = (array) => {
+  if (array === []) return undefined;
+  
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof array[index] !== "number" || array.length === 0) {
-      return undefined;
-    } else if (array = []) {
+    if (typeof (array[index]) !== 'number' || array.length === 0) {
       return undefined;
     }
   }
@@ -24,8 +24,6 @@ const average = (array) => {
   let average = sum / array.length;
   return Math.round(average);
 };
-
-console.log(typeof([]))
 
 console.log(average([]));
 
