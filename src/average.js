@@ -12,7 +12,7 @@
     - numbers([1, '2']) // Retorno: undefined;
 */
 
-const numbers = (array) => {
+const average = (array) => {
   if (array.length === []) {
     console.log('vazio');
     return undefined;
@@ -28,4 +28,6 @@ const numbers = (array) => {
   return Math.round(numbersRound);
 };
 
-module.exports = numbers;
+console.log(average([3, 4, 5]));
+
+module.exports = average;
