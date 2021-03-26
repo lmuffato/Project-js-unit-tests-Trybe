@@ -21,10 +21,11 @@ function check(array) {
 function check2(array) {
   for (let index = 0; index < array.length; index += 1) {
     const element = array[index];
-    if (typeof element === 'number') {
-      return true;
-    } else return false;
+    if (typeof element !== 'number') {
+      return false;
+    }
   }
+  return true;
 }
 
 const average = (array) => {
