@@ -18,8 +18,9 @@ const average = (array) => {
 };
 let numeros = 0;
 for(let index = 0; index < array.length; index +=1){
- numeros = numeros[index] / array.length;
+ numeros = numeros[index] / array.length -1;
 }
-return numeros;
+return math.round(numeros);
 }
+
 module.exports = average;
