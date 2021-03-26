@@ -82,14 +82,10 @@
 const createMenu = (order) => {
   return { 
     fetchMenu: () => order,
+    consumption: [],
   }
 };
 
-const assert = require('assert');
-const checkFecth = Object.keys(createMenu()).includes('fetchMenu');
-const objetoRetornado = { food: {}, drink: {} };
-
-assert.ok(checkFecth, true);
-assert.deepStrictEqual(objetoRetornado, createMenu(objetoRetornado).fetchMenu());
+    // objetoRetornado.consumption // Retorno: []
 
 // module.exports = createMenu;
