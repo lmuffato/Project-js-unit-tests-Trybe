@@ -39,5 +39,4 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-console.log(product1IdLast3Words);
 module.exports = productDetails;
