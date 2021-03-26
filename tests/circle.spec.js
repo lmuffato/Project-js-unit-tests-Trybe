@@ -28,7 +28,7 @@ describe('#circle', () => {
     assert.deepStrictEqual(circle(7), {
       radius: 7,
       area: 153.86,
-      circumference: 43.96
+      circumference: 43.96,
     });
     assert.ok(Object.keys(circle(3)).length === 3);
     assert.strictEqual(circle(), undefined);
@@ -37,7 +37,7 @@ describe('#circle', () => {
     assert.deepStrictEqual(circle(3), {
       radius: 3,
       area: 28.259999999999998,
-      circumference: 18.84
-    })
+      circumference: 18.84,
+    });
   });
 });

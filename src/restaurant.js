@@ -79,7 +79,6 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 // const toConsumption = (string) => string;
-const assert = require('assert');
 
 const generatePrice = (foods, price) => {
   let total = 0;
@@ -114,4 +113,6 @@ const createMenu = (menu) => {
   return menuObject;
 };
 
-// module.exports = createMenu;
+createMenu();
+
+module.exports = createMenu;
