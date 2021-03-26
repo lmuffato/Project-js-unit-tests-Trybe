@@ -34,18 +34,21 @@ const productDetails = require('../src/productDetails');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
+    const param1 = 'Alcool gel';
+    const param2 = 'Máscara';
     // Teste que o retorno da função é um array.
-    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
+    assert.strictEqual(Array.isArray(productDetails(param1, param2)), true);
     // consultado método Array em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
+    assert.strictEqual(productDetails(param1, param2).length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.strictEqual(typeof Object.keys(productDetails('Alcool gel', 'Máscara')), 'object');
+    assert.strictEqual(typeof Object.keys(productDetails(param1, param2)), 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
+    assert.notStrictEqual(productDetails(param1, param2)[0], productDetails(param1, param2)[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    // consultado método endsWith em: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
-    assert.ok(productDetails('Alcool gel', 'Máscara')[0].details.productId.endsWith('123'));
-    assert.ok(productDetails('Alcool gel', 'Máscara')[1].details.productId.endsWith('123'));
+    /* consultado método endsWith em: https://developer.mozilla.org/en-US/
+    docs/Web/JavaScript/Reference/Global_Objects/String/endsWith */
+    assert.ok(productDetails(param1, param2)[0].details.productId.endsWith('123'));
+    assert.ok(productDetails(param1, param2)[1].details.productId.endsWith('123'));
   });
 });
