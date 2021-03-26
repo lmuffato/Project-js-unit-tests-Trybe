@@ -18,9 +18,9 @@ const average = (arr) => {
 
   if (hasValue && isAllValuesNumber) {
     const sum = arr.reduce((value, total) => value + total);
-    const average = sum / arr.length;
+    const result = sum / arr.length;
 
-    return Math.round(average);
+    return Math.round(result);
   }
   return undefined;
 };
