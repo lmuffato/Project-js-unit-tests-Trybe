@@ -16,11 +16,15 @@
       #VQV!'
 */
 
+const mensager = (nome, idade) => `Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+
 const vqv = (nome, idade) => {
-  return `Oi, meu nome é ${nome}!
-  Tenho ${idade} anos,
-  trabalho na Trybe e mando muito em programação!
-  #VQV!`
+  if (nome && idade) {
+    return mensager(nome, idade);
+  }
 };
 
 module.exports = vqv;

@@ -28,7 +28,7 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle(3), 'object');
     assert.strictEqual(Object.entries(circle(3)).length, 3);
     assert.strictEqual(circle(), undefined);
-    assert.strictEqual(Object.values(circle(2)).includes(12,56), true);
+    assert.strictEqual(Object.values(circle(2)).includes(12.56), true);
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
