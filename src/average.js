@@ -12,28 +12,25 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const emptyArray = (array) => {
-  if (array.length === 0) {
-    return undefined
+const verifyArray = (array) => {
+  if (array.length < 1) {
+    return undefined;
   }
-};
-
-const typeString = (array) => {
-  for (let i = 0; i < array.length; i += 1) {
-    if (typeof (array[i]) !== "number") {
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
       return undefined;
     }
   }
 }
 
 const average = (array) => {
-  let averageArray = 0
-  emptyArray(array);
-  typeString(array);
-  for (let i = 0; i < array.length; i += 1) {
-    averageArray += array[i];
-    return Math.round(averageArray / array.length)
+  let sumOfArray = 0;
+  verifyArray(array);
+  for (let index2 = 0; index2 < array.length; index2 += 1) {
+    sumOfArray += array[index2];
   }
+  sumOfArray = Math.round(sumOfArray / array.length);
+  return sumOfArray;
 };
 
 module.exports = average;
