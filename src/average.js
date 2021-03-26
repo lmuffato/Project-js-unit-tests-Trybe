@@ -14,10 +14,10 @@
 
 const average = (array) => {
   let add = 0;
-  if(array.lenght === 0) {
+  if(array.length === 0) {
     return undefined;
   };
-  for(let index = 1; index < array.length; index += 1) {
+  for(let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
       return undefined;
     } else {
