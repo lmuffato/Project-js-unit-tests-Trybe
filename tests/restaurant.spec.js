@@ -112,7 +112,7 @@ describe('#createMenu', () => {
     const objetoRetornado8 = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
     // objetoRetornado.order('coxinha');
     objetoRetornado8.order('coxinha');
-    // objetoRetornado.order('agua'); 
+    // objetoRetornado.order('agua');
     objetoRetornado8.order('agua'); 
     // objetoRetornado.order('coxinha');
     objetoRetornado8.order('coxinha');
