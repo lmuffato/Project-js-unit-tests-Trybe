@@ -14,6 +14,9 @@
 const average = (numbers) => {
   let averageNumber = 0;
   let rounded = 0;
+  if (numbers.length === 0) {
+    return undefined;
+  }
   for (let number in numbers) {
     if (typeof (numbers[number]) !== 'number') {
       return undefined;
