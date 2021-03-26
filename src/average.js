@@ -8,10 +8,34 @@
     - Um array. Exemplos: [1, 2]; [1, 2, 3, 4, 5]; [1, 2, '3']; [];
   Comportamento:
     - average([2, 2]) // Retorno: 2;
-    - average([1, 1]) // Retorno: 1;
+    - average([1, 1]) // R4etorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (array) => {
+  let arrayNumbers = array;
+
+  if(arrayNumbers.length > 0){
+    let sum = 0;
+    let average = 0;
+  
+    for(let index = 0; index < arrayNumbers.length; index += 1){
+      if(typeof arrayNumbers[index] === 'number'){
+        sum += arrayNumbers[index];
+      } else {
+        return undefined;
+      }
+    }
+  
+    average = sum / arrayNumbers.length;
+    
+    return Math.round(average);
+  } else {
+    return undefined;
+  }
+};
+
+// console.log(average([]));
+console.log(average([-11, -5, 2]));
 
 module.exports = average;
