@@ -26,5 +26,6 @@
 //   sum = Math.round(sum / (array.length));
 //   return sum;
 // };
+// eslint-disable-next-line editorconfig/editorconfig
 
-module.exports = average;
+// module.exports = average;
