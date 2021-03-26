@@ -44,11 +44,11 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(typeof productDetails('a', 'b'), 'object');
     assert.notDeepStrictEqual(
       Object.values(productDetails('a', 'b')[0]),
-      Object.values(productDetails('a', 'b')[1])
+      Object.values(productDetails('a', 'b')[1]),
     );
     assert.deepStrictEqual(
       productDetails('a', 'b')[0].details.productId.slice(-3),
-      productDetails('a', 'b')[1].details.productId.slice(-3)
+      productDetails('a', 'b')[1].details.productId.slice(-3),
     );
   });
 });
