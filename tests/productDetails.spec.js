@@ -36,12 +36,12 @@ const callFunction = productDetails('Alcool gel', 'Máscara');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    callAssert(typeof productDetails(), 'array');
+    callAssert(typeof callFunction, 'object');
     callAssert(callFunction.length, 2);
     callAssert(typeof callFunction[0], 'object');
     callAssert(typeof callFunction[1], 'object');
     assert.notDeepStrictEqual(callFunction[0], callFunction[1]);
-    assert.strictEqual(productDetails()[0].details, productDetails()[1].details);
+    assert.deepStrictEqual(productDetails()[0].details, productDetails()[1].details);
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
