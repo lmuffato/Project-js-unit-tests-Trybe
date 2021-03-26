@@ -20,10 +20,12 @@ const vqv = (nome, idade) => {
 if (typeof nome === 'undefined') {
   return undefined;
 } else 
-return `'Oi, meu nome é ${nome}!
-  Tenho ${idade} anos,
-  trabalho na Trybe e mando muito em programação!
-  #VQV!`
+return `Oi, meu nome é ${nome}!
+    Tenho ${idade} anos,
+    trabalho na Trybe e mando muito em programação!
+    #VQV!`
 }
 
 module.exports = vqv;
+
+console.log(typeof vqv('Hamaji', 29));
