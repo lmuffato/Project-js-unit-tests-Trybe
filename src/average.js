@@ -14,14 +14,24 @@
 
 const average = (number) => {
 let sum;
-if (typeof(number) !== 'number' || number.length === 0 ) {
+if (number.length === 0 ) {
     return sum;
   }
 for (let index = 0; index < number.length; index += 1) {
-  sum += number[index];
+  if (typeof(number[index]) !== 'number') {
+    sum=undefined;
+    return sum;
+  } else if(sum === undefined){
+    sum = 0;
+    sum += number[index];
+  }else {
+    sum += number[index];
+  }
+  
 }
 sum = sum/number.length;
-return sum;
+let int = Math.round(sum);
+return int;
 }
 
 module.exports = average;
