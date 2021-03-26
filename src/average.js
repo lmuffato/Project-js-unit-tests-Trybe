@@ -13,7 +13,7 @@
 */
 
 const numbers = (array) => {
-  if (array.lenght === []) {
+  if (array.length === []) {
     console.log('vazio');
     return undefined;
   }
