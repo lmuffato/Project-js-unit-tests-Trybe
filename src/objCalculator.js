@@ -19,6 +19,20 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: function(param1, param2) {
+   return param1 + param2;
+  },
+
+  mult: function(param1, param2) {
+    return param1 * param2;
+   },
+  div: function(param1, param2) {
+    return param1 / param2;
+   },
+  sub: function(param1, param2) {
+    return param1 - param2;
+   },
+};
 
 module.exports = calculator;
