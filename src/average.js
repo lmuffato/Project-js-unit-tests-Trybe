@@ -23,7 +23,7 @@ const average = (arr) => {
   if (_arr.some(e => typeof e !== 'number')) {
     return undefined;
   }
-  return _arr.reduce((acc, cur) => acc + cur, 0);
+  return Math.round(_arr.reduce((acc, cur) => acc + cur, 0) / arr.length);
 };
 
 module.exports = average;
