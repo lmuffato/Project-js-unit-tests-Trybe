@@ -34,5 +34,5 @@ const calculator = {
   },
 };
 
-console.log(calculator.div(5, 2));
+// console.log(calculator.div(5, 2));
 module.exports = calculator;
