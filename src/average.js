@@ -12,8 +12,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  //adicionarei meu código aqui
+const average = (object) => {
+  let sum = 0;
+  let media = 0;
+  if (object.length === 0) {
+    return undefined
+  }
+  for (let numbers in object) {
+    if (typeof object[numbers] === 'string') {
+      return undefined;
+    } else {
+      sum += object[numbers];
+    }
+  }
+  media = sum / object.length;
+  return Math.round(media);
 };
 
 module.exports = average;
+
+
+const { O_EXCL } = require('constants');
