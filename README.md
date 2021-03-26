@@ -20,7 +20,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
 - [Requisitos do projeto](#requisitos-do-projeto)
 - [Lista de requisitos](#lista-de-requisitos)
-  - [Implemente a função average](#implemente-a-função-average)
+  - [Implemente a função numbers](#implemente-a-função-numbers)
   - [Implemente os casos de teste para a função numbers](#implemente-os-casos-de-teste-para-a-função-numbers)
   - [Implemente a função vqv](#implemente-a-função-vqv)
   - [Implemente os casos de teste para a função circle](#implemente-os-casos-de-teste-para-a-função-circle)
@@ -84,13 +84,13 @@ Você implementará várias funções para atender aos requisitos propostos e/ou
     * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
     * Exemplo: `git checkout -b joaozinho-js-unit-tests`
 
-4. Faça as alterações em, por exemplo, alguma das funções que precisam de implementação. Por exemplo, a `average.js` em `src/`:
+4. Faça as alterações em, por exemplo, alguma das funções que precisam de implementação. Por exemplo, a `numbers.js` em `src/`:
 ```jsx
-const average = () => {
+const numbers = () => {
   // add your implementation here
 }
 
-module.exports = average
+module.exports = numbers
 ```
 
 5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
@@ -158,9 +158,9 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
   5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
   6. `npm test` _(executa todos os testes presentes na aplicação)_
   7. `npm test path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
-    * exemplo: `npm test tests/average.spec.js`
+    * exemplo: `npm test tests/numbers.spec.js`
   8. `jest path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
-    * exemplo: `jest tests/average.spec.js`
+    * exemplo: `jest tests/numbers.spec.js`
 
 ### ESLint
 
@@ -170,9 +170,9 @@ Seu projeto só será avaliado se estiver passando pelos _checks_ do **ESLint**.
 
 ### Lista de requisitos
 
-### 1 - Implemente a função `average`
+### 1 - Implemente a função `numbers`
 
-A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos. Caso a função receba algum valor não númerico ou um array vazio, o valor undefined deve ser retornado. Todos os resultados devem ser arredondados para valores inteiros. Ex: 4,6 vira 5; 1,3 vira 1. O arquivo `average.spec.js` contém os testes para `average` já implementados. Implemente a função no arquivo `src/average.js` de forma que ela atenda aos testes propostos.  
+A função numbers recebe um array (tamanho variável) e retorna a média dos valores recebidos. Caso a função receba algum valor não númerico ou um array vazio, o valor undefined deve ser retornado. Todos os resultados devem ser arredondados para valores inteiros. Ex: 4,6 vira 5; 1,3 vira 1. O arquivo `numbers.spec.js` contém os testes para `numbers` já implementados. Implemente a função no arquivo `src/numbers.js` de forma que ela atenda aos testes propostos.  
 
 ### 2 - Implemente os casos de teste para a função `numbers`
 
