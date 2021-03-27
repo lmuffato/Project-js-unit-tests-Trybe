@@ -18,7 +18,7 @@ const average = (object) => {
   if (object.length === 0) {
     return undefined;
   }
-  for (let numbers = 0; object.length; numbers += 1) {
+  for (let numbers = 0; numbers < object.length; numbers += 1) {
     if (typeof object[numbers] === 'string') {
       return undefined;
     }
@@ -30,6 +30,6 @@ const average = (object) => {
 
 module.exports = average;
 
-console.log(average([2, 2]));
+console.log(average([1, 1]));
 
 const { O_EXCL } = require('constants');

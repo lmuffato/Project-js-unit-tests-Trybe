@@ -91,6 +91,15 @@ const createMenu = (object) => ({
   consumption: [],
 });
 
+const order = (object) => {
+  const newOrder = createMenu;
+  newOrder.consumption = [object];
+  newOrder.order = object;
+  return newOrder;
+};
+
+console.log(order('Macarrão'));
+
 // const createMenu = (param) => {
 //   return {
 //     fetchMenu: () => param },
