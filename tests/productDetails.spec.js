@@ -42,7 +42,13 @@ describe('#productDetails', () => {
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.strictEqual(typeof (Object.keys(retorno)), 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(Object.keys(retorno)[0], Object.keys(retorno)[1]);
+    assert.notStrictEqual(Object.entries(retorno)[0], Object.entries(retorno)[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
+    const valor1 = Object.values(retorno)[0].details.productId;
+    const valor2 = Object.values(retorno)[1].details.productId;
+    assert.strictEqual(valor2.substring(valor2.length - 3, valor2.length), '123');
+    assert.strictEqual(valor1.substring(valor1.length - 3, valor1.length), '123');
   });
 });
+
+//  para o ultimo reqisito usei a substring() desse link https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring
