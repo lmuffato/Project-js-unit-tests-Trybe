@@ -38,7 +38,7 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof (productDetails('Água sanitária', 'Sabonete')[0]), 'object');
     assert.strictEqual(typeof (productDetails('Luva', 'Água')[1]), 'object');
     assert.strictEqual(productDetails('Agua sanitária', 'Máscara')[0]
-      !== productDetails('Sabonete', 'Máscara')[1], false);
+      !== productDetails('Sabonete', 'Máscara')[1], true);
     assert.strictEqual(productDetails('Desinfetante', 'Máscara')[0]
       .details.productId
       .slice(-3), '123');
