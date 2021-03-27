@@ -17,7 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
-  let result = undefined;
+  let result;
   if (nome !== undefined && idade !== undefined) {
     result = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
