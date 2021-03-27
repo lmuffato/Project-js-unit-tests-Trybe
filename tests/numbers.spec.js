@@ -22,6 +22,6 @@ describe('#numbers', () => {
     assert.strictEqual(numbers([1, 2]), true); // true
     assert.strictEqual(numbers([1, 2, '3', 4, 5]), false); // true
     assert.strictEqual(numbers([1, 2, 'a']), false); // true
-    assert.strictEqual(numbers([]), false) // true
+    assert.strictEqual(numbers([]), false); // true
   });
 });
