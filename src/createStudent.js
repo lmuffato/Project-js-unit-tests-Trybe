@@ -16,12 +16,12 @@
 */
 
 const createStudent = (name) => {
-  const key1 = {}
-  key1.name = name
-  const feedback = () => 'Eita pessoa boa!'
-  key1.feedback = feedback
-  return key1
+  const key1 = {};
+  key1.name = name;
+  const feedback = () => 'Eita pessoa boa!';
+  key1.feedback = feedback;
+  return key1;
 };
-const estudante = createStudent('Leandrão, o Lobo Solitário')
-console.log(estudante.name)
+const estudante = createStudent('Leandrão, o Lobo Solitário');
+console.log(estudante.name);
 module.exports = createStudent;
