@@ -30,15 +30,18 @@ const productDetails = require('../src/productDetails');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-
+const prod1 = 'Colirio';
+const prod2 = 'Remedio';
+const valor1 = Object.values(productDetails(prod1, prod2)[0].details).join('');
+const valor2 = Object.values(productDetails(prod1, prod2)[1].details).join('');
+const valor1Number = valor1.split('').filter((n) => (Number(n) || n === 0)).join('');
+const valor2Number = valor2.split('').filter((n) => (Number(n) || n === 0)).join('');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
-    // ESCREVA SEUS TESTES ABAIXO:
-    // Teste que o retorno da função é um array.
-    // Teste que o array retornado pela função contém dois itens dentro.
-    // Teste que os dois itens dentro do array retornado pela função são objetos.
-    // Teste que os dois objetos são diferentes entre si.
-    // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.strictEqual(typeof productDetails, 'function');
+    assert.strictEqual(productDetails(prod1, prod2).length, 2);
+    assert.strictEqual(typeof productDetails(prod1, prod2), 'object');
+    assert.notStrictEqual(productDetails(prod1, prod2)[0], productDetails(prod1, prod2)[1]);
+    assert.strictEqual(valor1Number, valor2Number);
   });
 });
