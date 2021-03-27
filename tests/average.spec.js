@@ -1,4 +1,4 @@
-/* eslint-disable max-len  test */ 
+// eslint-disable max-len  test //
 
 const assert = require('assert');
 const average = require('../src/average');
@@ -26,7 +26,6 @@ describe('#average', () => {
     assert.strictEqual(average([1, 2, '3']), undefined);
     assert.strictEqual(average([1, 2, 3]), 2);
     assert.strictEqual(average([0, 0, 0, 0, 0, 0, 1]), 0);
-
     assert.strictEqual(average([]), undefined);
     assert.strictEqual(average([' ']), undefined);
     assert.strictEqual(average(['um', 'dois', 'tres']), undefined);
