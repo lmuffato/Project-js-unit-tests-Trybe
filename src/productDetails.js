@@ -39,6 +39,8 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-console.log(Object.keys(productDetails('asad', 'bsadasd').length));
+const output = productDetails('a', 'b');
+
+console.log(output[0].details.productId.includes('123'));
 
 module.exports = productDetails;
