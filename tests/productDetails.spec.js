@@ -35,8 +35,8 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
     assert.strictEqual(productDetails('Alcool gel', 'Sabonete').length, 2);
-    assert.strictEqual(productDetails('Água sanitária', 'Sabonete')[0], 'object');
-    assert.strictEqual(productDetails('Luva', 'Água')[1], 'object');
+    assert.strictEqual(typeof (productDetails('Água sanitária', 'Sabonete')[0]), 'object');
+    assert.strictEqual(typeof (productDetails('Luva', 'Água')[1]), 'object');
     assert.strictEqual(productDetails('Agua sanitária', 'Máscara')[0]
       !== productDetails('Sabonete', 'Máscara')[1], false);
     assert.strictEqual(productDetails('Desinfetante', 'Máscara')[0]
