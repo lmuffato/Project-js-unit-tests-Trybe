@@ -28,8 +28,10 @@ describe('#circle', () => {
     assert.deepStrictEqual(typeof circle(3), 'object');
     assert.deepStrictEqual(Object.entries(circle(3)).length, 3);
     assert.deepStrictEqual(circle(), undefined);
-    assert.deepStrictEqual(Object.values(circle(2))[2], circle(2).circumference);
-    assert.deepStrictEqual(Object.values(circle(3))[1], circle(3).area);
-    assert.strictEqual(Object.entries(circle(3)), circle(3));
+    assert.deepStrictEqual(circle(2).circumference, 12.56);
+    assert.deepStrictEqual(parseFloat((circle(3).area).toFixed(2)), 28.26);
+    const serializedCircle = circle(3);
+    serializedCircle.area = parseFloat((circle(3).area).toFixed(2));
+    assert.deepStrictEqual(serializedCircle, { radius: 3, area: 28.26, circumference: 18.84 });
   });
 });
