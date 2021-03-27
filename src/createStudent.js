@@ -20,12 +20,11 @@ const createStudent = (nome) => {
     name: nome,
     feedback() {
       return 'Eita pessoa boa!';
-    }
-  }
-  return estudante
+    },
+  };
+  return estudante;
 };
 
-console.log(createStudent('Leandrão, o Lobo Solitário').feedback())
-
+console.log(createStudent('Leandrão, o Lobo Solitário').feedback());
 
 module.exports = createStudent;

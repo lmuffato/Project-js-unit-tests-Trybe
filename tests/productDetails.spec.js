@@ -1,4 +1,4 @@
-/* eslint-disable max-len*/
+/* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
@@ -37,14 +37,14 @@ describe('#productDetails', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     const produtos = productDetails('produto 1', 'produto 2');
-    assert.deepStrictEqual(typeof produtos, 'object') 
+    assert.deepStrictEqual(typeof produtos, 'object');
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(produtos.length, 2)
+    assert.strictEqual(produtos.length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.deepStrictEqual(typeof produtos[0], 'object')
-    assert.deepStrictEqual(typeof produtos[1], 'object')
+    assert.deepStrictEqual(typeof produtos[0], 'object');
+    assert.deepStrictEqual(typeof produtos[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(produtos[0], produtos[1])
+    assert.notStrictEqual(produtos[0], produtos[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     const produto1Id = produtos[0].details.productId;
     const produto2Id = produtos[1].details.productId;

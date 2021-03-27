@@ -17,16 +17,16 @@ const average = (arrayNumbers) => {
   if (arrayNumbers.length < 1) {
     return undefined;
   }
-  for (index in arrayNumbers) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (typeof arrayNumbers[index] !== 'number') {
-      return undefined
+      return undefined;
     }
     media += arrayNumbers[index];
   }
   media = Math.round(media / arrayNumbers.length);
-  return media
+  return media;
 };
 
-console.log(average([]))
+console.log(average([2, 3, 9]));
 
 module.exports = average;

@@ -1,15 +1,15 @@
 /* eslint-disable max-len */
 
 /*
-  Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema, 
+  Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema,
   cadastrar um menu. Dado que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
-  - ler o menu cadastrado; 
+  - ler o menu cadastrado;
   - fazer pedidos;
   - verificar o que foi pedido;
   - somar o valor da conta.
 
   A estrutura deste código e deste objeto já foi definida e você irá implementá-la.
-  Abaixo você verá uma série de testes e passos que devem ser, NECESSARIAMENTE, feitos em ordem para o bom desenvolvimento do sistema. 
+  Abaixo você verá uma série de testes e passos que devem ser, NECESSARIAMENTE, feitos em ordem para o bom desenvolvimento do sistema.
   Eles guiarão você pelo desenvolvimento.
 
   Parâmetros:
@@ -57,70 +57,66 @@
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, 
+// PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro,
 // adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
-// DICA: para criar isso, você pode: 
+// DICA: para criar isso, você pode:
 // - Definir a função `createMenu()`
-// - Definir o objeto que a `createMenu()` retorna, mas separadamente 
+// - Definir o objeto que a `createMenu()` retorna, mas separadamente
 // - E, depois, definir a função que será atribuída a `order`.
 // ```
 // const restaurant = {}
 //
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
 //
-// const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`. 
+// const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`.
 // // Essa função deve ser associada à chave `order` de `restaurant`
 // ```
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, 
-// soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, 
+// PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`,
+// soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const createMenu = (obj) => {
   let consumption = [];
-  return { 
+  return {
     fetchMenu: () => obj,
 
-    consumption: consumption,
+    consumption,
 
     order: (pedido) => consumption.push(pedido),
 
     pay: () => {
       let total = 0;
-      const {food, drinks} = obj;
+      const { food, drinks } = obj;
       const itemFood = Object.keys(food);
       const itemDrinks = Object.keys(drinks);
       for (let index = 0; index < consumption.length; index += 1) {
-
-        if (itemFood.includes(consumption[index])) { 
+        if (itemFood.includes(consumption[index])) {
           total += food[consumption[index]];
         }
         if (itemDrinks.includes(consumption[index])) {
           total += drinks[consumption[index]];
-        } 
-
+        }
       }
-      total = total * 1.1;
-      return total
-    }
-  }
+      return total * 1.1;
+    },
+  };
 };
 
 const meuRestaurante = createMenu({
-  food: {'coxinha': 3.90, 'sanduiche': 9.90},
-  drinks: {'agua': 3.90, 'cerveja': 6.90}
+  food: { coxinha: 3.90, sanduiche: 9.90 },
+  drinks: { agua: 3.90, cerveja: 6.90 },
 });
 
-meuRestaurante.order("coxinha");
-meuRestaurante.order("pastel");
-meuRestaurante.order("agua");
-meuRestaurante.order("pastel");
+meuRestaurante.order('coxinha');
+meuRestaurante.order('pastel');
+meuRestaurante.order('agua');
+meuRestaurante.order('pastel');
 
-console.log(meuRestaurante.consumption)
-console.log(meuRestaurante.pay())
-
+console.log(meuRestaurante.consumption);
+console.log(meuRestaurante.pay());
 
 module.exports = createMenu;
