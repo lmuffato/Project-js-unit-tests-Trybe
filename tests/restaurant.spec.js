@@ -49,15 +49,23 @@ const createMenu = require('../src/restaurant');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
+const testObj = {
+  food: {
+    1: 'Pizza',
+    2: 'Hamburguer',
+  },
+  drink: {
+    1: 'Agua',
+    2: 'Coca-cola',
+    3: 'Fanta',
+  },
+};
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
-    // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui,
-    // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
-    // ```
-    // const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
-    // ```
+    assert.strictEqual(typeof createMenu(), 'object');
+    // assert.strictEqual(Object.keys(createMenu(testObj).fetchMenu()), ['food', 'drink']);
+    assert.strictEqual(createMenu(testObj).fetchMenu(), testObj);
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
     // ```
