@@ -12,6 +12,13 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (listOfNumbers) => {
+  let sum = 0;
+  for (let number = 0; number < listOfNumbers.length; number += 1) {
+    sum += listOfNumbers[number];
+  }
+  const avarageValue = sum / listOfNumbers.length;
+  return avarageValue;
+};
 
 module.exports = average;
