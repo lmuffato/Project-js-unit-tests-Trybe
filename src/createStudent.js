@@ -18,8 +18,8 @@
 const createStudent = (parametroNome) => {
   const nomeEFeedback = {
     name: parametroNome,
-    feedback: () => 'Eita pessoa boa!'
-  }
+    feedback: () => 'Eita pessoa boa!',
+  };
   return nomeEFeedback;
 };
 
