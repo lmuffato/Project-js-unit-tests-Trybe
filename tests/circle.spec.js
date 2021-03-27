@@ -27,25 +27,26 @@ describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    const assertDeep = assert.deepStrictEqual();
-    assertDeep({
-      radius: 1, area: 3.14, circumference: 6.28,
-    }, {
+    assert.deepStrictEqual(circle(1), {
       radius: 1, area: 3.14, circumference: 6.28,
     });
     // Teste se o objeto retornado tem 3 entradas.
-    assertDeep({
+    assert.deepStrictEqual({
       radius: 1, area: 3.14, circumference: 6.28,
     }, {
       radius: 1, area: 3.14, circumference: 6.28,
     });
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    assertDeep(circle(), undefined);
+    assert.deepStrictEqual(circle(), undefined);
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assertDeep(circle(2), { radius: 2, area: 12.56, circumference: 12.56 });
+    assert.deepStrictEqual(circle(2), { radius: 2, area: 12.56, circumference: 12.56 });
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assertDeep(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
+    assert.deepStrictEqual(circle(3), {
+      radius: 3, area: 28.259999999999998, circumference: 18.84,
+    });
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assertDeep(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
+    assert.deepStrictEqual(circle(3), {
+      radius: 3, area: 28.259999999999998, circumference: 18.84,
+    });
   });
 });
