@@ -62,7 +62,10 @@ describe('#productDetails', () => {
     assert.strictEqual(isObjectAllItensInArray(productDetails('Gel', 'Máscara')), true);
 
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(productDetails('Gel', 'Máscara')[0] !== productDetails('Gel', 'Máscara')[1], 'true');
+    assert.notDeepStrictEqual(
+      productDetails('Gel', 'Máscara')[0] !== productDetails('Gel', 'Máscara')[1],
+      'true',
+    );
 
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.strictEqual(sameProductIdFinal(productDetails('Gel', 'Máscara')), true);

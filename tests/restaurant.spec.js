@@ -67,7 +67,8 @@ const hasOnlyFoodAndDrink = () => {
   return true;
 };
 
-const hasTwoCoxinhas = () => objetoRetornado.consumption.filter((x) => x === 'coxinha').length === 2;
+const hasTwoCoxinhas = () => objetoRetornado
+  .consumption.filter((x) => x === 'coxinha').length === 2;
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
