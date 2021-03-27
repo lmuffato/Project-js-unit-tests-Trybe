@@ -35,6 +35,7 @@ const average = (array) => {
     for (let i = 0; i < array.length; i += 1) {
       avarageResult += array[i];
     }
+    avarageResult = Math.round(avarageResult / array.length);
   } else {
     avarageResult = undefined;
   }
