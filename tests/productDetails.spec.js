@@ -36,15 +36,16 @@ describe('#productDetails', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     assert.deepStrictEqual(Array.isArray(productDetails('Alcool gel', 'Mascara')), true);
     for (let index = 0; index < 2; index += 1) {
-    assert.deepStrictEqual(typeof productDetails('alcool','gel')[index], 'object');
-  }
-    assert.deepStrictEqual(productDetails('gel', 'mascara')[0] !== productDetails('gel', 'mascara')[1], true);
+      assert.deepStrictEqual(typeof productDetails('alcool', 'gel')[index], 'object');
+    }
+    assert.deepStrictEqual(productDetails('gel', 'mascara')[0] !==
+      productDetails('gel', 'mascara')[1], true);
     for (let index = 0; index < 2; index += 1) {
       const teste = productDetails('1', '2')[index].details.productId.split('');
       const teste2 = teste.length;
       assert.strictEqual(teste[teste2 - 3], '1');
       assert.strictEqual(teste[teste2 - 2], '2');
-      assert.strictEqual(teste[teste2 - 1], '3'); // Feito com base e ajuda do Bruno Mendes;
+      assert.strictEqual(teste[teste2 - 1], '3'); // Feito com base e ajuda do Bruno Mendes
     };
   });
 });
