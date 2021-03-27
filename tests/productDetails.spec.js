@@ -43,7 +43,7 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notStrictEqual((productDetails('Alcool gel', 'Máscara')[0], 'object'), (productDetails('Alcool gel', 'Máscara')[1]));
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(productDetails('abc', 'def')[0].details.productId.substr(10, 3), 'object');
-    assert.strictEqual(productDetails('abc', 'def')[1].details.productId.substr(7, 3), 'object');
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.substr(10, 3), 'object');
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.substr(7, 3), 'object');
   });
 });
