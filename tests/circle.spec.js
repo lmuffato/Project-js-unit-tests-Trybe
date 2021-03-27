@@ -27,17 +27,17 @@ describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    const deep = assert.deepStrictEqual();
-    deep({ radius: 1, area: 3.14, circumference: 6.28 }, { radius: 1, area: 3.14, circumference: 6.28 });
+    const aD = assert.deepStrictEqual();
+    aD({ radius: 1, area: 3.14, circumference: 6.28 }, { radius: 1, area: 3.14, circumference: 6.28 });
     // Teste se o objeto retornado tem 3 entradas.
-    deep({ radius: 1, area: 3.14, circumference: 6.28 }, { radius: 1, area: 3.14, circumference: 6.28 });
+    aD({ radius: 1, area: 3.14, circumference: 6.28 }, { radius: 1, area: 3.14, circumference: 6.28 });
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    deep(circle(), undefined);
+    aD(circle(), undefined);
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    deep(circle(2), { radius: 2, area: 12.56, circumference: 12.56 });
+    aD(circle(2), { radius: 2, area: 12.56, circumference: 12.56 });
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    deep(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
+    aD(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    deep(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
+    aD(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
   });
 });
