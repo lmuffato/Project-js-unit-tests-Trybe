@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
+const { match } = require('assert');
 const assert = require('assert');
 const circle = require('../src/circle');
 
@@ -25,7 +26,15 @@ const circle = require('../src/circle');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
+    assert.strictEqual(typeof (circle(3)), 'object');
+    assert.strictEqual(circle(), undefined);
+    assert.strictEqual(Object.entries(circle(7)).length, 3);
+    assert.strictEqual(parseFloat((circle(2).circumference).toPrecision(5)), 12.56);
+    assert.strictEqual(parseFloat(circle(3).area.toFixed(2)), 28.26);
+    const circle3 = circle(3);
+    circle3.area = parseFloat(circle3.area.toFixed(2));
+    circle3.circumference = parseFloat(circle3.circumference.toFixed(2));
+    assert.deepStrictEqual(circle3, {radius: 3, area: 28.26, circumference: 18.84});
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
