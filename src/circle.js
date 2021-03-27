@@ -30,4 +30,4 @@ const circle = (radius) => {
 
 module.exports = circle;
 
-console.log(Object.keys(circle(1)).length)
+console.log(Object.keys(circle(1)).length);
