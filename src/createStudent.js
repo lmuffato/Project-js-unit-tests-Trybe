@@ -16,11 +16,11 @@
 */
 
 const createStudent = (parametroNome) => {
-  const umNome = {
+  const nomeEFeedback = {
     name: parametroNome,
     feedback: () => 'Eita pessoa boa!'
   }
-  return umNome;
+  return nomeEFeedback;
 };
 
 module.exports = createStudent;
