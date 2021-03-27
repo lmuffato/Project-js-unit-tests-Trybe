@@ -22,6 +22,6 @@ module.exports = numbers;
 
 const assert = require('assert');
 
-assert.strictEqual(numbers([1, 2]), true, 'os parametros deveriam ser numeros'); // true
-assert.strictEqual(numbers([1, '2']), false, 'os parametros deveriam ser numeros'); // true
-assert.strictEqual(numbers([]), true, 'os parametros deveriam ser numeros'); // true
+assert.strictEqual(numbers([1, 2]), true,); // true
+assert.strictEqual(numbers([1, '2']), false,); // true
+assert.strictEqual(numbers([]), true,); // true
