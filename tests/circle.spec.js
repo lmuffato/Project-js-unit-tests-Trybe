@@ -34,7 +34,7 @@ describe('#circle', () => {
     const circle3 = circle(3);
     circle3.area = parseFloat(circle3.area.toFixed(2));
     circle3.circumference = parseFloat(circle3.circumference.toFixed(2));
-    assert.deepStrictEqual(circle3, {radius: 3, area: 28.26, circumference: 18.84});
+    assert.deepStrictEqual(circle3, { radius: 3, area: 28.26, circumference: 18.84 });
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
