@@ -33,26 +33,19 @@
     food: {'coxinha': 3.90, 'sanduiche', 9.90},
     drinks: {'agua': 3.90, 'cerveja': 6.90}
   });
-
   meuRestaurante.fetchMenu() // Retorno: Menu acima
-
   - Uma chave `consumption` que contém um array de strings, com cada string sendo a chave de um pedido. Por exemplo: ['coxinha', 'cerveja']
-
   - Uma chave `order` que tem uma função que, recebida uma string como parâmetro, adiciona essa string à lista salva em `consumption`.
-
   - Uma chave `pay` que, quando chamada, invoca uma função que soma o valor de todos os pedidos e dá o preço com acréscimo de 10%.
-
   IMPORTANTE: COMECE PELO TESTE 1 DO ARQUIVO `tests/restaurant.spec.js` E NÃO PELO PASSO 1 DESTE ARQUIVO!
-*/
-
+  */
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: () => objetoPassadoPorParametro }.
-//
 // Agora faça o TESTE 4 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
-//
+
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -79,6 +72,25 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const createMenu = (menuObject) => {
+  let consumption = [];
+  const restaurant = {
+    fetchMenu: () => menuObject,
+    consumption,
+
+    // order:
+    // dada uma string recebida por parâmetro,
+    // adiciona essa string ao array de `objetoRetornado.consumption`
+    order: (request) => {
+      consumption.push(request);
+    },
+
+    // pay:
+    // varre todo os itens de `objetoRetornado.consumption`
+    // soma o preço de todos checando-os no menu
+    // retorna o valor somado acrescido de 10%.
+    pay: () => {},
+  };
+};
 
 module.exports = createMenu;
