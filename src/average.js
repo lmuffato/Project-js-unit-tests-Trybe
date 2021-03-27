@@ -14,22 +14,28 @@
 
 /**
  * Retorna a média aritmética de um array de números.
- * @param {array} arrayOnlyNumber 
+ * @param {array} arrayOnlyNumber
  */
-const average = (arrayOnlyNumber) => {
+const isArrayOnlyNumber = (arrayOnlyNumber) => {
   let isArrayNumberNotEmpty = true;
   if (arrayOnlyNumber.length === 0) return undefined;
   arrayOnlyNumber.forEach((x) => {
-    if(typeof x !== 'number') isArrayNumberNotEmpty = false;
+    if (typeof x !== 'number') isArrayNumberNotEmpty = false;
   });
-  return isArrayNumberNotEmpty 
+  return isArrayNumberNotEmpty;
+};
+
+const average = (arrayOnlyNumber) => {
+  let isArrayNumberNotEmpty = isArrayOnlyNumber(arrayOnlyNumber);
+
+  return isArrayNumberNotEmpty
     ? arrayOnlyNumber.reduce((result, el, index, thisArray) => {
-                    if (index === thisArray.length - 1) {
-                      result = Math.round(result) + Math.round(el);
-                      return Math.round(result / thisArray.length);
-                    }
-                  return Math.round(result + Math.round(el));
-                }, [])
+      if (index === thisArray.length - 1) {
+        result = Math.round(result) + Math.round(el);
+        return Math.round(result / thisArray.length);
+      }
+      return Math.round(result + Math.round(el));
+    }, [])
     : undefined;
 };
 
