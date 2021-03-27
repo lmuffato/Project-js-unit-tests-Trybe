@@ -39,6 +39,6 @@ describe('#circle', () => {
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.StrictEqual(parseFloat(circle(3).toPrecision(2).radius), 3);
     assert.StrictEqual(parseFloat(circle(3).toPrecision(2).area), 28);
-    assert.StrictEqual(parseFloat(circle(3).toPrecision(2).circumference), 18);
+    assert.StrictEqual(parseFloat(circle(3).toPrecision(2).circumference), 19);
   });
 });
