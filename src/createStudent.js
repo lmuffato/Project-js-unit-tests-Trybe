@@ -14,7 +14,8 @@
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
-
+/*
+Meu codigo nao passado pelo lint
 const createStudent = (name) => {
   const key1 = {};
   key1.name = name;
@@ -24,4 +25,12 @@ const createStudent = (name) => {
 };
 const estudante = createStudent('Leandrão, o Lobo Solitário');
 console.log(estudante.name);
+module.exports = createStudent;
+*/
+// Codigo que peguei de exemplo de colegas apos fazer o meu pra passar no lint
+const createStudent = (name) => ({
+  name: name,
+  feedback: () => 'Eita pessoa boa!'
+});
+const estudante = createStudent('Leandrão, o Lobo Solitário');
 module.exports = createStudent;
