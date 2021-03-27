@@ -18,12 +18,14 @@
         Use esse conhecimento para te ajudar a lidar com possíveis problemas que esses testes trarão!
 */
 
+const assert = require('assert');
+
 const circle = (radius) => {
   const PI = 3.14;
   if (!radius) { return undefined; }
   return {
     radius,
-    area: PI * radius * radius,
+    area: parseFloat((PI * radius * radius).toFixed(2)),
     circumference: 2 * PI * radius,
   };
 };
