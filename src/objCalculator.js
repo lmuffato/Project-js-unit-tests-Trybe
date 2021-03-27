@@ -19,6 +19,27 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: (number1, number2) => {
+    if (Number.isInteger(number1) && Number.isInteger(number2)) {
+      return number1 + number2;
+    }
+  },
+  mult: (number1, number2) => {
+    if (Number.isInteger(number1) && Number.isInteger(number2)) {
+      return number1 * number2;
+    }
+  },
+  div: (number1, number2) => {
+    if (Number.isInteger(number1) && Number.isInteger(number2)) {
+      return Math.floor(number1 / number2);
+    }
+  },
+  sub: (number1, number2) => {
+    if (Number.isInteger(number1) && Number.isInteger(number2)) {
+      return number1 - number2;
+    }
+  },
+};
 
 module.exports = calculator;
