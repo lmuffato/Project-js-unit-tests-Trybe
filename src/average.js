@@ -14,8 +14,11 @@
 
 const average = (listOfNumbers) => {
   let sum = 0;
+  if (listOfNumbers.length === 0) {
+    return undefined;
+  }
   for (let number = 0; number < listOfNumbers.length; number += 1) {
-    if (typeof (listOfNumbers[number]) !== 'number' || listOfNumbers.length === 0) {
+    if (typeof (listOfNumbers[number]) !== 'number') {
       return 'undefined';
     }
     sum += listOfNumbers[number];
