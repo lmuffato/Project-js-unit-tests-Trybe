@@ -20,16 +20,16 @@ const isValid = (array) => {
     }
   }
   return test;
-}
+};
 
 const average = (array) => {
-  let result = undefined;
+  let result;
   if (array.length !== 0 || isValid(array)) {
-    let sum = 0
+    let sum = 0;
     for (let index = 0; index < array.length; index += 1) {
       sum += array[index];
     }
-    result = Math.round(sum/array.length);
+    result = Math.round(sum / array.length);
   }
   return result;
 };
