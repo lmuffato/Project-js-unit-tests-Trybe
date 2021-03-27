@@ -11,29 +11,28 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+
+const is
 const isValid = (array) => {
   let test = true;
-  if (array.length === 0){
-    test = false;
-  } else{
-    for (let index = 0; index < array.length; index += 1) {
-      if (typeof array[index] !== 'number') {
-        test = false;
-      }    
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
+      test = false;
     }
   }
   return test;
 }
+
 const average = (array) => {
-  if (isValid(array)) { 
+  let result = undefined;
+  if (array.length !== 0 || isValid(array)) {
     let sum = 0
-    for (let index = 0; index < array.length; index +=1) {
-      sum += array[index];    
+    for (let index = 0; index < array.length; index += 1) {
+      sum += array[index];
     }
-    return Math.round(sum/array.length);
-  } else {
-    return undefined;
+    result = Math.round(sum/array.length);
   }
+  return result;
 };
 
 module.exports = average;
