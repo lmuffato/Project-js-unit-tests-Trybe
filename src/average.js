@@ -11,9 +11,34 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
-const average = () => {
-// add your implementation here!!
+let testArray = [];
+const checkIfNumber = (array) => {
+  let verificatorN = 0;
+  let checkNum = true;
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number') {
+      verificatorN += 1;
+    }
+  }
+  if (verificatorN > 0) {
+    checkNum = false;
+  }
+  if (array.length === 0) {
+    checkNum = false;
+  }
+  return checkNum;
+};
+const average = (array) => {
+  const condition = checkIfNumber(array);
+  let avarageResult = 0;
+  if (condition) {
+    for (let i = 0; i < array.length; i += 1) {
+      avarageResult += array[i];
+    }
+  } else {
+    avarageResult = undefined;
+  }
+  return avarageResult;
 };
 
 module.exports = average;
