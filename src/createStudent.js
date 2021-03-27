@@ -29,7 +29,7 @@ module.exports = createStudent;
 */
 // Codigo que peguei de exemplo de colegas apos fazer o meu pra passar no lint
 const createStudent = (name) => ({
-  name: name,
+  name,
   feedback: () => 'Eita pessoa boa!',
 });
 const estudante = createStudent('Leandrão, o Lobo Solitário');
