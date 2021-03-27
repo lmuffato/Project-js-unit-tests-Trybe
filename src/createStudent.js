@@ -16,15 +16,15 @@
 */
 
 function feedback() {
-  return 'Eita pessoa boa!'
+  return 'Eita pessoa boa!';
 }
 
-const createStudent = (name) => { 
+const createStudent = (name) => {
   const obj = {
     name,
     feedback: feedback(),
   };
-  return obj
+  return obj;
 };
 
 module.exports = createStudent;
