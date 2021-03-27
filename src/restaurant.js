@@ -92,7 +92,7 @@ function totalValueConsumption() {
     let result;
     Object.values(this.fetchMenu()).forEach((typeMenu) => {
       Object.keys(typeMenu).forEach((itemMenu) => {
-        if (itemMenu === b) result = typeMenu[itemMenu];
+        if (itemMenu === b) result = typeMenu[itemMenu] * 1.1;
       });
     });
     return a + result;
