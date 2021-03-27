@@ -41,15 +41,18 @@ describe('#productDetails', () => {
     assert.strictEqual(productDetails('a', 'b').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     const checkObjType = (obj) => {
-      for (let key in arrayProduct) {
-        if (typeof arrayProduct[key] === 'object');
-        return true;
+      for (let key = 0; key < arrayProduct.length; key += 1) {
+        if (typeof arrayProduct[key] === 'object') {
+          return true;
+        }
       }
-      return false;
     };
     assert.strictEqual(checkObjType(arrayProduct), true);
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(productDetails('a', 'b')[0], productDetails('a', 'b')[1]);
+    assert.notDeepStrictEqual(
+      productDetails('a', 'b')[0],
+      productDetails('a', 'b')[1],
+    );
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });
