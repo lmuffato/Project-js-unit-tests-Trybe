@@ -7,15 +7,9 @@ const average = (arrayNumbers) => {
     if (typeof (arrayNumbers[index]) !== 'number') {
       return undefined;
     }
-    result += Math.round((arrayNumbers[index])) / arrayNumbers.length;
+    result += Math.round((arrayNumbers[index]) / arrayNumbers.length);
   }
   return result;
 };
-
-console.log(average([2, 2]));
-console.log(average([1, '2']));
-console.log(average([1, 5, 8]));
-console.log(average([1, '']));
-console.log(average([]));
 
 module.exports = average;
