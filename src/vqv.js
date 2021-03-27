@@ -17,15 +17,14 @@
 */
 
 const vqv = (nome, idade) => {
-  if (typeof(nome) === 'string' && typeof(idade) === 'number') {
+  if (typeof (nome) === 'string' && typeof (idade) === 'number') {
     return `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
-#VQV!`
-  } else{
-    return undefined
+#VQV!`;
   }
+  return undefined;
 };
-console.log(vqv())
+console.log(vqv());
 
 module.exports = vqv;

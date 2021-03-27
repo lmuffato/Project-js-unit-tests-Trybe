@@ -35,10 +35,10 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.deepStrictEqual(productDetails('alcool', 'arroz'),[
+    assert.deepStrictEqual(productDetails('alcool', 'arroz'), [
       { name: 'alcool', details: { productId: 'alcool123' } },
-      { name: 'arroz', details: { productId: 'arroz123' } }
-    ])
+      { name: 'arroz', details: { productId: 'arroz123' } },
+    ]);
     // Teste que o array retornado pela função cosntém dois itens dentro.
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     // Teste que os dois objetos são diferentes entre si.
