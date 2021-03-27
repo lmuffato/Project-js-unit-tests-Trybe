@@ -12,8 +12,16 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  const ave = teste para comitt
-};
+const average = (array) => {
+ const soma = array.reduce((sum, item) => {
+  console.log(sum);
+   return sum + item;
+ });
+ const result = soma / array.length;
 
+  return result;
+
+
+};
+ console.log(average([8, 6, 7]));
 module.exports = average;
