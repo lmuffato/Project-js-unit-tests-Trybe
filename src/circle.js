@@ -27,5 +27,11 @@ const circle = (radius) => {
     circumference: 2 * PI * radius,
   };
 };
+const arredontaNumero = (objeto) => {
+  for (key of objeto) {
+    return Math.round(objeto.key);
+  }s
+}
+console.log(arredontaNumero(circle(1)));
 
 module.exports = circle;
