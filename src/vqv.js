@@ -26,7 +26,7 @@ const vqv = (nome, idade) => {
   }
   const line1 = `Oi, meu nome é ${nome}!\n`;
   const line2 = `Tenho ${idade} anos,\n`;
-  const line3 = `trabalho na Trybe e mando muito em programação!\n#VQV!`;
+  const line3 = 'trabalho na Trybe e mando muito em programação!\n#VQV!';
   return (line1 + line2 + line3);
 };
 
