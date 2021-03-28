@@ -12,4 +12,7 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+console.log(productDetails());
+const end123 = productDetails()[0].details.productId;
+console.log(end123);
 module.exports = productDetails;
