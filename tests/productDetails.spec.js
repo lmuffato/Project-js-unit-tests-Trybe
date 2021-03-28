@@ -40,12 +40,15 @@ const isObjectAllItensInArray = (param) => {
   return true;
 };
 
-const sameProductIdFinal = (product) => productDetails('Gel', 'Máscara')
-  .map((x) => x.details.productId.substr(-3))
-  .reduce((result, el, index, thisArray) => {
-    if (el === thisArray[0]) return true;
-    return false;
-  });
+const sameProductIdFinal = (product) => product
+  .map((x) => x.details.productId.substr(-3)) // ['123', '123', '123']
+  .reduce((acc, el, index, thisArray) => {
+    if (el === '123' && acc) {
+      return true;
+    }
+    acc = false;
+    return acc;
+  }, true);
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
