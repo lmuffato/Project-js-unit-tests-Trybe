@@ -66,13 +66,16 @@ const isEndEqual123 = (array) => {
   return true;
 };
 
+const alcool = 'Alcool gel';
+const mascara = 'Máscara';
+
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // Referência: https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/101/files
-    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
-    assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
-    assert.strictEqual(testArrayItemsIsObject(productDetails('Alcool gel', 'Máscara')), true);
-    assert.strictEqual(testArrayItemsIsDiferent(productDetails('Alcool gel', 'Máscara')), true);
-    assert.strictEqual(isEndEqual123(productDetails('Alcool', 'Máscara')), true);
+    assert.strictEqual(Array.isArray(productDetails(alcool, mascara)), true);
+    assert.deepStrictEqual(productDetails(alcool, mascara).length, 2);
+    assert.strictEqual(testArrayItemsIsObject(productDetails(alcool, mascara)), true);
+    assert.strictEqual(testArrayItemsIsDiferent(productDetails(alcool, mascara)), true);
+    assert.strictEqual(isEndEqual123(productDetails(alcool, mascara)), true);
   });
 });
