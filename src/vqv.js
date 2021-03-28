@@ -16,6 +16,16 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {};
+/* Lembrar que colocar "!" antes do atributo
+é o mesmo que dizer "sem o atributo".
+Ex: "!nome" = "sem nome". */
+
+const vqv = (nome, idade) => {
+  if(!nome || !idade) {
+    return undefined;
+  }
+  const paragraph = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
+  return paragraph;
+};
 
 module.exports = vqv;
