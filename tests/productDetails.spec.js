@@ -58,6 +58,7 @@ const isEndEqual123 = (array) => {
 
   testArray.forEach((item) => {
     const string = item.details.productId;
+    // Referência: https://stackoverflow.com/questions/5873810/how-can-i-get-last-characters-of-a-string
     const finalId = string.substr(string.length - 3);
     if (finalId !== '123') return false;
   });
