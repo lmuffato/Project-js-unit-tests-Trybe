@@ -13,13 +13,24 @@
 */
 
 const average = (array) => {
-  let arithmeticAverage = 0;
-  for (let number of array) {
-    if (typeof number !== 'number' || array.length === 0) {
+  const arrayLength = array.length;
+  if (array.length === 0) {
+    return undefined;
+  }
+  const values = Object.values(array);
+  let sumOfValues = 0;
+
+  for (let value of values) {
+    if (typeof value !== 'number') {
       return undefined;
     }
-    arithmeticAverage += number;
+    sumOfValues += value;
   }
-  return Math.round(arithmeticAverage / array.length);
+
+  return Math.round(sumOfValues / arrayLength);
 };
+
+const array = [-11, -5, 2];
+console.log(average(array));
+
 module.exports = average;
