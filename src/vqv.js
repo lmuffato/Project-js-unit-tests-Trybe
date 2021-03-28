@@ -15,7 +15,25 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-
-const vqv = (nome, idade) => {};
+const ifHasPam = (name, age) => {
+  let result;
+  if ((name === null) || (age === null)) {
+    result = false;
+  } else {
+    result = true;
+  }
+  return result;
+};
+const vqv = (nome, idade) => {
+  let theReturnIs;
+  const msg = `Oi, meu nome é ${nome}!
+  Tenho ${idade} anos,
+  trabalho na Trybe e mando muito em programação!
+  #VQV!`;
+  if (ifHasPam(nome, idade)) {
+    theReturnIs = msg;
+  }
+  return theReturnIs;
+};
 
 module.exports = vqv;
