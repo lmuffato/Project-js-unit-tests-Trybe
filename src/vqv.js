@@ -17,7 +17,7 @@
 */
 const ifHasPam = (name, age) => {
   let result;
-  if ((name === null) || (age === null)) {
+  if ((name === undefined) || (age === undefined)) {
     result = false;
   } else {
     result = true;
