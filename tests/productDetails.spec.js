@@ -30,15 +30,16 @@ const productDetails = require('../src/productDetails');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-const productAcoll = productDetails('Alcool gel', 'Máscara')[0];
-const productMascara = productDetails('Alcool gel', 'Máscara')[1];
+const products = productDetails('Alcool gel', 'Máscara');
+const productAcoll = products[0];
+const productMascara = products[1];
 const acoll123 = productAcoll.details.productId.includes('123');
 const mascara123 = productMascara.details.productId.includes('123');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara'), [productAcoll, productMascara]);
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
+    // assert.strictEqual(products, [productAcoll, productMascara]);
+    assert.strictEqual(products.length, 2);
     assert.strictEqual(typeof productMascara && typeof productAcoll, 'object');
     assert.strictEqual(productAcoll === productMascara, false);
     assert.strictEqual(acoll123 && mascara123, true);
