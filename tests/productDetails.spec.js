@@ -38,7 +38,7 @@ const mascara123 = productMascara.details.productId.includes('123');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    // assert.strictEqual(products, [productAcoll, productMascara]);
+    assert.strictEqual(products, [productAcoll, productMascara]);
     assert.strictEqual(products.length, 2);
     assert.strictEqual(typeof productMascara && typeof productAcoll, 'object');
     assert.strictEqual(productAcoll === productMascara, false);
