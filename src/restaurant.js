@@ -95,11 +95,16 @@ function totalValueConsumption(consume) {
   }, 0);
 }
 
-const createMenu = (param) => ({
-  fetchMenu: () => param,
-  consumption: [],
-  order: orderActual,
-  pay: totalValueConsumption,
-});
+const createMenu = (menu) => {
+  const x = {
+    fetchMenu: () => menu,
+    consumption: [],
+    order: (item) => {
+      x.consumption.push(item);
+    },
+    pay: totalValueConsumption,
+  };
+  return x;
+};
 
 module.exports = createMenu;
