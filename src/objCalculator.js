@@ -21,9 +21,9 @@
 
 const calculator = {
   add: (param1, param2) => (param1 + param2),
-  mult: (param1, param2) => (param1 + param2),
-  div: (param1, param2) => (param1 + param2),
-  sub: (param1, param2) => (param1 + param2),
+  mult: (param1, param2) => (param1 - param2),
+  div: (param1, param2) => (param1 / param2),
+  sub: (param1, param2) => (param1 * param2),
 };
 
 module.exports = calculator;
