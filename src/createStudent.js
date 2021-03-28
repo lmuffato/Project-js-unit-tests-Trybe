@@ -15,9 +15,15 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = (name) => ({
-  'name': (name),
+const createStudent = (nome) => ({
+  // Se não especificar a chave, a chave terá o mesmo nome do valor
+  name: nome,
   feedback: () => 'Eita pessoa boa!',
 });
 
 module.exports = createStudent;
+
+// const estudante = createStudent('Lucas')
+// console.log( estudante )
+// console.log( estudante.name )
+// console.log( estudante.feedback() )
