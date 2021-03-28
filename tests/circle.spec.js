@@ -30,7 +30,7 @@ describe('#circle', () => {
     assert.strictEqual(circle([]), undefined);
     assert.strictEqual(circle(1), { radius: 1, area: 3.14, circumference: 6.28 });
     assert.strictEqual(circle(7), { radius: 7, area: 153.86, circumference: 43.96 });
-        // ESCREVA SEUS TESTES ABAIXO:
+    // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
