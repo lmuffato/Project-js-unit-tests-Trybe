@@ -87,8 +87,8 @@ describe('#createMenu', () => {
     // TESTE 5: Verifique que chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro,
     // como `objetoRetornado.order('coxinha')`, tal string é adicionada ao array retornado em `objetoRetornado.consumption
     // ```
-    objetoRetornado.order("coxinha");
-    assert.strictEqual(objetoRetornado.consumption, ["coxinha"]);
+    objetoRetornado.order('coxinha');
+    assert.strictEqual(objetoRetornado.consumption, ['coxinha']);
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.order("coxinha");
     // objetoRetornado.consumption // Retorno: ["coxinha"]
@@ -99,11 +99,11 @@ describe('#createMenu', () => {
     // ```
 
     objetoRetornado.consumption = [];
-    objetoRetornado.order("coxinha");
-    objetoRetornado.order("agua");
-    objetoRetornado.order("sopa");
-    objetoRetornado.order("sashimi");
-    assert.strictEqual(objetoRetornado.consumption, ["coxinha", "agua", "sopa", "sashimi"]);
+    objetoRetornado.order('coxinha');
+    objetoRetornado.order('agua');
+    objetoRetornado.order('sopa');
+    objetoRetornado.order('sashimi');
+    assert.strictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
     // ```
     // Agora faça o TESTE 7 deste arquivo.
@@ -122,7 +122,7 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
     // ```
-    const menuForPayPropertyTest = createMenu({ food: { pastel: 3.5 }, drink: { refri: 3 } })
+    const menuForPayPropertyTest = createMenu({ food: { pastel: 3.5 }, drink: { refri: 3 } });
     objetoRetornado.consumption = [];
     objetoRetornado.order('pastel');
     objetoRetornado.order('refri');
