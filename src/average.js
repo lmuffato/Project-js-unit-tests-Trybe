@@ -13,6 +13,9 @@
 */
 
 const average = (array) => {
+  if (!array.length) {
+    return undefined;
+  }
   let total = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (typeof (array[index]) !== 'number') {
@@ -25,4 +28,3 @@ const average = (array) => {
 };
 
 module.exports = average;
-console.log('oi');
