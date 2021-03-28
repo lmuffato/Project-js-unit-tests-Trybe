@@ -24,11 +24,6 @@ const circle = require('../src/circle');
 */
 const circumferenceRaio2 = Object.values(circle(2))[2];
 const raio3 = Object.values(circle(3));
-const arredontaNumero = (objeto) => {
-  for (key of objeto) {
-    return Math.round(objeto.key);
-  }
-}
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     assert.strictEqual(typeof circle(1), 'object');
