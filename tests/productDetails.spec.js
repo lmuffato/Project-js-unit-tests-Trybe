@@ -34,7 +34,7 @@ const productDetails = require('../src/productDetails');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
-    assert.strictEqual(Array.isArray(productDetails('1', '2')), 'true');
+    assert.strictEqual(Array.isArray(productDetails('1', '2')), true);
     assert.strictEqual(productDetails('1', '2').length, 2);
     for (let index = 0; index < 2; index += 1) {
       assert.strictEqual(typeof productDetails('1', '2')[index], 'object');
