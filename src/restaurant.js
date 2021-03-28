@@ -81,7 +81,8 @@
 
 const createMenu = (menu) => {
   return {
-    fetchMenu: () => menu
+    fetchMenu: () => menu,
+    consumption: [],
   }
 };
 
