@@ -72,6 +72,6 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     assert.strictEqual(testArrayItemsIsObject(productDetails('Alcool gel', 'Máscara')), true);
     assert.strictEqual(testArrayItemsIsDiferent(productDetails('Alcool gel', 'Máscara')), true);
-    assert.strictEqual(isEndEqual123(productDetails('Alcool gel', 'Máscara')), true);
+    assert.strictEqual(isEndEqual123(productDetails('Alcool', 'Máscara')), true);
   });
 });
