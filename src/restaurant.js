@@ -76,21 +76,28 @@ const createMenu = (menuObject) => {
   let consumption = [];
   const restaurant = {
     fetchMenu: () => menuObject,
+
     consumption,
 
-    // order:
-    // dada uma string recebida por parâmetro,
-    // adiciona essa string ao array de `objetoRetornado.consumption`
     order: (request) => {
       consumption.push(request);
     },
 
-    // pay:
-    // varre todo os itens de `objetoRetornado.consumption`
-    // soma o preço de todos checando-os no menu
-    // retorna o valor somado acrescido de 10%.
-    pay: () => {},
+    pay: () => {
+      let totalAmount = 0;
+      for (let index = 0; index < consumption.length; index += 1) {
+        let item = consumption[index];
+        let isInFood = Object.keys(menuObject.food).includes(item);
+        if (isInFood) {
+          totalAmount += menuObject.food[item];
+        } else {
+          totalAmount += menuObject.drinks[item];
+        }
+      }
+      return (totalAmount * 1.1).toPrecision(4);
+    },
   };
+  return restaurant;
 };
 
 module.exports = createMenu;
