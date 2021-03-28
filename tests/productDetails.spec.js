@@ -31,15 +31,47 @@ const productDetails = require('../src/productDetails');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
+const testArrayItemsIsObject = (array) => {
+  const testArray = array;
+
+  testArray.forEach((item) => {
+    if (typeof item !== 'object') {
+      return false;
+    }
+  });
+
+  return true;
+};
+
+const testArrayItemsIsDiferent = (array) => {
+  const testArray = array;
+
+  if (testArray[0] !== testArray[1]) {
+    return true;
+  }
+
+  return false;
+};
+
+const isEndEqual123 = (array) => {
+  const testArray = array;
+
+  testArray.forEach((item) => {
+    const string = item.details.productId;
+    const finalId = string.substr(string.length - 3);
+    if (finalId !== '123') return false;
+  });
+
+  return true;
+};
+
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    // ESCREVA SEUS TESTES ABAIXO:
-    // Teste que o retorno da função é um array.
-    assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara'));
-    // Teste que o array retornado pela função contém dois itens dentro.
+    // Referência: https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/101/files
+    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
     assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
-    // Teste que os dois itens dentro do array retornado pela função são objetos.
-    // Teste que os dois objetos são diferentes entre si.
-    // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.strictEqual(testArrayItemsIsObject(productDetails('Alcool gel', 'Máscara')), true);
+    assert.strictEqual(testArrayItemsIsDiferent(productDetails('Alcool gel', 'Máscara')), true);
+    assert.strictEqual(isEndEqual123(productDetails('Alcool gel', 'Máscara')), true);
   });
 });
