@@ -27,9 +27,9 @@ const ifHasPam = (name, age) => {
 const vqv = (nome, idade) => {
   let theReturnIs;
   const msg = `Oi, meu nome é ${nome}!
-  Tenho ${idade} anos,
-  trabalho na Trybe e mando muito em programação!
-  #VQV!`;
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
   if (ifHasPam(nome, idade)) {
     theReturnIs = msg;
   }
