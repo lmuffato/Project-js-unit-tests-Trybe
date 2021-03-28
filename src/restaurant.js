@@ -83,7 +83,7 @@ const orderActual = function (item) {
   return this.consumption;
 };
 
-function totalValueConsumption() {
+function totalValueConsumption(consume) {
   return this.consumption.reduce((acc, currentValue) => {
     let result;
     Object.values(this.fetchMenu()).forEach((typeMenu) => {
