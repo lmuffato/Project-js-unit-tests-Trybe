@@ -64,10 +64,9 @@ describe('#createMenu', () => {
     assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha']);
     objetoRetornado.order('agua');
     objetoRetornado.order('sopa');
-    objetoRetornado.order('sashimi');
-    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
+    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'sopa']);
     objetoRetornado.order('coxinha');
-    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'sopa', 'sashimi', 'coxinha']);
+    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'sopa', 'coxinha']);
     assert.strictEqual(objetoRetornado.pay(), 1.1 * 21.599999999999998);
   });
 });
