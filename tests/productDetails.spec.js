@@ -36,13 +36,16 @@ describe('#productDetails', () => {
     // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(typeof productDetails(), 'array');
+    assert.strictEqual(typeof productDetails(), 'object');
     // Teste que o array retornado pela função contém dois itens dentro.
     assert.strictEqual(productDetails().length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.strictEqual(typeof Object.values(productDetails()), 'object');
     // Teste que os dois objetos são diferentes entre si.
-    // assert.deepStrictEqual()
+    assert.notDeepStrictEqual(productDetails('ca', 'pa')[0], productDetails('ca', 'pa')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
+    // method Slice https://www.w3schools.com/jsref/jsref_slice_array.asp
+    assert.strictEqual(productDetails()[0].details.productId.slice(-3), '123');
+    assert.strictEqual(productDetails()[1].details.productId.slice(-3), '123');
   });
 });
