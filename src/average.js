@@ -30,12 +30,10 @@ const createAverage = (array) => {
 };
 
 const average = (array) => {
-  let averageReturn = 0; // definindo a média que será retornada
   if (verifyArray(array)) {
     return undefined;
   }
-  averageReturn = createAverage(array);
-  return Math.round(averageReturn);
+  return Math.round(createAverage(array));
 };
 
 module.exports = average;
