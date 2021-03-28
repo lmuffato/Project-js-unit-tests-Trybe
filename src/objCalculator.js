@@ -19,6 +19,24 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: (numberOne, numberTwo) => {
+    let sum = numberOne + numberTwo;
+    return Math.trunc(sum);
+  },
+  mult: (numberOne, numberTwo) => {
+    let multiplication = numberOne * numberTwo;
+    return Math.trunc(multiplication);
+  },
+  div: (numberOne, numberTwo) => {
+    let division = numberOne / numberTwo;
+    return Math.trunc(division);
+  },
+  sub: (numberOne, numberTwo) => {
+    let subtraction = numberOne - numberTwo;
+    return Math.trunc(subtraction);
+  },
+};
 
 module.exports = calculator;
+//  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
