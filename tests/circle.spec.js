@@ -26,7 +26,20 @@ const circle = require('../src/circle');
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     // ESCREVA SEUS TESTES ABAIXO:
-    assert.fail();
+    assert.strictEqual(typeof circle('number'), 'object');
+    assert.strictEqual(Object.keys(circle('number')).length, 3);
+    assert.strictEqual(circle(), undefined);
+    assert.strictEqual(circle(2).circumference, 12.56);
+    // Para o seguinte teste precisei entender um pouco sobre toPrecision (para retornar o número de casas que eu necessitava) no artigo:
+    // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+    // E também o artigo sobre parseFloat , já que a função toPrecision me retorna uma string e eu precisaria de um number:
+    // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
+    assert.strictEqual(parseFloat(circle(3).area.toPrecision(4)), 28.26);
+    // Para o último teste precisei entender um pouco mais sobre deepStrictEqual no seguinte artigo:
+    // https://www.w3schools.com/nodejs/met_assert_deepstrictequal.asp
+    assert.deepStrictEqual(circle(3), {
+      radius: 3, area: 28.259999999999998, circumference: 18.84,
+    });
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
