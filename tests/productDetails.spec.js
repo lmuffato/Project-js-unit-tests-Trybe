@@ -43,7 +43,7 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     const returnHolder = productDetails('x', 'y');
     const areObjectDifferent = productDetails('x', 'y')[0] !== productDetails('x', 'y')[1];
-    assert.deepStrictEqual(typeof productDetails('x', 'y'), 'array');
+    assert.deepStrictEqual(typeof productDetails('x', 'y'), 'object');
     assert.deepStrictEqual(productDetails('x', 'y').length, 2);
     assert.deepStrictEqual(typeof Object.entries(returnHolder), 'object');
     assert.deepStrictEqual(areObjectDifferent, true);
