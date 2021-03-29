@@ -10,35 +10,34 @@
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
-*/
-
-function arrayNulo(num) {
-  if (num === ['']) {
-    return undefined;
-  }
-}
-
-function arrayNumber(num) {
-  for (let index = 0; index < num.length; index += 1) {
-    if (typeof num[index] !== 'number') {
+    */
+   
+const average = (num) => {
+  function arrayNulo(num) {
+    if (num === ['']) {
       return undefined;
     }
   }
-}
-
-function medias(num) {
-  let soma = 0;
-  let media = 0;
-  for (let index = 0; index < num.length; index += 1) {
-    soma = num[index] + 1;
-  }
-  media = soma / num.length;
-  return Math.round(media);
-}
-
-const average = (num) => {
   arrayNulo(num);
+
+  function arrayNumber(num) {
+    for (let index = 0; index < num.length; index += 1) {
+      if (typeof num[index] !== 'number') {
+        return undefined;
+      }
+    }
+  }
   arrayNumber(num);
+
+  function medias(num) {
+    let soma = 0;
+    let media = 0;
+    for (let index = 0; index < num.length; index += 1) {
+      soma = num[index] + 1;
+    }
+    media = soma / num.length;
+    return Math.round(media);
+  }
   medias(num);
 };
 
