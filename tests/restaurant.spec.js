@@ -56,7 +56,8 @@ describe('#createMenu', () => {
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
 
     const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
-    const menuObject = typeof objetoRetornado.fetchMenu === 'function' && typeof objetoRetornado === 'object';
+    const menuObject = typeof objetoRetornado.fetchMenu === 'function'
+    && typeof objetoRetornado === 'object';
     assert.strictEqual(menuObject, true);
 
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
@@ -125,7 +126,8 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
-    const meuRestaurante = createMenu({ food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } });
+    const meuRestaurante = createMenu({ food: { coxinha: 3.9, sopa: 9.9 },
+      drink: { agua: 3.9, cerveja: 6.9 } });
     meuRestaurante.order('coxinha');
     meuRestaurante.order('agua');
     meuRestaurante.order('coxinha');
