@@ -116,7 +116,7 @@ describe('#createMenu', () => {
     objPagamento.order('coxinha');
     objPagamento.order('agua');
     objPagamento.order('coxinha');
-    const pagamento = createMenu(cardapio).pay();
+    const pagamento = objPagamento.pay();
     assert.deepStrictEqual(pagamento, 10.67);
   });
 });

@@ -73,7 +73,8 @@ const menu = {
   },
 };
 
-createMenu(menu).order('coxinha');
-createMenu(menu).order('agua');
-console.log(createMenu(menu).pay());
+const myObject = createMenu(menu);
+myObject.order('coxinha');
+myObject.order('agua');
+console.log(myObject.pay());
 module.exports = createMenu;
