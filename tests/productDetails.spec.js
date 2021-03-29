@@ -36,7 +36,7 @@ describe('#productDetails', () => {
     // assert.fail();
     const a = 'Alcool gel';
     const b = 'Máscara';
-    assert.strictEqual(typeof productDetails(a, b), 'array');
+    assert.strictEqual(typeof productDetails(a, b), 'object');
     assert.strictEqual(productDetails(a, b).length, 2);
     assert.strictEqual(typeof productDetails(a, b)[0], 'object');
     assert.strictEqual(typeof productDetails(a, b)[1], 'object');
