@@ -30,24 +30,14 @@ describe('#circle', () => {
     assert.strictEqual(circle(), undefined);
     assert.strictEqual((circle(2).circumference).toPrecision(4), '12.56');
     assert.strictEqual((circle(3).area).toPrecision(4), '28.26');
-    const precisionCircle = {
-      radius: 0,
-      area: 0,
-      circumference: 0,
-    };
-    for (let index in circle(3)) {
-      if (Object.keys(precisionCircle).length === Object.keys(circle(3)).length) {
-        (circle(3)[index]) = (circle(3)[index]).toPrecision(2);
-        precisionCircle[index] = (circle(3)[index]).toPrecision(2);
-      }
-    }
-    assert.strictEqual(circle(3), precisionCircle);
-    // ESCREVA SEUS TESTES ABAIXO:
-    // Teste se circle retorna um objeto.
-    // Teste se o objeto retornado tem 3 entradas.
-    // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+    const precisionCircle = (radius) => ({
+      radius,
+      area: (circle(3).area).toPrecision(4),
+      circumference: (circle(3).circumference).toPrecision(4),
+    });
+    const precision = Object.assign(circle(3), precisionCircle(3));
+    assert.strictEqual(precision, { radius: 3, area: '28.26', circumference: '18.84' });
+
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
   });
 });
