@@ -12,14 +12,6 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  arrayNulo (num);
-  arrayNumber (num);
-  media (num);
-};
-
-module.exports = average;
-
 function arrayNulo(num) {
   if (num === ['']) {
     return undefined;
@@ -41,3 +33,11 @@ function media (num) {
   media = soma/num.length;
   return Math.round(media);
 }
+
+const average = () => {
+  arrayNulo (num);
+  arrayNumber (num);
+  media (num);
+};
+
+module.exports = average;
