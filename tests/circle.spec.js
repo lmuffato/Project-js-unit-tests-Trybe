@@ -22,7 +22,6 @@ const circle = require('../src/circle');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-const area = parseFloat(3.14 * 3 * 3).toPrecision(4);
 
 const correctCircle = {
   radius: 3,
@@ -36,7 +35,7 @@ describe('#circle', () => {
     assert.deepStrictEqual(Object.keys(circle(1)).length, 3);
     assert.deepStrictEqual(circle(), undefined);
     assert.deepStrictEqual(circle(2).circumference, 12.56);
-    assert.deepStrictEqual(circle(3).area, area);
+    assert.deepStrictEqual(circle(3).area, correctCircle.area);
     assert.deepStrictEqual(Object.values(circle(3)), Object.values(correctCircle));
   });
 });
