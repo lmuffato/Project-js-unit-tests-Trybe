@@ -15,10 +15,8 @@
 const average = (array) => {
   // add your implementation here
   let sum = 0;
-  if (array.length === 0) {
-    return undefined;
-  }
-  for (let index in array) {
+  if (array.length === 0) return undefined;
+  for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
       return undefined;
     }
