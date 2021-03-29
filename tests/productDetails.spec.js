@@ -33,13 +33,16 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true, 'O retorno deve ser true para array');
+    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
     assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     assert.strictEqual(typeof (productDetails('Alcool Gel', 'Máscara')), 'object');
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0] !== productDetails('Alcool gel', 'Máscara')[1], true);
 
-    const firstProductId = Number(productDetails('Alcool gel', 'Máscara')[0].details.productId.slice(-3));
-    const secondProductId = Number(productDetails('Alcool gel', 'Máscara')[1].details.productId.slice(-3));
-    assert.deepStrictEqual(firstProductId && secondProductId, 123);
+    const firstProductObject = productDetails('Alcool gel', 'Máscara')[0];
+    const secondProductObject = productDetails('Alcool gel', 'Máscara')[1];
+    assert.strictEqual(firstProductObject !== secondProductObject, true);
+
+    const firstId = Number(productDetails('Alcool gel', 'Máscara')[0].details.productId.slice(-3));
+    const secondId = Number(productDetails('Alcool gel', 'Máscara')[1].details.productId.slice(-3));
+    assert.deepStrictEqual(firstId && secondId, 123);
   });
 });
