@@ -35,6 +35,4 @@ const average = (array) => {
   return calcMed(array);
 };
 
-console.log(average([3, 4, 5]));
-
 module.exports = average;
