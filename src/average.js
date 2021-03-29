@@ -24,5 +24,6 @@ const average = (parameter1) => {
   }
   return result.round();
 };
+average(parameter);
 
 module.exports = average;
