@@ -37,10 +37,11 @@ describe('#circle', () => {
     };
     for (let index in circle(3)) {
       if (Object.keys(precisionCircle).length === Object.keys(circle(3)).length) {
-        precisionCircle[index] = (circle(3)[index]).toPrecision(4);
+        (circle(3)[index]) = (circle(3)[index]).toPrecision(2);
+        precisionCircle[index] = (circle(3)[index]).toPrecision(2);
       }
     }
-    assert.strictEqual(precisionCircle, { radius: '3.000', area: '28.26', circumference: '18.84' });
+    assert.strictEqual(circle(3), precisionCircle);
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
