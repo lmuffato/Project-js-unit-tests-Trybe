@@ -22,11 +22,11 @@ const circle = require('../src/circle');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-const area = (3.14 * 3 * 3).toPrecision(4);
+const area = parseFloat(3.14 * 3 * 3).toPrecision(4);
 
 const correctCircle = {
   radius: 3,
-  area: (3.14 * 3 * 3).toPrecision(4),
+  area: parseFloat(3.14 * 3 * 3).toPrecision(4),
   circumference: 2 * 3.14 * 3,
 };
 
