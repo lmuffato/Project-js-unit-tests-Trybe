@@ -29,7 +29,7 @@ const sumNumbers = (array) => {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     sumArray += arrayNumbers[index];
   }
-  return sumArray / arrayNumbers.length;
+  return Math.floor(sumArray / arrayNumbers.length); // Utilizei o método floor pois ele aredonda para baixo.
 };
 
 const average = (array) => {
