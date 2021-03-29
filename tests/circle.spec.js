@@ -33,10 +33,12 @@ describe('#circle', () => {
     const precisionCircle = {
       radius: 0,
       area: 0,
-      circumference: 0
-    }
-    for (index in circle(3)){
-      precisionCircle[index] = (circle(3)[index]).toPrecision(4)
+      circumference: 0,
+    };
+    for (let index in circle(3)) {
+      if (Object.keys(precisionCircle).length === Object.keys(circle(3)).length) {
+        precisionCircle[index] = (circle(3)[index]).toPrecision(4);
+      }
     }
     assert.strictEqual(precisionCircle, { radius: 3.000, area: 28.26, circumference: 18.84 });
     // ESCREVA SEUS TESTES ABAIXO:
