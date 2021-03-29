@@ -29,7 +29,7 @@ const sumNumbers = (array) => {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     sumArray += arrayNumbers[index];
   }
-  return Math.floor(sumArray / arrayNumbers.length); // Utilizei o método floor pois ele aredonda para baixo.
+  return Math.round(sumArray / arrayNumbers.length); // Utilizei o método round que aredonda o valor.
 };
 
 const average = (array) => {
