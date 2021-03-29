@@ -14,22 +14,23 @@
 
 const average = (array) => {
   let soma = 0;
-  let resposta = undefined;
   let media;
+  let calculoMedia;
 
   if (array.length === 0) {
-    return resposta;
+    return undefined;
   }
 
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
-      return resposta;
+      return undefined;
     }
     soma += array[index];
   }
 
-  return Math.round(media = (soma/array.length));
+  calculoMedia = Math.round(media = (soma / array.length));
 
+  return calculoMedia;
 };
 
 module.exports = average;
