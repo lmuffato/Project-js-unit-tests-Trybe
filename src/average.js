@@ -14,8 +14,10 @@
 
 const average = (numbers) => {
   let soma = 0;
-  // eslint-disable-next-line no-constant-condition
-  if ((typeof (numbers !== 'number' && (numbers.length === 0)))) {
+  if ((typeof (numbers !== 'number'))) {
+    return ('undefined');
+  }
+  if (numbers.length === 0) {
     return ('undefined');
   }
 
