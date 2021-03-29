@@ -39,6 +39,4 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-console.log(acoll123);
-
 module.exports = productDetails;
