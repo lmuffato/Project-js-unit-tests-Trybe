@@ -28,9 +28,8 @@ describe('#circle', () => {
     // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     const circle3 = circle(3);
-    circle3.area = parseFloat((circle3.area).toPrecision(4))
-    circle3.circumference = parseFloat((circle3.circumference).toPrecision(4))
-
+    circle3.area = parseFloat((circle3.area).toPrecision(4));
+    circle3.circumference = parseFloat((circle3.circumference).toPrecision(4));
 
     // Teste se circle retorna um objeto.
     assert.strictEqual(typeof circle(1), 'object');
