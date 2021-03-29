@@ -90,7 +90,7 @@ const createMenu = (obj) => {
 
     pay: () => {
       let total = 0;
-      const { food, drinks } = obj;
+      const {food, drinks} = obj;
       const itemFood = Object.keys(food);
       const itemDrinks = Object.keys(drinks);
       for (let index = 0; index < consumption.length; index += 1) {

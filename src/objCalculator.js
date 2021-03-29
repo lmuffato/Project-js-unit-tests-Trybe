@@ -21,11 +21,11 @@
 
 const calculator = {
   add: (number1, number2) => {
-    let result = Math.floor(number1 + number2);
+    let result = number1 + number2;
     return result;
   },
   mult: (number1, number2) => {
-    let result = Math.floor(number1 * number2);
+    let result = number1 * number2;
     return result;
   },
   div: (number1, number2) => {
@@ -33,7 +33,7 @@ const calculator = {
     return result;
   },
   sub: (number1, number2) => {
-    let result = Math.floor(number1 - number2);
+    let result = number1 - number2;
     return result;
   },
 };

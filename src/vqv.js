@@ -30,6 +30,4 @@ trabalho na Trybe e mando muito em programação!
   return phrase;
 };
 
-console.log(vqv('Tunico', ''));
-
 module.exports = vqv;
