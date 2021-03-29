@@ -59,15 +59,22 @@ describe('#createMenu', () => {
     objetoRetornado.order('agua');
     objetoRetornado.order('sopa');
     objetoRetornado.order('sashimi');
-    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
+    assert.deepStrictEqual(objetoRetornado.consumption, [
+      'coxinha',
+      'agua',
+      'sopa',
+      'sashimi',
+    ]);
     objetoRetornado.consumption = [];
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
-    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'coxinha']);
+    assert.deepStrictEqual(objetoRetornado.consumption, [
+      'coxinha',
+      'agua',
+      'coxinha',
+    ]);
     // assert.deepStrictEqual(objetoRetornado.pay, somaDos)
-
-
 
     // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui,
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
