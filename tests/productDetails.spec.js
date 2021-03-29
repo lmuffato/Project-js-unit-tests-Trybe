@@ -35,14 +35,19 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(typeof (productDetails), 'function');
+    assert.strictEqual(typeof productDetails, 'function');
     // Teste que o array retornado pela função contém dois itens dentro.
     let paramOne;
     let paramTwo;
+    const productD = productDetails('produtoUm', 'produtoDois');
     assert.strictEqual((productDetails(paramOne, paramTwo)).length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.strictEqual();
+    assert.deepStrictEqual(typeof productD[0] && typeof productD[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
+    assert.notDeepStrictEqual(productD[0], productD[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.strictEqual(productD[0].details.productId.substr(-3), productD[1].details.productId.substr(-3));
   });
 });
+
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substr
