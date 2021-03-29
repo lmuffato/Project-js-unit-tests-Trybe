@@ -13,10 +13,8 @@
 */
 
 const average = (param) => {
-  let list = param; 
-  if (list === undefined) {
-    return undefined;
-  } else if (list.length === 0) {
+  let list = param;
+  if (list === undefined || list.length === undefined){
     return undefined;
   }
   for (let key = 0; key < list.length; key += 1) {
@@ -27,5 +25,4 @@ const average = (param) => {
   const test = list.reduce((acc, curr) => acc + curr);
   return Math.round(test / list.length);
 }
-
 module.exports = average;
