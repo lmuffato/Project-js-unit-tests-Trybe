@@ -56,11 +56,12 @@ const comparation = (func1, func2) => {
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     const idProducts = Object.values(((productDetails()[0] || {}).details || {}).productId);
-    assert.strictEqual(() => {
+    const isArray = () => {
       if (Array.isArray(productDetails('sabonete', 'banana')) === true) {
         return 'array';
       }
-    }, 'array');
+    };
+    assert.strictEqual(isArray(), 'array');
     // Teste que o retorno da função é um array.
     assert.strictEqual(Object.entries(productDetails()).length, 2);
     // Teste que o array retornado pela função contém dois itens dentro.
