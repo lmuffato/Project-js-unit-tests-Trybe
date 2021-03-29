@@ -12,10 +12,19 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  if (average[] !== number) {
+// Found about reduce solution at https://stackoverflow.com/questions/29544371/finding-the-average-of-an-array-using-js and https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+const average = (arr) => {
+  for (let index = 0; index < arr.length; index += 1) {
+    if (typeof arr[index] !== 'number') {
+      return undefined;
+    }
+  }
+  if (arr.length === 0 || arr === undefined) {
     return undefined;
   }
+  const total = arr.reduce((acc, cur) => acc + cur, 0);
+  return Math.round(total / arr.length);
 };
 
+console.log(average([]));
 module.exports = average;
