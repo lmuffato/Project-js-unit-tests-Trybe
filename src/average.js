@@ -15,15 +15,15 @@ const average = (num) => {
   let soma = 0;
   let media = 0;
   if (num.length === 0) {
+    return undefined;
+  }
+  for (let index = 0; index < num.length; index += 1) {
+    if (typeof num[index] === 'string') {
       return undefined;
+    }
   }
   for (let index = 0; index < num.length; index += 1) {
-      if (typeof num[index] === 'string') {
-          return undefined;
-      }
-  }
-  for (let index = 0; index < num.length; index += 1) {
-      soma = num[index] + 1;
+    soma = num[index] + 1;
   }
   media = soma / num.length;
   return Math.round(media);
