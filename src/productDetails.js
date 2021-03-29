@@ -40,3 +40,11 @@ const productDetails = (firstProduct, secondProduct) => [
 ];
 
 module.exports = productDetails;
+
+const bia = [1, 2, 3];
+
+console.log(productDetails('prod1', 'prod2')[1].details.productId);
+
+const myName = 'Beatriz';
+
+console.log(myName.slice(myName.length - 3, myName.length));
