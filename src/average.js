@@ -14,9 +14,12 @@ const assert = require('assert');
 */
 
 const average = (keys) => {
+  if (keys.length === 0) {
+    return undefined;
+  }
   let numberMedia = 0;
   for (let index = 0; index < keys.length; index += 1) {
-    if (typeof keys[index] === 'string' || keys[index] === '') {
+    if (typeof keys[index] === 'string') {
       return undefined;
     }
     numberMedia += keys[index];
@@ -24,5 +27,5 @@ const average = (keys) => {
   let returnMedia = numberMedia / keys.length;
   return Math.round(returnMedia);
 };
-
+console.log(average([]));
 module.exports = average;
