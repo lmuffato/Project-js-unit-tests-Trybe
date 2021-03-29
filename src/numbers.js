@@ -21,9 +21,10 @@ const numbers = (myArray) => {
   return true;
 };
 
-module.exports = numbers(numberCollection);
+module.exports = numbers;
 assert.deepStrictEqual(typeof (numbers), 'function');
 let func = numbers(numberCollection);
 assert.deepStrictEqual(func, true);
-func = numbers([2, 'errado', 5]);
+numberCollection = ([2, 'errado', 5]);
+func = numbers(numberCollection);
 assert.deepStrictEqual(func, false);
