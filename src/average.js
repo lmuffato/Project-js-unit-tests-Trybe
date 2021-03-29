@@ -13,7 +13,7 @@
 */
 let parameter = [1, 2, 3, 4, 5];
 const average = (parameter1) => {
-  if (parameter1 === []) {
+  if (parameter1.length === 0) {
     return undefined;
   }
   for (let index in parameter1) {
@@ -29,6 +29,7 @@ const average = (parameter1) => {
   }
   return Math.round(result);
 };
-average(parameter);
-
+console.log(average(['7']));
+console.log(average([]));
+console.log(average([7, 8]));
 module.exports = average;
