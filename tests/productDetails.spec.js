@@ -55,5 +55,6 @@ describe('#productDetails', () => {
     assert.notDeepStrictEqual(item1, item2);
 
     // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.fail();
   });
 });
