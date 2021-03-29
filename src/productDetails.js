@@ -38,9 +38,7 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
-const productAcoll = productDetails('Alcool gel', 'Máscara')[0];
-const productMascara = productDetails('Alcool gel', 'Máscara')[1];
-const acoll123 = productAcoll.details.productId.includes('123');
+
 console.log(acoll123);
 
 module.exports = productDetails;
