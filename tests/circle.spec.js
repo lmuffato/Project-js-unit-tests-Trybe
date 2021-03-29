@@ -31,7 +31,10 @@ describe('#circle', () => {
     assert.deepStrictEqual(circle(), undefined);
     assert.deepStrictEqual(circle(2).circumference, 12.56);
     assert.deepStrictEqual(parseFloat(circle(3).area.toFixed(2)), 28.26);
-    const area = parseFloat(circle(3).area.toFixed(2));
-    assert.deepStrictEqual(Object.values(circle(3)), [3.00, area, 18.84]);
+    const values = Object.values(circle(3));
+    const radius = values[0];
+    const area = parseFloat(values[1].toFixed(2));
+    const circumference = values[2];
+    assert.deepStrictEqual([radius, area, circumference], [3.00, 28.26, 18.84]);
   });
 });
