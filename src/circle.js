@@ -17,15 +17,19 @@
         Uma solução pra isso pode ser fazer a soma no seguinte formato: `parseFloat((0.2 + 0.1).toPrecision(2))`.
         Use esse conhecimento para te ajudar a lidar com possíveis problemas que esses testes trarão!
 */
-
+/*
 const circle = (radius) => {
   const PI = 3.14;
   if (!radius) { return undefined; }
-  return {
+  let obj = {
     radius,
     area: PI * radius * radius,
     circumference: 2 * PI * radius,
   };
+  return obj;
 };
 
+console.log(typeof obj);
+console.log(circle(3));
 module.exports = circle;
+*/
