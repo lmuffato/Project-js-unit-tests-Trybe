@@ -24,18 +24,10 @@ let div = (a, b) => Math.floor(a / b);
 let sub = (a, b) => a - b;
 
 const calculator = {
-  add(a, b) {
-    return a + b;
-  },
-  mult(a, b) {
-    return a * b;
-  },
-  div(a, b) {
-    return Math.floor(a / b);
-  },
-  sub(a, b) {
-    return a - b;
-  },
+  add: (numOne, numTwo) => numOne + numTwo,
+  mult: (numOne, numTwo) => numOne * numTwo,
+  div: (numOne, numTwo) => Math.floor(numOne / numTwo),
+  sub: (numOne, numTwo) => numOne - numTwo,
 };
 
 module.exports = calculator;
