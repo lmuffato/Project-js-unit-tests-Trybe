@@ -11,34 +11,24 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
     */
-   
 const average = (num) => {
-  function arrayNulo(num) {
-    if (num === ['']) {
+  let soma = 0;
+  let media = 0;
+    if (num.length === 0) {
       return undefined;
     }
-  }
-  arrayNulo(num);
-
-  function arrayNumber(num) {
     for (let index = 0; index < num.length; index += 1) {
-      if (typeof num[index] !== 'number') {
+      if (typeof num[index] === 'string') {
         return undefined;
       }
     }
-  }
-  arrayNumber(num);
-
-  function medias(num) {
-    let soma = 0;
-    let media = 0;
     for (let index = 0; index < num.length; index += 1) {
       soma = num[index] + 1;
     }
     media = soma / num.length;
     return Math.round(media);
-  }
-  medias(num);
+  
+  
 };
 
 module.exports = average;
