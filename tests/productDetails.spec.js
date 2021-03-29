@@ -8,10 +8,10 @@ const productDetails = require('../src/productDetails');
 function productIdMustEndWith123(array) {
   let condiction = '';
   for (let key in array) {
-    if (productDetails('Alcool gel', 'Máscara')[key].details.productId.endsWith ('123') === false) {
-       condiction = false; break; }
-    if (productDetails('Alcool gel', 'Máscara')[key].details.productId.endsWith ('123') === true) {
-       condiction = true; }
+    if (productDetails('Alcool gel', 'Máscara')[key].details.productId.endsWith ('123') === false)
+      { condiction = false; break; }
+    if (productDetails('Alcool gel', 'Máscara')[key].details.productId.endsWith ('123') === true)
+      { condiction = true; }
   } return condiction;
 }
 
@@ -25,7 +25,8 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0] === 'object', true);
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1] === 'object', true);
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[0]);
+    assert.notStrictEqual(
+      productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[0]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.strictEqual(productIdMustEndWith123(productDetails('Alcool gel', 'Máscara')), true);
   });
