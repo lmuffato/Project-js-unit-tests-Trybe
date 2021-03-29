@@ -10,8 +10,6 @@
 */
 const assert = require('assert');
 
-let numberCollection = [2, 3, 4];
-
 const numbers = (myArray) => {
   for (let i = 0; i < myArray.length; i += 1) {
     if (typeof myArray[i] !== 'number') {
@@ -22,9 +20,3 @@ const numbers = (myArray) => {
 };
 
 module.exports = numbers;
-assert.deepStrictEqual(typeof (numbers), 'function');
-let func = numbers(numberCollection);
-assert.deepStrictEqual(func, true);
-numberCollection = ([2, 'errado', 5]);
-func = numbers(numberCollection);
-assert.deepStrictEqual(func, false);
