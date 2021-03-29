@@ -39,6 +39,7 @@ describe('#circle', () => {
     assert.strictEqual(parse(circle(3).area), parse(28.26));
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.deepStrictEqual(Object.keys(circle(3)), ['radius', 'area', 'circumference']);
-    assert.deepStrictEqual(Object.values(circle(3)).map((e) => parse(e)), [3, 28.26, 18.84].map((e) => parse(e)));
+    assert.deepStrictEqual(Object.values(circle(3))
+      .map((e) => parse(e)), [3, 28.26, 18.84].map((e) => parse(e)));
   });
 });
