@@ -32,31 +32,31 @@ const productDetails = require('../src/productDetails');
 */
 
 const verifyIfIsArrayByLength = (funcao) => {
-  const length = funcao.length;
-  if (length === undefined) {
+  const func = funcao;
+  if (func.length === undefined) {
     return false;
   }
   return true;
-}
+};
 
 const verifyIsArray = (funcao) => {
   let isArrayOrObject;
   let typeOfReturn = typeof (funcao);
-  if ( typeOfReturn !== 'object' ) {
+  if (typeOfReturn !== 'object') {
     isArrayOrObject = false;
-    return isArrayOrObject; //false
+    return isArrayOrObject;
   }
-  return verifyIfIsArrayByLength(funcao); //return false or true
-}
+  return verifyIfIsArrayByLength(funcao);
+};
 
 const virifyAllAreObjects = (array) => {
   for (let index = 0; index < array.length; index += 1) {
-    if(array[index].length !== undefined) {
+    if (array[index].length !== undefined) {
       return false;
     }
   }
   return true;
-}
+};
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
