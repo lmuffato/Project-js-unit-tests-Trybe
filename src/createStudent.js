@@ -15,6 +15,13 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
-
+const createStudent = (name) => {
+  return {
+    name: name,
+    feedback: () => {
+      let message = 'Eita pessoa boa!';
+      return message;
+    }
+  }
+};
 module.exports = createStudent;
