@@ -21,9 +21,7 @@ const average = (keys) => {
     }
     numberMedia += keys[index];
   }
-  return numberMedia;
+  return numberMedia / keys.length;
 };
-
-console.log(average([2, 3, 3, 5, 7, '10']));
 
 module.exports = average;
