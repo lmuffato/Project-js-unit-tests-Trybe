@@ -82,7 +82,8 @@ describe('#createMenu', () => {
     assert.strictEqual(hasFunctionInValues(objetoRetornado), true);
     objetoRetornado = createMenu({ food: {}, drink: {} });
     assert.strictEqual(hasOnlyFoodAndDrink(objetoRetornado.fetchMenu()), true);
-    assert.deepStrictEqual(createMenu({ food: {}, drink: {} }).fetchMenu(), objetoRetornado.fetchMenu());
+    const testObj = createMenu({ food: {}, drink: {} }).fetchMenu();
+    assert.deepStrictEqual(testObj, objetoRetornado.fetchMenu());
     assert.deepStrictEqual(createMenu({}).consumption, []);
     objetoRetornado.order('coxinha');
     assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha']);
