@@ -12,6 +12,17 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (numbers) => {
+  let soma = 0;
+  // eslint-disable-next-line no-constant-condition
+  if ((typeof (numbers !== 'number' && (numbers.length === 0)))) {
+    return ('undefined');
+  }
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    soma += numbers[i];
+  }
+  return Math.round(soma / numbers.length);
+};
 
 module.exports = average;
