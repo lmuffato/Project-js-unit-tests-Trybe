@@ -32,18 +32,31 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle(1), 'object');
 
     // Teste se o objeto retornado tem 3 entradas.
-    assert.strictEqual(Object.keys(circle).length, 3);
+    const typeCheck = circle(1);
+    assert.strictEqual(Object.keys(typeCheck).length, 3);
 
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.strictEqual(circle(), undefined);
 
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.strictEqual(circle(2), { circumference: 12.57 });
+    const objectRadioTwo = circle(2);
+    const circleRadio2Circunference = objectRadioTwo.circumference;
+
+    assert.strictEqual(circleRadio2Circunference, 12.56);
 
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.strictEqual(circle(3), { area: 28.26 });
+    const objectRadioThree = circle(3);
+    const radio3Area = parseFloat((objectRadioThree.area).toPrecision(4));
+
+    assert.strictEqual(radio3Area, 28.26);
 
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.strictEqual(circle(3), { radius: 3, area: 28.26, circumference: 18.84 });
+    const radio3Radius = objectRadioThree.radius;
+    const radio3Circumference = parseFloat((objectRadioThree.circumference).toPrecision(4));
+
+    // assert.strictEqual(circle(3), { radius: 3, area: 28.26, circumference: 18.84 });
+    assert.strictEqual(radio3Area, 28.26);
+    assert.strictEqual(radio3Circumference, 18.84);
+    assert.strictEqual(radio3Radius, 3);
   });
 });
