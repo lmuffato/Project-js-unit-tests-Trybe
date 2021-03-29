@@ -39,12 +39,13 @@ describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     let objetoRetornado = createMenu({
       food: {},
-      drink: {},
+      drinks: {},
     });
+
     assert.strictEqual(typeof objetoRetornado.fetchMenu, 'function');
     assert.deepStrictEqual(objetoRetornado.fetchMenu(), {
       food: {},
-      drink: {},
+      drinks: {},
     });
     objetoRetornado = createMenu({
       food: { coxinha: 3.9, sanduiche: 9.9 },
@@ -54,7 +55,7 @@ describe('#createMenu', () => {
       food: { coxinha: 3.9, sanduiche: 9.9 },
       drinks: { agua: 3.9, cerveja: 6.9 },
     });
-    objetoRetornado.addsConsumption('coxinha');
+    objetoRetornado.order('coxinha');
     assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha']);
     objetoRetornado.order('agua');
     objetoRetornado.order('sopa');
@@ -74,7 +75,7 @@ describe('#createMenu', () => {
       'agua',
       'coxinha',
     ]);
-    // assert.deepStrictEqual(objetoRetornado.pay, somaDos)
+    assert.deepStrictEqual(objetoRetornado.pay(), 11.70);
 
     // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui,
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
