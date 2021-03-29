@@ -18,13 +18,15 @@ function arrayNulo(num) {
   }
 }
 
-function arrayNumber (num) {
-  if (num !== number) {
-    return undefined;
+function arrayNumber(num) {
+  for (let index = 0; index < num.length; index += 1) {
+    if (typeof(num[index]) !== 'number') {
+      return undefined;
+    }
   }
 }
 
-function media (num) {
+function medias(num) {
   let soma = 0;
   let media = 0;
   for (let index = 0; index < num.length; index += 1) {
@@ -34,10 +36,10 @@ function media (num) {
   return Math.round(media);
 }
 
-const average = () => {
-  arrayNulo (num);
-  arrayNumber (num);
-  media (num);
+const average = (num) => {
+  arrayNulo(num);
+  arrayNumber(num);
+  medias(num);
 };
 
 module.exports = average;
