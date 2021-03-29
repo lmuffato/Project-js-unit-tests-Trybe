@@ -10,7 +10,7 @@ const Exe02 = 'Máscara';
 
 function productIdMustEndWith123(array) {
   let condiction = '';
-  for (let key = 0; key < array.length; key +=1) {
+  for (let key = 0; key < array.length; key += 1) {
     if (productDetails(Exe01, Exe02)[key].details.productId.endsWith('123') === false) {
       condiction = false; break;
     }
