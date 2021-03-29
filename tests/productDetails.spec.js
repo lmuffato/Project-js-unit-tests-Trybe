@@ -12,9 +12,11 @@ function productIdMustEndWith123(array) {
   let condiction = '';
   for (let key in array) {
     if (productDetails(Exe01, Exe02)[key].details.productId.endsWith('123') === false) {
-    condiction = false; break; }
+      condiction = false; break;
+    }
     if (productDetails(Exe01, Exe02)[key].details.productId.endsWith('123') === true) {
-    condiction = true; }
+      condiction = true;
+    }
   } return condiction;
 }
 
