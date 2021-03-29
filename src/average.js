@@ -21,7 +21,6 @@ const verifyNumbers = (array) => {
 };
 
 const average = (array) => {
-
   if (verifyNumbers(array) === false) {
     return undefined;
   }
@@ -30,11 +29,9 @@ const average = (array) => {
 
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-  for (let index = 0; index < array.length; index += 1){
-
-  };
-
-  avg = (array.reduce(reducer) / array[index]);
+  for (let index = 0; index < array.length; index += 1) {
+    avg = (array.reduce(reducer) / array[index]);
+  }
 
   return Math.round(avg);
 };
