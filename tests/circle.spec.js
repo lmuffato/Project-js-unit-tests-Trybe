@@ -27,10 +27,18 @@ describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     assert.strictEqual(typeof circle(1), 'object');
     assert.strictEqual(Object.keys(circle(1)).length, 3);
-    assert.strictEqual(circle([]), undefined);
-    assert.strictEqual(circle(2), { radius: 2, area: 12.56, circumference: 12.56 });
-    assert.strictEqual(circle(3), { radius: 3, area: 28.26, circumference: 18.84 });
-    assert.strictEqual(circle(3), { radius: 3, area: 28.26, circumference: 18.84 });
+    assert.strictEqual(circle(), undefined);
+    assert.strictEqual((circle(2).circumference).toPrecision(4), 12.56);
+    assert.strictEqual((circle(3).area).toPrecision(4), 28.26);
+    const precisionCircle = {
+      radius: 0,
+      area: 0,
+      circumference: 0
+    }
+    for (index in circle(3)){
+      precisionCircle[index] = (circle(3)[index]).toPrecision(4)
+    }
+    assert.strictEqual(precisionCircle, { radius: 3.000, area: 28.26, circumference: 18.84 });
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
     // Teste se o objeto retornado tem 3 entradas.
