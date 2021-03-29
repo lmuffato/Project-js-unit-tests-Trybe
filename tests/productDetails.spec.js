@@ -49,3 +49,6 @@ describe('#productDetails', () => {
       productDetails('Alcohol', 'Mask')[1].details.productId.substr(-3));
   });
 });
+
+//  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring
+//  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
