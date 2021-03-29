@@ -48,8 +48,9 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof array, 'object');
     // Para o teste a seguir consultei o pull request do Lucas Pedroso, turma 10 A.
     assert.notDeepStrictEqual(array[0] !== array[1], 'true');
-    // Para o teste a seguir consultei o seguinte link:
+    // Para o teste a seguir consultei os seguintes links:
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+    // https://stackoverflow.com/questions/3884632/how-to-get-the-last-character-of-a-string
     assert.strictEqual(
       array[0].details.productId.slice(-3), array[1].details.productId.slice(-3), '123',
     );

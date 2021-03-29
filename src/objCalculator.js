@@ -19,6 +19,13 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: (number1, number2) => number1 + number2,
+  mult: (number1, number2) => number1 * number2,
+  // Para a chave divisão consultei o seguinte link:
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+  div: (number1, number2) => Math.floor(number1 / number2),
+  sub: (number1, number2) => number1 - number2,
+};
 
 module.exports = calculator;
