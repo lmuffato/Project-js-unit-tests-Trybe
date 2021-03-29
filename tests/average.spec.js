@@ -37,3 +37,18 @@ describe('#average', () => {
     assert.strictEqual(average([-11, -5, 2]), -5);
   });
 });
+
+const average = (numbers)=> {
+  let soma = 0;
+   if((typeof (numbers !== 'number' || (numbers.length = 0)))) {
+    return('undefined');
+   }
+
+   for (let i = 0; i < numbers.length; i += 1) {
+   soma += numbers[i];
+   }
+   return Math.round(soma / numbers.length);
+ }
+
+
+ 
