@@ -18,20 +18,17 @@ const checkArray = (array) => {
       return undefined;
     }
   }
-  return array;
 };
 
 const average = (array) => {
   let result = 0;
-  if (checkArray(array) === undefined) {
-    result = undefined;
-  } else {
-    result = Math.round(
-      array.reduce((pValue, currentValue) => pValue + currentValue)
-      / array.length,
-    );
+  if (checkArray(array) === undefined || array.length === 0) {
+    return undefined;
   }
-  return result;
+  result = Math.round(
+    array.reduce((pValue, currentValue) => pValue + currentValue)
+    / array.length,
+  );
 };
 
 module.exports = average;
