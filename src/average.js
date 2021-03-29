@@ -11,18 +11,23 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const verifyConditions = (param) => {
+  if (param === undefined || param.length === undefined) {
+    return undefined;
+  }
+};
 
 const average = (param) => {
   let list = param;
-  if (list === undefined || list.length === undefined) {
-    return undefined;
-  }
+  verifyConditions(list);
   for (let key = 0; key < list.length; key += 1) {
     if (typeof list[key] !== 'number') {
       return undefined;
     }
   }
-  const test = list.reduce((acc, curr) => acc + curr);
-  return Math.round(test / list.length);
+  if (list.length > 0) {
+    const test = list.reduce((acc, curr) => acc + curr);
+    return Math.round(test / list.length);
+  }
 };
 module.exports = average;
