@@ -53,3 +53,7 @@ myObject.order('coxinha');
 myObject.order('agua');
 console.log(myObject.pay());
 module.exports = createMenu;
+
+// Referencias do projeto
+// Consultei a forma de 3 colegas da trybe de fazer o requisito 9 para a minha refatoração,
+// Esses meu colegas são Sergio, Renzo e Murilo.
