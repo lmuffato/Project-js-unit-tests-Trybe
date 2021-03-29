@@ -23,6 +23,7 @@ const circle = require('../src/circle');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
+const parse = (num) => parseFloat(num).toPrecision(4);
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     // ESCREVA SEUS TESTES ABAIXO:
@@ -33,11 +34,11 @@ describe('#circle', () => {
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.strictEqual(typeof circle(), 'undefined');
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.strictEqual(parseFloat(circle(2).circumference).toPrecision(4), parseFloat(12.56).toPrecision(4));
+    assert.strictEqual(parse(circle(2).circumference), parse(12.56));
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.strictEqual(parseFloat(circle(3).area).toPrecision(4), parseFloat(28.26).toPrecision(4));
+    assert.strictEqual(parse(circle(3).area), parse(28.26));
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.deepStrictEqual(Object.keys(circle(3)), ['radius', 'area', 'circumference']);
-    assert.deepStrictEqual(Object.values(circle(3)).map((e) => parseFloat(e).toPrecision(4)), [3, 28.26, 18.84].map((e) => parseFloat(e).toPrecision(4)));
+    assert.deepStrictEqual(Object.values(circle(3)).map((e) => parse(e)), [3, 28.26, 18.84].map((e) => parse(e)));
   });
 });
