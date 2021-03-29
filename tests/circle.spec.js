@@ -25,7 +25,7 @@ const circle = require('../src/circle');
 
 const correctCircle = {
   radius: 3,
-  area: parseFloat(3.14 * 3 * 3).toPrecision(4),
+  area: 3.14 * 3 * 3,
   circumference: 2 * 3.14 * 3,
 };
 
