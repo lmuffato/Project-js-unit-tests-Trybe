@@ -15,10 +15,15 @@
 function checkIfArrayIsNotValid(array) {
   for (let index = 0; index < array.length; index += 1) {
     const item = array[index];
-    if (typeof item !== 'number' || array.length === 0) {
+    if (typeof item !== 'number') {
       return true;
     }
   }
+
+  if (array === undefined || array.length === 0) {
+    return true;
+  }
+
   return false;
 }
 
@@ -27,11 +32,10 @@ const average = (array) => {
   if (arrayIsNotValid) return undefined;
   let sumOfNumbers = 0;
   for (let index = 0; index < array.length; index += 1) {
-    const item = array[index];
-    const roundedNumber = Math.round(item);
-    sumOfNumbers += roundedNumber;
+    const number = array[index];
+    sumOfNumbers += number;
   }
-  return sumOfNumbers / array.length;
+  return Math.round(sumOfNumbers / array.length);
 };
 
 module.exports = average;
