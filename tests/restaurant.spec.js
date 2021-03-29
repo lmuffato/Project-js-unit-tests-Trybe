@@ -127,7 +127,7 @@ describe('#createMenu', () => {
     objetoRetornado.order('pastel');
     objetoRetornado.order('refri');
     objetoRetornado.order('pastel');
-    assert.strictEqual(objetoRetornado.pay(), 11);
+    assert.strictEqual(menuForPayPropertyTest.pay(), 11);
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
