@@ -19,6 +19,39 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const checkNumbers = (num1, num2) => {
+  if (!Number.isInteger(num1) || !Number.isInteger(num2)) {
+    console.log('Insira números iteiros!');
+    return false;
+  }
+  return true;
+};
+
+const calculator = {
+  add: (num1, num2) => {
+    if (checkNumbers(num1, num2)) {
+      return num1 + num2;
+    }
+    return '';
+  },
+  mult: (num1, num2) => {
+    if (checkNumbers(num1, num2)) {
+      return num1 * num2;
+    }
+    return '';
+  },
+  div: (num1, num2) => {
+    if (checkNumbers(num1, num2)) {
+      return Math.trunc(num1 / num2);
+    }
+    return '';
+  },
+  sub: (num1, num2) => {
+    if (checkNumbers(num1, num2)) {
+      return Math.trunc(num1 - num2);
+    }
+    return '';
+  },
+};
 
 module.exports = calculator;
