@@ -1,3 +1,4 @@
+const assert = require('assert');
 /*
   A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos.
   Caso a função receba algum valor não númerico ou um array vazio,
@@ -12,6 +13,17 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (keys) => {
+  let numberMedia = 0;
+  for (let index = 0; index < keys.length; index += 1) {
+    if (typeof keys[index] === 'string' || keys[index] === '') {
+      return undefined;
+    }
+    numberMedia += keys[index];
+  }
+  return numberMedia;
+};
+
+console.log(average([2, 3, 3, 5, 7, '10']));
 
 module.exports = average;
