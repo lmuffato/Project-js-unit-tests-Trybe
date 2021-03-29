@@ -28,8 +28,8 @@ const average = (array) => {
   let sumOfNumbers = 0;
   for (let index = 0; index < array.length; index += 1) {
     const item = array[index];
-    const integerItem = parseInt(item, 10);
-    sumOfNumbers += integerItem;
+    const roundedNumber = Math.round(item);
+    sumOfNumbers += roundedNumber;
   }
   return sumOfNumbers / array.length;
 };
