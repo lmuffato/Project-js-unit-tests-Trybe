@@ -13,8 +13,13 @@
 */
 let parameter = [1, 2, 3, 4, 5];
 const average = (parameter1) => {
-  if (typeof parameter1 !== 'number' || parameter1 === []) {
+  if (parameter1 === []) {
     return undefined;
+  }
+  for (let index in parameter1) {
+    if (typeof parameter1[index] !== 'number') {
+      return undefined;
+    }
   }
   let sun = 0;
   let result = 0;
@@ -22,7 +27,7 @@ const average = (parameter1) => {
     sun += parameter1[index];
     result = sun / parameter1.length;
   }
-  return result.round();
+  return Math.round(result);
 };
 average(parameter);
 
