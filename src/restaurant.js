@@ -93,7 +93,7 @@ const createMenu = (menu) => {
       restaurant.consumption.forEach((el) => {
         sum += (menu.food[el] || 0) + (menu.drink[el] || 0);
       });
-      return sum;
+      return sum + (sum * 0.1);
     },
   };
   return restaurant;
