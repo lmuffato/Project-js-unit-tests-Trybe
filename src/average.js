@@ -21,7 +21,8 @@ const average = (keys) => {
     }
     numberMedia += keys[index];
   }
-  return numberMedia / keys.length;
+  let returnMedia = numberMedia / keys.length;
+  return Math.round(returnMedia);
 };
 
 module.exports = average;
