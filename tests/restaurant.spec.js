@@ -114,9 +114,12 @@ describe('#createMenu', () => {
     conta.order('coxinha');
     conta.order('agua');
     conta.order('coxinha');
-    assert.strictEqual(conta.pay(), 11.00);
+    assert.strictEqual(conta.pay(), (11.00).toPrecision(4));
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
 
-// Referência consultada: https://nodejs.org/api/assert.html#assert_assert_strictequal_actual_expected_message
+// Referências consultadas:
+// https://nodejs.org/api/assert.html#assert_assert_strictequal_actual_expected_message
+// https://www.codota.com/code/javascript/functions/assert/strictEqual
+// https://www.geeksforgeeks.org/node-js-assert-strictequal-function/

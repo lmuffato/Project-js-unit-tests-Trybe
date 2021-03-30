@@ -81,16 +81,13 @@
 let myRestaurant = {};
 const orderFromMenu = (request) => {
   myRestaurant.consumption.push(request);
-  return myRestaurant.consumption;
 };
 
 const createMenu = (cardapio) => {
   myRestaurant = {
     fetchMenu: () => cardapio,
     consumption: [],
-    order: (request) => {
-      orderFromMenu(request);
-    },
+    order: (request) => orderFromMenu(request),
     pay: () => {
       let consumo = 0;
       const foodItem = Object.keys(cardapio.food);
@@ -104,7 +101,7 @@ const createMenu = (cardapio) => {
           consumo += cardapio.drink[consumptionArr[key]];
         }
       }
-      return consumo * 1.1;
+      return (consumo * 1.1).toPrecision(4);
     },
   };
   return myRestaurant;
@@ -118,3 +115,5 @@ module.exports = createMenu;
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 // https://nodejs.org/api/assert.html#assert_assert_strictequal_actual_expected_message
 // https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/101/files
+// Sobre toPrecision:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision

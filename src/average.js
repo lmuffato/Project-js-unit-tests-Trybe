@@ -37,3 +37,5 @@ module.exports = average;
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 // Sobre método reduce:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+// Sobre typeof:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof
