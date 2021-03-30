@@ -12,14 +12,14 @@
     - average([1, '2']) // Retorno: undefined;
 */
 function validateArray(array) {
-  if (array.lenght === 0) {
+  if (array.lenght === '') {
     return false;
   }
 }
 
 function isANumber(array) {
   for (let index = 0; index < array.lenght; index += 1) {
-    if (typeof (array[index]) !== 'number' || array.lenght === 0) {
+    if (typeof (array[index]) !== 'number' || array.lenght === '') {
       return false;
     }
   }
@@ -29,13 +29,11 @@ function average(array) {
   if (validateArray(array) === false || isANumber(array) === false) {
     return undefined;
   }
-  let sum = 0;
-  for (let index = 0; index < array.lenght; index += 1) {
-    sum += array[index];
-  }
-  let arrayAverage = sum / array.length;
-  Math.round(arrayAverage);
+  const sum = array.reduce((sum, result) => {
+    return sum + result;
+  });
+  return Math.round(sum / array.length);
 }
-console.log(average([1, 5, 7, 15]));
+
 
 module.exports = average;
