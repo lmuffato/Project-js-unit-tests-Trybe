@@ -12,10 +12,11 @@ const createMenu = (objectMenu) => {
   };
   return menu;
 };
+
 const objetoRetornado = createMenu({ food: {}, drink: {} });
 
-// objetoRetornado.order('items');
-// objetoRetornado.order('items');
-// console.log(objetoRetornado.consumption);
+// console.log(objetoRetornado.order('items'));
+objetoRetornado.order('items');
+console.log(objetoRetornado.consumption);
 
 module.exports = createMenu;
