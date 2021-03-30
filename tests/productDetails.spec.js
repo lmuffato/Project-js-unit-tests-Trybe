@@ -4,16 +4,27 @@
 const assert = require('assert');
 const productDetails = require('../src/productDetails');
 
+// ESCREVA SEUS TESTES ABAIXO:
+// Teste que o retorno da função é um array.
+// Teste que o array retornado pela função contém dois itens dentro.
+// Teste que os dois itens dentro do array retornado pela função são objetos.
+// Teste que os dois objetos são diferentes entre si.
+// (Difícil) Teste que os dois productIds terminam com 123.
+
+const isEnd123 = (array) => {
+  const item1 = array[0].details.productId.endsWith('123');
+  const item2 = array[1].details.productId.endsWith('123');
+  return item1 && item2;
+};
+
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     const callFunction = productDetails('Alcool gel', 'Máscara');
     assert.strictEqual(Array.isArray(callFunction), true);
     assert.strictEqual(callFunction.length, 2);
-    assert.ok(callFunction[0].toString() === '[object Object]'
-    && callFunction[1].toString() === '[object Object]');
-    // assert.notDeepStrictEqual(productDetails('Luva', 'Gel')[0], productDetails('Luva', 'Gel')[1]);
-    // const end123First = productDetails()[0].details.productId;
-    // const end123Second = productDetails()[0].details.productId;
-    // assert.ok(end123First === 'undefined123' && end123Second === 'undefined123');
+    assert.strictEqual(callFunction[0].toString() === '[object Object]'
+    && callFunction[1].toString() === '[object Object]', true);
+    assert.notDeepStrictEqual(callFunction[0], callFunction[1]);
+    assert.ok(isEnd123(callFunction));
   });
 });
