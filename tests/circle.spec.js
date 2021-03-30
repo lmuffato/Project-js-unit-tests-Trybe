@@ -38,7 +38,6 @@ describe('#circle', () => {
     const func2 = circle(3);
     assert.strictEqual(func2.area, 3.14 * 3 * 3);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.strictEqual(func2, { radius: 3, area: 3.14 * 3 * 3, circumference: 2 * 3.14 * 3 });
-    assert.strictEqual(func2, { area: 28.259999999999998, circumference: 18.84, radius: 3 });
+    assert.deepStrictEqual(func2, { radius: 3, area: 3.14 * 3 * 3, circumference: 2 * 3.14 * 3 });
   });
 });
