@@ -3,16 +3,14 @@
 
 const assert = require('assert');
 const productDetails = require('../src/productDetails');
+const funcFull = (productDetails('Álcool gel', 'Máscara'));
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
-    assert.strictEqual(typeof (productDetails('Álcool gel', 'Máscara')[0]) 
-    && productDetails('Água sanitária', 'Máscara')[1], 'object');
-    assert.strictEqual(productDetails('Álcool gel', 'Máscara')[0] 
-    !== productDetails('Álcool gel', 'Máscara')[1]);
-    assert.strictEqual(productDetails('Álcool gel', 'Máscara')[0].slice(-3)
-    && productDetails('Álcool gel', 'Máscara')[1].slice(-3), '123');
+    assert.strictEqual(Array.isArray(funcFull), true);
+    assert.strictEqual(funcFull.length, 2);
+    assert.strictEqual(typeof(funcFull[0]) && typeof(funcFull[1]), 'object');
+    assert.strictEqual(funcFull[0] !== funcFull[1]);
+    assert.strictEqual(funcFull[0].slice(-3) && funcFull[1].slice(-3), '123');
   });
 });
