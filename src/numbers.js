@@ -9,7 +9,7 @@
     - numbers([2, 'errado', 5]); // Retorna: false
 */
 
-const numbers = (myArray) => {
+/* const numbers = (myArray) => {
   for (let i = 0; i < myArray.length; i += 1) {
     if (typeof myArray[i] !== 'number') {
       return false;
@@ -18,4 +18,4 @@ const numbers = (myArray) => {
   return true;
 };
 
-module.exports = numbers;
+module.exports = numbers; */
