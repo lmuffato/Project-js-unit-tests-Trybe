@@ -12,14 +12,14 @@
     - average([1, '2']) // Retorno: undefined;
 */
 function average(array) {
-if (array.length === 0){
-  return undefined
-}
-for (let numbers of array){
-  if (typeof numbers !== 'number'){
-    return undefined;
+  if (array.length === 0) {
+    return undefined
   }
-}
+  for (let numbers of array) {
+    if (typeof numbers !== 'number') {
+      return undefined;
+    }
+  }
   const sum = array.reduce((sumArray, result) => sumArray + result);
   return Math.round(sum / array.length);
 }
