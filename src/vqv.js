@@ -28,3 +28,5 @@ const vqv = (nome, idade) => {
 };
 
 module.exports = vqv;
+
+// Desenvolvida com auxílio do plantão do instrutor Eliezer (muito obrigada pelos insights!);

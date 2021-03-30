@@ -31,3 +31,9 @@ const average = (param) => {
   }
 };
 module.exports = average;
+
+// Desenvolvida com auxílio do plantão do instrutor Eliezer e com sugestões do colega Edmilson (muito obrigada pelos insights!);
+// Sobre math.round:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+// Sobre método reduce:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce

@@ -118,3 +118,5 @@ describe('#createMenu', () => {
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
+
+// Referência consultada: https://nodejs.org/api/assert.html#assert_assert_strictequal_actual_expected_message

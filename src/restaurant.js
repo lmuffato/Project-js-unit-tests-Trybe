@@ -101,7 +101,7 @@ const createMenu = (cardapio) => {
           consumo += cardapio.food[consumptionArr[key]];
         }
         if (drinkItem.includes(consumptionArr[key])) {
-          consumo += cardapio.drink[myRestaurant.consumption[key]];
+          consumo += cardapio.drink[consumptionArr[key]];
         }
       }
       return consumo * 1.1;
