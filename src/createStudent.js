@@ -17,15 +17,13 @@
 const estudante = {
 
 };
+
 const createStudent = (name) => {
   estudante.name = `${name}, o Lobo Solitário`;
   estudante.feedback = () => 'Eita pessoa boa!';
+  return estudante;
 };
 
 createStudent('Leandrão');
-
-console.log(estudante.name);
-console.log(estudante.feedback());
-console.log(typeof estudante);
 
 module.exports = createStudent;
