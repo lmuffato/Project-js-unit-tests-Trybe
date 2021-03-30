@@ -24,7 +24,7 @@
   ]
 */
 
-/* const productDetails = (firstProduct, secondProduct) => [
+const productDetails = (firstProduct, secondProduct) => [
   {
     name: firstProduct,
     details: {
@@ -39,4 +39,4 @@
   },
 ];
 
-module.exports = productDetails; */
+module.exports = productDetails;
