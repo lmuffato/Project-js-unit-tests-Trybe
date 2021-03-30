@@ -16,13 +16,14 @@ const average = (numbers) => {
   let soma = 0;
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers.length === 0 || ((typeof (numbers[i] !== 'number')))) {
-      return ('undefined');
+      return 'undefined';
     }
   }
   for (let i = 0; i < numbers.length; i += 1) {
     soma += numbers[i];
   }
-  return Math.round(soma / numbers.length);
+  let total = Math.round(soma / numbers.length);
+  return total;
 };
 
 module.exports = average;
