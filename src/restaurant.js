@@ -80,6 +80,8 @@
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 let restaurant = {};
+let bill = () => {};
+let addOrder = () => {};
 
 const createMenu = (menu) => {
   return {
@@ -90,11 +92,11 @@ const createMenu = (menu) => {
   };
 };
 
-const addOrder = (orderToAdded) => {
+addOrder = (orderToAdded) => {
   restaurant.consumption.push(orderToAdded);
 };
 
-const bill = () => {
+bill = () => {
   const drinks = Object.keys(restaurant.fetchMenu().drink);
   const consumption = restaurant.consumption;
   let theBill = 0;
