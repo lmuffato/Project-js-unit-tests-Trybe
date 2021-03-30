@@ -26,12 +26,12 @@ function somaArray(array) {
 }
 
 const average = (array) => {
-  const soma = somaArray(array);
+  const divisao = Math.round(somaArray(array) / array.length);
 
-  if (array.length === 0 || soma === undefined) {
+  if ( divisao === undefined || divisao === NaN ) {
     return undefined;
   }
-  return Math.round(soma / array.length);
+  return divisao
 };
 
 module.exports = average;
