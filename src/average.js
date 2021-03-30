@@ -29,9 +29,7 @@ function average(array) {
   if (validateArray(array) === false || isANumber(array) === false) {
     return undefined;
   }
-  const sum = array.reduce((sumArray, result) => {
-    return sumArray + result;
-  });
+  const sum = array.reduce((sumArray, result) => sumArray + result);
   return Math.round(sum / array.length);
 }
 console.log(average([1, 5, 8, 17]));
