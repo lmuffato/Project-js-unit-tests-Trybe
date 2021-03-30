@@ -15,6 +15,19 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-/* const createStudent = () => {};
+const createStudent = (nome) => {
+  const addPhrase = (phrase) => `Eita pessoa boa!`;
+  const student = {
+    name: nome,
+    feedback: addPhrase
+  }
+  student.name = nome;
+  return student;
+};
 
-module.exports = createStudent; */
+/* const contaPalavras = (frase) => frase.split(‘ ‘).lenght;
+para criar um objeto a partir de um função
+const objetoPessoa = (nome, idade) => ({nome: nome, idade:idade})
+é preciso colocar o {objeto} dentro de () para o JS não achar que este é o corpo da função */
+
+module.exports = createStudent;
