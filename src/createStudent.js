@@ -19,9 +19,7 @@ const estudante = {
 };
 const createStudent = (name) => {
   estudante.name = `${name}, o Lobo Solitário`;
-  estudante.feedback = () => {
-    console.log('Eita pessoa boa!');
-  };
+  estudante.feedback = () => 'Eita pessoa boa!';
 };
 
 createStudent('Leandrão');
