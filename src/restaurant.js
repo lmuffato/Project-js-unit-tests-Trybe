@@ -81,17 +81,18 @@
 
 let objetoRetornado = {};
 const orderFunction = (string) => objetoRetornado.consumption.push(string);
-const obj = { food: { coxinha: 3.9, sopa: 9.9, sashimi: 10 }, drink: { agua: 3.9, cerveja: 6.9 } };
+
+const orders = objetoRetornado.consumption;
 
 const counter = (valor) => {
   let count = 0;
-  for (value of orders) {
+  for (let value of orders) {
     if (value === valor) {
       count += 1;
     }
   }
   return count;
-}
+};
 
 const itemsToSell = (iterable) => {
   let fullMenu = [];
@@ -101,15 +102,15 @@ const itemsToSell = (iterable) => {
     }
   }
   return fullMenu.flat();
-}
+};
 
 const itemsPrice = (iterable) => {
-  let itemsPrice = [];
+  let itemsPrices = [];
   for (let key in iterable) {
-   itemsPrice.push(Object.values(iterable[key]));
+    itemsPrices.push(Object.values(iterable[key]));
   }
-  return itemsPrice.flat();
-}
+  return itemsPrices.flat();
+};
 
 const doSum = (objeto2) => {
   let total = 0;
@@ -117,14 +118,14 @@ const doSum = (objeto2) => {
     total += counter(itemsToSell(objeto2)[index]) * itemsPrice(objeto2)[index];
   }
   return total;
-}
+};
 
 const createMenu = (objeto) => {
   objetoRetornado = {
     fetchMenu: () => objeto,
     consumption: [],
     order: orderFunction,
-    pay: doSum
+    pay: doSum,
   };
   return objetoRetornado;
 };
