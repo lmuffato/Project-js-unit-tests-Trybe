@@ -95,21 +95,21 @@ const counter = (valor) => {
 };
 
 const itemsToSell = (iterable) => {
-  let fullMenu = [];
-  for (let key in iterable) {
-    for (let chaves in iterable[key]) {
-      fullMenu.push(chaves);
-    }
+  let secundaryKeys = [];
+  let mainKeys = Object.keys(iterable);
+  for (let index = 0; index < mainKeys.length; index += 1) {
+    secundaryKeys.push(Object.keys(iterable[mainKeys[index]]));
   }
-  return fullMenu.flat();
+  return secundaryKeys.flat();
 };
 
 const itemsPrice = (iterable) => {
-  let itemsPrices = [];
-  for (let key in iterable) {
-    itemsPrices.push(Object.values(iterable[key]));
+  let secundaryValues = [];
+  let mainKeys = Object.keys(iterable);
+  for (let index = 0; index < mainKeys.length; index += 1) {
+    secundaryValues.push(Object.values(iterable[mainKeys[index]]));
   }
-  return itemsPrices.flat();
+  return secundaryValues.flat();
 };
 
 const doSum = (objeto2) => {
