@@ -8,8 +8,10 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     assert.strictEqual(Array.isArray(funcFull), true);
     assert.strictEqual(funcFull.length, 2);
-    assert.strictEqual(typeof (funcFull[0]) && typeof (funcFull[1]), 'object');
+    assert.strictEqual(typeof (funcFull[0]), 'object');
+    assert.strictEqual(typeof (funcFull[1]), 'object');
     assert.strictEqual(funcFull[0] !== funcFull[1]);
-    assert.strictEqual(funcFull[0].slice(-3) && funcFull[1].slice(-3), '123');
+    assert.strictEqual(funcFull[0].slice(-3), '123');
+    assert.strictEqual(funcFull[1].slice(-3), '123');
   });
 });
