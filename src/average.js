@@ -14,9 +14,12 @@
 
 const average = (numbers) => {
   let soma = 0;
+  if (numbers.length === 0) {
+    return undefined;
+  }
   for (let i = 0; i < numbers.length; i += 1) {
-    if (typeof (numbers[i] !== 'number')) {
-      return 'undefined';
+    if (typeof numbers[i] !== 'number') {
+      return undefined;
     }
     soma += numbers[i];
   }
