@@ -32,8 +32,9 @@ function average(array) {
   const sum = array.reduce((sum, result) => {
     return sum + result;
   });
-  return Math.round(sum / array.length);
+  let averageArray = sum / array.length;
+  return Math.round(averageArray);
 }
-
+console.log(average([1, 5, 8, 17]));
 
 module.exports = average;
