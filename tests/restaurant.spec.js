@@ -54,8 +54,8 @@ describe('#createMenu', () => {
     assert.strictEqual(typeof createMenu().fetchMenu, 'function');
     assert.deepStrictEqual(Object.key(createMenu().fetchMenu()), ['food', 'drink']);
     const menu = {
-      food: {'coxinha': 3.90, 'sanduiche': 9.90, 'sopa': 12, 'sashimi': 20},
-      drink: {'agua': 3.90, 'cerveja': 6.90}
+      food: { coxinha: 3.90, sanduiche: 9.90, sopa: 12, sashimi: 20 },
+      drink: { agua: 3.90, cerveja: 6.90 },
     };
     let restaurant = createMenu(menu);
     assert.deepStrictEqual(createMenu(menu).fetchMenu(), menu);
