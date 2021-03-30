@@ -30,9 +30,8 @@ const average = (array) => {
 
   if (array.length === 0 || soma === undefined) {
     return undefined;
-  } else {
-    return Math.round(soma / array.length);
-  }
+  } 
+  return Math.round(soma / array.length);
 };
 
 module.exports = average;
