@@ -26,5 +26,6 @@ createStudent('Leandrão');
 
 console.log(estudante.name);
 console.log(estudante.feedback());
+console.log(typeof estudante);
 
 module.exports = createStudent;
