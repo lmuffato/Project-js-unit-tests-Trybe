@@ -12,5 +12,6 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
-
+const callFunction2 = productDetails('Alcool gel', 'Máscara');
+console.log(callFunction2.toString());
 module.exports = productDetails;
