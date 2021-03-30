@@ -29,8 +29,8 @@ function average(array) {
   if (validateArray(array) === false || isANumber(array) === false) {
     return undefined;
   }
-  const sum = array.reduce((sum, result) => {
-    return sum = sum + result;
+  const sum = array.reduce((sumArray, result) => {
+    return sumArray + result;
   });
   return Math.round(sum / array.length);
 }
