@@ -50,7 +50,7 @@ describe('#productDetails', () => {
     const produtos = productDetails(iten1, iten2);
     const produto01 = produtos[0].details.productId;
     const produto02 = produtos[1].details.productId;
-    assert.strictEqual(produtos[0].includes('123') && produtos[1].includes('123'), true);
+    assert.strictEqual(produto01.includes('123') && produto02.includes('123'), true);
     // referencia https://github.com/tryber/sd-010-a-project-js-unit-tests/blob/3011stan-js-unit-tests/tests/productDetails.spec.js
   });
 });
