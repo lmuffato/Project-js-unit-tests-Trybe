@@ -19,7 +19,7 @@ const estudante = {
 };
 
 const createStudent = (name) => {
-  estudante.name = `${name}, o Lobo Solitário`;
+  estudante.name = name;
   estudante.feedback = () => 'Eita pessoa boa!';
   return estudante;
 };
