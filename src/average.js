@@ -27,14 +27,12 @@ function somaArray(array) {
 
 const average = (array) => {
   const soma = somaArray(array);
-  let divisao = 0;
 
   if (array.length === 0 || soma === undefined) {
-    divisao = undefined;
+    return undefined;
   } else {
-    divisao = Math.round(soma / array.length);
+    return Math.round(soma / array.length);
   }
-  return divisao;
 };
 
 module.exports = average;
