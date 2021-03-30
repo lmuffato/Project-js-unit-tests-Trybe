@@ -79,6 +79,54 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+let objetoRetornado = {};
+const orderFunction = (string) => objetoRetornado.consumption.push(string);
+const obj = { food: { coxinha: 3.9, sopa: 9.9, sashimi: 10 }, drink: { agua: 3.9, cerveja: 6.9 } };
+
+const counter = (valor) => {
+  let count = 0;
+  for (value of orders) {
+    if (value === valor) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+const itemsToSell = (iterable) => {
+  let fullMenu = [];
+  for (let key in iterable) {
+    for (let chaves in iterable[key]) {
+      fullMenu.push(chaves);
+    }
+  }
+  return fullMenu.flat();
+}
+
+const itemsPrice = (iterable) => {
+  let itemsPrice = [];
+  for (let key in iterable) {
+   itemsPrice.push(Object.values(iterable[key]));
+  }
+  return itemsPrice.flat();
+}
+
+const doSum = (objeto2) => {
+  let total = 0;
+  for (let index = 0; index < itemsPrice(objeto2).length; index += 1) {
+    total += counter(itemsToSell(objeto2)[index]) * itemsPrice(objeto2)[index];
+  }
+  return total;
+}
+
+const createMenu = (objeto) => {
+  objetoRetornado = {
+    fetchMenu: () => objeto,
+    consumption: [],
+    order: orderFunction,
+    pay: doSum
+  };
+  return objetoRetornado;
+};
 
 module.exports = createMenu;
