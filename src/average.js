@@ -28,7 +28,7 @@ function somaArray(array) {
 const average = (array) => {
   const divisao = Math.round(somaArray(array) / array.length);
 
-  if (divisao === undefined || isNaN(divisao)) {
+  if (divisao === undefined || divisao.isNaN) {
     return undefined;
   }
   return divisao;
