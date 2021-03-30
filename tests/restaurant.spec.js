@@ -53,7 +53,7 @@ const createMenu = require('../src/restaurant');
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     assert.strictEqual(typeof createMenu().fetchMenu, 'function');
-    assert.deepStrictEqual(Object.key(createMenu().fetchMenu()), ['food', 'drink']);
+    assert.deepStrictEqual(Object.keys(createMenu().fetchMenu()), ['food', 'drink']);
     const menu = {
       food: { coxinha: 3.90, sanduiche: 9.90, sopa: 12, sashimi: 20 },
       drink: { agua: 3.90, cerveja: 6.90 },
