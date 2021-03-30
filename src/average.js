@@ -34,7 +34,7 @@ const average = (array) => {
   } else {
     divisao = soma / array.length;
   }
-  return divisao;
+  return Math.round(divisao);
 };
 
 module.exports = average;
