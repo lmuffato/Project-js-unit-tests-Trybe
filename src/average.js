@@ -19,14 +19,14 @@ function validateArray(array) {
 
 function isANumber(array) {
   for (let index = 0; index < array.lenght; index += 1) {
-    if ( typeof(array[index]) !== 'number' || array.lenght === 0) {
+    if (typeof (array[index]) !== 'number' || array.lenght === 0) {
       return false;
     }
   }
 }
 
 function average(array) {
-if (validateArray(array) === false || isANumber(array) === false) {
+  if (validateArray(array) === false || isANumber(array) === false) {
     return undefined;
   }
   let sum = 0;
