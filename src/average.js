@@ -11,27 +11,21 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-function validateArray(array) {
-  if (array.lenght === '') {
-    return false;
-  }
-}
-
-function isANumber(array) {
+function validateNumbersInArray(array) {
   for (let index = 0; index < array.lenght; index += 1) {
-    if (typeof (array[index]) !== 'number' || array.lenght === '') {
+    if (typeof (array[index]) !== 'number' || array.lenght === 0) {
       return false;
     }
   }
 }
 
 function average(array) {
-  if (validateArray(array) === false || isANumber(array) === false) {
+  if (validateNumbersInArray(array) === false) {
     return undefined;
   }
   const sum = array.reduce((sumArray, result) => sumArray + result);
   return Math.round(sum / array.length);
 }
-console.log(average([1, 5, 8, 17]));
+
 
 module.exports = average;
