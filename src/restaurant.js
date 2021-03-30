@@ -79,7 +79,7 @@
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 // const pedidoDoCardapio = (pedido) => myRestaurant.consumption.push(pedido);
 let myRestaurant = {};
-const orderFromMenu = function (request) {
+const orderFromMenu = (request) => {
   myRestaurant.consumption.push(request);
   return myRestaurant.consumption;
 };
