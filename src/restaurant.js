@@ -78,10 +78,23 @@
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`,
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
+function bill() {
+  const drinks = Object.keys(this.fetchMenu().drink);
+  const theConsumption = this.consumption;
+  let theBill = 0;
+  for (let index = 0; index < theConsumption.length; index += 1) {
+    if (drinks.includes(theConsumption[index])) {
+      theBill += this.fetchMenu().drink[theConsumption[index]];
+    } else {
+      theBill += this.fetchMenu().food[theConsumption[index]];
+    }
+  }
+  return theBill;
+}
 
-let restaurant = {};
-let bill = () => {};
-let addOrder = () => {};
+function addOrder(orderToAdded) {
+  this.consumption.push(orderToAdded);
+}
 
 const createMenu = (menu) => {
   const newRestaurant = {
@@ -93,34 +106,15 @@ const createMenu = (menu) => {
   return newRestaurant;
 };
 
-addOrder = (orderToAdded) => {
-  restaurant.consumption.push(orderToAdded);
-};
-
-bill = () => {
-  const drinks = Object.keys(restaurant.fetchMenu().drink);
-  const theConsumption = restaurant.consumption;
-  let theBill = 0;
-  for (let index = 0; index < theConsumption.length; index += 1) {
-    if (drinks.includes(theConsumption[index])) {
-      theBill += restaurant.fetchMenu().drink[theConsumption[index]];
-    } else {
-      theBill += restaurant.fetchMenu().food[theConsumption[index]];
-    }
-  }
-  return theBill;
-};
-
-const menu = {
-  food: { coxinha: 3.90, sanduiche: 9.90, sopa: 12, sashimi: 20 },
-  drink: { agua: 3.90, cerveja: 6.90 },
-};
-
-restaurant = createMenu(menu);
-restaurant.order('coxinha');
-restaurant.order('agua');
-restaurant.order('sopa');
-restaurant.order('sashimi');
-console.log(restaurant.fetchMenu(), restaurant.consumption, restaurant.pay());
+// const menu = {
+//   food: { coxinha: 3.90, sanduiche: 9.90, sopa: 12, sashimi: 20 },
+//   drink: { agua: 3.90, cerveja: 6.90 },
+// };
+// const restaurant = createMenu(menu);
+// restaurant.order('coxinha');
+// restaurant.order('agua');
+// restaurant.order('sopa');
+// restaurant.order('sashimi');
+// console.log(restaurant.fetchMenu(), restaurant.consumption === ['coxinha'], restaurant.pay());
 
 module.exports = createMenu;
