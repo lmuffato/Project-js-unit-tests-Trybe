@@ -44,3 +44,7 @@ describe('#circle', () => {
     });
   });
 });
+
+// Referências consultadas:
+// Thread do slack do colega Nando (turma 7): https://trybecourse.slack.com/archives/C017W4EDD4K/p1601495346313700
+// Pull request do colega Murilo Gonçalves: https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/53/files

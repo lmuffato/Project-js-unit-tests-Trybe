@@ -50,7 +50,7 @@
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
+// PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio. v
 //
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
@@ -77,9 +77,44 @@
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`,
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
+// const pedidoDoCardapio = (pedido) => myRestaurant.consumption.push(pedido);
+let myRestaurant = {};
+const orderFromMenu = function (request) {
+  myRestaurant.consumption.push(request);
+  return myRestaurant.consumption;
+};
 
-const createMenu = () => {
-
+const createMenu = (cardapio) => {
+  myRestaurant = {
+    fetchMenu: () => cardapio,
+    consumption: [],
+    order: (request) => {
+      orderFromMenu(request);
+    },
+    pay: () => {
+      let consumo = 0;
+      const foodItem = Object.keys(cardapio.food);
+      const drinkItem = Object.keys(cardapio.drink);
+      const consumptionArr = myRestaurant.consumption;
+      for (let key = 0; key <= consumptionArr.length; key += 1) {
+        if (foodItem.includes(consumptionArr[key])) {
+          consumo += cardapio.food[consumptionArr[key]];
+        }
+        if (drinkItem.includes(consumptionArr[key])) {
+          consumo += cardapio.drink[myRestaurant.consumption[key]];
+        }
+      }
+      return consumo * 1.1;
+    },
+  };
+  return myRestaurant;
 };
 
 module.exports = createMenu;
+
+// Referências consultadas:
+// https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/96/files
+// https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/113/files
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+// https://nodejs.org/api/assert.html#assert_assert_strictequal_actual_expected_message
+// https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/101/files
