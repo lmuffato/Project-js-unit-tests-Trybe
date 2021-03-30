@@ -13,7 +13,7 @@
 */
 function average(array) {
   if (array.length === 0) {
-    return undefined
+    return undefined;
   }
   for (let numbers of array) {
     if (typeof numbers !== 'number') {
