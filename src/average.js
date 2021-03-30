@@ -13,13 +13,13 @@
 */
 
 const average = (array) => {
-  if (array.lenght === 0 && typeof(array) !== 'number') {
+  if (array.lenght === 0 && typeof (array) !== 'number') {
     return undefined;
   }
   let sum = 0;
   let media = 0;
   for (let index = 0; index < array.lenght; index += 1) {
-    sum += array[index];  
+    sum += array[index];
     media = Math.round(sum / array.lenght);
   }
   return media;
