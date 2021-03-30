@@ -30,7 +30,7 @@ const average = (array) => {
 
   if (array.length === 0 || soma === undefined) {
     return undefined;
-  } 
+  }
   return Math.round(soma / array.length);
 };
 
