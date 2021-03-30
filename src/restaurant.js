@@ -84,12 +84,13 @@ let bill = () => {};
 let addOrder = () => {};
 
 const createMenu = (menu) => {
-  return {
+  const newRestaurant = {
     fetchMenu: () => menu,
     consumption: [],
     order: addOrder,
     pay: bill,
   };
+  return newRestaurant;
 };
 
 addOrder = (orderToAdded) => {
@@ -98,7 +99,8 @@ addOrder = (orderToAdded) => {
 
 bill = () => {
   const drinks = Object.keys(restaurant.fetchMenu().drink);
-  const consumption = restaurant.consumption;
+  let consumption = [];
+  consumption = restaurant.consumption;
   let theBill = 0;
   for (let index = 0; index < consumption.length; index += 1) {
     if (drinks.includes(consumption[index])) {
@@ -115,11 +117,11 @@ const menu = {
   drink: { agua: 3.90, cerveja: 6.90 },
 };
 
-restaurant = createMenu(menu);
-restaurant.order('coxinha');
-restaurant.order('agua');
-restaurant.order('sopa');
-restaurant.order('sashimi');
-console.log(restaurant.fetchMenu(), restaurant.consumption, restaurant.pay());
+// restaurant = createMenu(menu);
+// restaurant.order('coxinha');
+// restaurant.order('agua');
+// restaurant.order('sopa');
+// restaurant.order('sashimi');
+// console.log(restaurant.fetchMenu(), restaurant.consumption, restaurant.pay());
 
 module.exports = createMenu;
