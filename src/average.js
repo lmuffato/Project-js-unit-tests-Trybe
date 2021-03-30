@@ -12,24 +12,29 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  const arrayN = array;
+function somaArray (array) {
   let soma = 0;
 
-  for (let index = 0; index < arrayN.length; index += 1) {
-    if (typeof arrayN[index] !== 'number') {
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
       return soma = undefined;
     } else {
-      soma = soma + arrayN[index];
+      soma = soma + array[index];
     }
   }
+  return soma;
+}
 
-  if (typeof soma === 'number') {
-    soma =  Math.round(soma / arrayN.length);
+const average = (array) => {
+  const soma = somaArray(array);
+  let divisao = 0;
+  
+  if (array.length === 0 || soma === undefined) {
+    divisao = undefined;
   } else {
-    soma = undefined; 
+    divisao = soma / array.length;
   }
-  return soma
+  return divisao;
 };
 
 module.exports = average;
