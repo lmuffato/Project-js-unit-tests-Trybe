@@ -38,12 +38,5 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
-const a = 'Alcool gel';
-const b = 'Máscara';
-const result = productDetails(a, b);
-console.log(result);
-console.table(typeof result);
-// console.log(result.details.productId.match(/123$/g) === ['123']);
-// console.log(productDetails('Alcool gel', 'Máscara')[0].details.productId.split("").reverse().join("").includes(321, 0));
 
 module.exports = productDetails;

@@ -106,15 +106,4 @@ const createMenu = (menu) => {
   return newRestaurant;
 };
 
-// const menu = {
-//   food: { coxinha: 3.90, sanduiche: 9.90, sopa: 12, sashimi: 20 },
-//   drink: { agua: 3.90, cerveja: 6.90 },
-// };
-// const restaurant = createMenu(menu);
-// restaurant.order('coxinha');
-// restaurant.order('agua');
-// restaurant.order('sopa');
-// restaurant.order('sashimi');
-// console.log(restaurant.fetchMenu(), restaurant.consumption === ['coxinha'], restaurant.pay());
-
 module.exports = createMenu;
