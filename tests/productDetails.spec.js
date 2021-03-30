@@ -34,7 +34,7 @@ const productDetails = require('../src/productDetails');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
-    const functionTest = productDetails('Alcool gel', 'Máscara')
+    const functionTest = productDetails('Alcool gel', 'Máscara');
     // Teste que o retorno da função é um array.
     assert.ok(functionTest, typeof Array);
     // Teste que o array retornado pela função contém dois itens dentro.
