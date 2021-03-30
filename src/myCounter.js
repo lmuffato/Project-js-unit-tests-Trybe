@@ -10,15 +10,17 @@
   myCounter() // Retorna: [0, 2, 3, 1, 2, 3, 2, 2, 3, 3, 2, 3];
 */
 
-/* const myCounter = () => {
+const myCounter = () => {
   var myArray = [];
   for (var counter = 0; counter <= 3; counter += 1) {
     myArray.push(counter);
     for (var counter = 2; counter <= 3; counter += 1) {
       myArray.push(counter);
+    for (let otherCounter = 2; otherCounter <= 3; otherCounter += 1) {
+      myArray.push(otherCounter);
     }
   }
   return myArray;
 };
 
-module.exports = myCounter; */
+module.exports = myCounter;
