@@ -12,14 +12,14 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-function somaArray (array) {
+function somaArray(array) {
   let soma = 0;
 
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
-      return soma = undefined;
+      soma = undefined;
     } else {
-      soma = soma + array[index];
+      soma += array[index];
     }
   }
   return soma;
@@ -28,7 +28,7 @@ function somaArray (array) {
 const average = (array) => {
   const soma = somaArray(array);
   let divisao = 0;
-  
+
   if (array.length === 0 || soma === undefined) {
     divisao = undefined;
   } else {
