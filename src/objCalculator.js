@@ -20,16 +20,16 @@
 */
 
 const calculator = {
-  add: (a, b) => {
+  add: add = (a, b) => {
     return a + b;
   },
-  mult: (a, b) => {
+  mult: mult = (a, b) => {
     return a * b;
   },
-  div: (a, b) => {
+  div: div = (a, b) => {
     return Math.trunc(a / b);
   },
-  sub: (a, b) => {
+  sub: sub = (a, b) => {
     return a - b;
   },
 };
