@@ -17,7 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
-  const trailText = `Oi, meu nome é ${nome}!
+  const trailText = `  Oi, meu nome é ${nome}!
   Tenho ${idade} anos,
   trabalho na Trybe e mando muito em programação!
   #VQV!`;

@@ -24,8 +24,8 @@ const calculator = {
 
   mult: (param1, param2) => param1 * param2,
 
-  div: (param1, param2) => param1 / param2,
-
+  div: (param1, param2) => Math.trunc(param1 / param2),
+  // Acredito que o correto seria Math.random ou simples /, porém o teste pede para que retorne 2
   sub: (param1, param2) => param1 - param2,
 };
 
