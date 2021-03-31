@@ -35,8 +35,8 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     assert.strictEqual(typeof productDetails === 'array', true);
     assert.strictEqual(productDetails.length === 2, true);
-    assert.strictEqual(typeof productDetails[0] === 'object' && productDetails[0] === 'object', true)
-    assert.strictEqual(productDetails[0] !== productDetails[0], true)
+    assert.strictEqual(typeof productDetails() === 'object', true);
+    assert.strictEqual(productDetails[0] !== productDetails[1], true);
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.

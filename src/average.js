@@ -12,9 +12,9 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (array) => { 
-  let median = 0
-  let sum = 0
+const average = (array) => {
+  let median = 0;
+  let sum = 0;
   for (let index = 0; index < array.length; index += 1) {
     sum = median + array[index];
   }

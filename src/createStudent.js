@@ -16,12 +16,12 @@
 */
 
 const createStudent = (name) => {
- if (typeof name !== 'string') {
-  return undefined;
- } return {
+  if (typeof name !== 'string') {
+    return undefined;
+  } return ({
     name: name,
     feedback: 'Eita pessoa boa!',
- };
+  });
 };
 
 module.exports = createStudent;
