@@ -57,8 +57,8 @@ describe('#productDetails', () => {
     ]);
 
     // (Difícil) Teste que os dois productIds terminam com 123.
-     productObject1 = productDetails('Alcool gel', 'Máscara')[0];
-     productObject2 = productDetails('Alcool gel', 'Máscara')[1];
+    productObject1 = productDetails('Alcool gel', 'Máscara')[0];
+    productObject2 = productDetails('Alcool gel', 'Máscara')[1];
 
     assert.strictEqual(productObject1.details.productId, `${'Alcool gel'}123`);
     assert.strictEqual(productObject2.details.productId, `${'Máscara'}123`);
