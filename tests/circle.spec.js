@@ -35,7 +35,7 @@ describe('#circle', () => {
       area: (circle(3).area).toPrecision(4),
       circumference: (circle(3).circumference).toPrecision(4),
     });
-    assert.strictEqual((Object.entries(precisionCircle(3))),
+    assert.deepStrictEqual((Object.entries(precisionCircle(3))),
       [['radius', 3], ['area', '28.26'], ['circumference', '18.84']]);
 
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
