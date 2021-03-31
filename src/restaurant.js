@@ -47,12 +47,14 @@
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: () => objetoPassadoPorParametro }.
 //
+
 // Agora faça o TESTE 4 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
 //
+
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -64,8 +66,14 @@
 // - Definir o objeto que a `createMenu()` retorna, mas separadamente
 // - E, depois, definir a função que será atribuída a `order`.
 // ```
-// const restaurant = {}
-//
+
+// const retorno = createMenu({ food: { pastel: 1.50, 'pizza-frita': 4.50, 'hamburger-assado': 4.00 },
+//   drink: { 'coca-lata': 4.50, água: 1.50, suco: 2.00 } });
+
+// retorno.order('coxinha');
+
+// console.log(retorno.consumption);
+
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
 //
 // const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`.
@@ -79,32 +87,51 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
+// Com alterações no código por sugestões de Wanderson Sales - Turma 10 - Tribo A
+
+const createMenu = (object) => {
+  let menu = object;
+  const orderFromMenu = function (request) {
+    this.consumption.push(request);
+    return this.consumption;
+  };
+  return {
+    fetchMenu() {
+      return menu;
+    },
+    consumption: [],
+    order: orderFromMenu,
+    pay() {
+      let total = 0;
+
+      this.consumption.map((itens) => {
+        Object.keys(menu).forEach((elem) => {
+          Object.keys(menu[elem]).forEach((element) => {
+            if (itens === element) {
+              total += menu[elem][element];
+            }
+          });
+        });
+        return itens;
+      });
+      total *= 1.1;
+      return total;
+    },
+  };
+};
+
 const assert = require('assert');
 
 const test = {
-  food: { pastel: 1.50, 'pizza-frita': 4.50, 'hamburger-assado': 4.00 },
-  drink: { 'coca-lata': 4.50, água: 1.50, suco: 2.00 },
+  food: { coxinha: 3.90, sanduiche: 9.90 },
+  drinks: { agua: 3.90, cerveja: 6.90 },
 };
+let objetoRetornado = createMenu(test);
 
-const createMenu = (object) => ({
-  fetchMenu: () => object,
-  consumption: [],
-});
+objetoRetornado.order('coxinha');
+objetoRetornado.order('agua');
+objetoRetornado.order('coxinha');
 
-const order = (object) => {
-  const newOrder = createMenu;
-  newOrder.consumption = [object];
-  newOrder.order = object;
-  return newOrder;
-};
+console.log(objetoRetornado.pay());
 
-console.log(order('Macarrão'));
-
-// const createMenu = (param) => {
-//   return {
-//     fetchMenu: () => param },
-// };
-// assert.strictEqual(createMenu(), 'object');
-
-// console.log(createMenu(test));
 module.exports = createMenu;
