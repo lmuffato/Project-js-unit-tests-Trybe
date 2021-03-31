@@ -17,11 +17,4 @@ const numbers = (myArray) => {
   }
   return true;
 };
-
-const assert = require('assert');
-
-assert.strictEqual(numbers([1, 2]), true);
-assert.strictEqual(numbers([1, 2, 3, 4, 5]), true);
-assert.strictEqual(numbers([1, 2, 'a']), false);
-
 module.exports = numbers;
