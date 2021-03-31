@@ -17,12 +17,10 @@
 */
 
 const vqv = (nome, idade) => {
-
-  if (nome === undefined || idade === undefined){
+  if (nome === undefined || idade === undefined) {
     return undefined;
-  }
-  else {
-  return `Oi, meu nome é ${nome}!
+  } else {
+    return `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
