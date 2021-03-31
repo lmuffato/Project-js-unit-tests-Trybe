@@ -35,7 +35,8 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara'), 'object');
+    const productArray = productDetails('Alcool gel', 'Máscara');
+    assert.strictEqual(typeof productArray, 'object');
 
     // Teste que o array retornado pela função contém dois itens dentro.
     const productKey = Object.keys(productDetails(2));
@@ -51,7 +52,7 @@ describe('#productDetails', () => {
       { name: 'Alcool gel', details: { productId: 'Alcool gel123' } },
       { name: 'Máscara', details: { productId: 'Mascara123' } },
     ]);
-    
+
     // (Difícil) Teste que os dois productIds terminam com 123.
     let productObject1 = productDetails('Alcool gel', 'Máscara')[0];
     let productObject2 = productDetails('Alcool gel', 'Máscara')[1];
