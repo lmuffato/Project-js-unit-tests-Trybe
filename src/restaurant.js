@@ -111,15 +111,7 @@ const createMenu = (obj) => {
   
 };
 
-let test3 = createMenu({
-  food: {'coxinha': 3.90, 'sanduiche': 9.90},
-  drinks: {'agua': 3.90, 'cerveja': 6.90}
-});
-test3.order('coxinha');
-test3.order('agua')
 
-createMenu();
-console.log(test3.pay())
 
 
 
