@@ -19,8 +19,11 @@ const createStudent = (name) => {
   const student = {};
   const feedback = () => 'Eita pessoa boa!';
   student.name = name;
-  student.feedback = feedback();
+  student.feedback = feedback;
   return student;
 };
+
+const estudante = createStudent('Leandrão, o Lobo Solitário');
+console.log(typeof estudante.feedback);
 
 module.exports = createStudent;
