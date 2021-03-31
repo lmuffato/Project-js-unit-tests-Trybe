@@ -10,15 +10,12 @@
 */
 
 const numbers = (myArray) => {
-  for (let i = 0; i < myArray.length; index += 1) {
-    if (typeof myArray[index] !== 'number') {
+  for (let i = 0; i < myArray.length; i += 1) {
+    if (typeof myArray[i] !== 'number') {
       return false;
     }
   }
   return true;
 };
-
-console.log(numbers([2, 3, 4]));
-console.log(numbers([2, 'errado', 5]));
 
 module.exports = numbers;
