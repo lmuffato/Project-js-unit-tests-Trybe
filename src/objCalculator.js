@@ -4,7 +4,7 @@
     - mult;
     - div;
     - sub.
-  Para cada uma delas atribua uma função que realiza a respectiva operação.
+  Para cada uma delas atribua uma função que realiza n1 respectiva operação.
   A função deve receber dois inteiros e retornar um inteiro.
   Os resultados das divisões devem sempre ser arredondados para baixo.
 
@@ -19,6 +19,16 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+let calculator = {
+  add: (n1, n2) => n1 + n2,
+  mult: (n1, n2) => n1 * n2,
+  div: (n1, n2) => Math.floor(n1 / n2),
+  sub: (n1, n2) => n1 - n2,
+};
+
+const objCalculator = (param1) => {
+  const result = param1;
+  return result;
+};
 
 module.exports = calculator;
