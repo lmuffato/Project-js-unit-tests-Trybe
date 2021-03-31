@@ -18,7 +18,7 @@ const average = (array) => {
   for (let index = 0; index < array.length; index += 1) {
     sum = median + array[index];
   }
-  median = sum / array.length;
+  median = Math.round(sum / array.length);
   return median;
 };
 
