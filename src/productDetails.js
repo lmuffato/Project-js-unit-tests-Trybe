@@ -38,5 +38,8 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
-
+const prods = productDetails('matheus', 'prod1');
+const cut = prods[0].details.productId.length
+const numbers = prods[0].details.productId.slice(cut - 3, cut);
+console.log(numbers);
 module.exports = productDetails;
