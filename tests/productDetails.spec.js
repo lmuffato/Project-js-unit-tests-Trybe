@@ -44,14 +44,14 @@ describe('#productDetails', () => {
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
-    
+
     // Teste que os dois objetos são diferentes entre si.
     const productValue = Object.values(productDetails('Alcool gel', 'Máscara'));
     assert.notStrictEqual(productValue, [
       { name: 'Alcool gel', details: { productId: 'Alcool gel123' } },
-      { name: 'Máscara', details: { productId: 'Mascara123' } }
-    ]
-);
+      { name: 'Máscara', details: { productId: 'Mascara123' } },
+    ]);
+    
     // (Difícil) Teste que os dois productIds terminam com 123.
     let productObject1 = productDetails('Alcool gel', 'Máscara')[0];
     let productObject2 = productDetails('Alcool gel', 'Máscara')[1];
