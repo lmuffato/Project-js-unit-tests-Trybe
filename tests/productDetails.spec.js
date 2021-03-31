@@ -41,8 +41,9 @@ describe('#productDetails', () => {
     assert.strictEqual(Object.keys(productDetails(2)).length, 2);
 
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
-    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
+    const arrayProduct = productDetails('Alcool', 'Máscara');
+    assert.strictEqual(typeof arrayProduct[0], 'object');
+    assert.strictEqual(typeof arrayProduct[1], 'object');
 
     // Teste que os dois objetos são diferentes entre si.
     const productValue = Object.values(productDetails('Alcool gel', 'Máscara'));
@@ -52,7 +53,8 @@ describe('#productDetails', () => {
     ]);
 
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId, `${'Alcool gel'}123`);
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId, `${'Máscara'}123`);
+    const idProduct = productDetails('Alcool gel', 'Máscara').details.productId;
+    assert.strictEqual(idProduct[0], `${'Alcool gel'}123`);
+    assert.strictEqual(idProduct[1], `${'Máscara'}123`);
   });
 });
