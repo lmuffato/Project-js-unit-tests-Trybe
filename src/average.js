@@ -20,12 +20,14 @@ const average = (array) => {
 
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
-      return undefined
-    };
+      return undefined;
+    }
     media += array[index];
   }
   media = Math.round(media / array.length);
   return media;
 };
+console.log(average(['oi']));
+
 
 module.exports = average;
