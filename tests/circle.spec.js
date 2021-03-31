@@ -31,6 +31,10 @@ describe('#circle', () => {
     assert.strictEqual(circle(), undefined);
     assert.strictEqual(circle(2).circumference, 12.56);
     assert.strictEqual(circle(3).circumference, 18.84);
-    assert.deepStrictEqual(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
+    // estava tendo problema de limite de linhas e consultei o pullrequest do [hhackenhaar] para entender que precisava diminui os valores inseridos nos testes com a função toFixed()
+    const testCircle = circle(3);
+    testCircle.area = parseFloat((testCircle.area).toFixed(2));
+    testCircle.circumference = parseFloat((testCircle.circumference).toFixed(2));
+    assert.deepStrictEqual(testCircle, { radius: 3, area: 28.26, circumference: 18.84 });
   });
 });
