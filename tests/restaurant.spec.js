@@ -54,7 +54,7 @@ describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     assert.strictEqual(typeof createMenu(), 'object');
     const objetoRetornado = createMenu({ food: {}, drink: {} });
-    assert.deepstrictEqual(objetoRetornado.fetchMenu(), { food: {}, drink: {} });
+    assert.deepStrictEqual(objetoRetornado.fetchMenu(), { food: {}, drink: {} });
     const object = createMenu();
     assert.deepStrictEqual(createMenu(object).fetchMenu(), object);
     // ```
@@ -81,6 +81,12 @@ describe('#createMenu', () => {
     // ```
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
+    const iWantToEat = (param) => {
+      const pedido = param;
+      objetoRetornado.order(pedido);
+      return objetoRetornado.consumption;
+    };
+    assert.deepStrictEqual(iWantToEat('coxinha'), ['coxinha']);
     // TESTE 6: Verifique que as três orders seguintes, de bebidas e comidas mescladas, somam três itens no array `objetoRetornado.consumption` conforme os itens pedidos.
     // ```
     // objetoRetornado.order("coxinha");
