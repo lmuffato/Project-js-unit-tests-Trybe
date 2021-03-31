@@ -35,4 +35,4 @@ const average = (array)=> {
     return element
 };
 
-module.exports = average;
+module.exports = average;//assert.fail();
