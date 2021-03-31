@@ -16,6 +16,9 @@ const average = (array) => {
   let median = 0;
   let sum = 0;
   for (let index = 0; index < array.length; index += 1) {
+    if (typeof (array[index]) === 'string') {
+      return undefined;
+    }
     sum += array[index];
   }
   median = Math.round(sum / array.length);
