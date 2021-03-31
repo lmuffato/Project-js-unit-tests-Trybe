@@ -59,7 +59,8 @@ describe('#createMenu', () => {
     // ```
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
-    assert.deepStrictEqual(Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu()), ['food', 'drink']);
+    let returned = Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu());
+    assert.deepStrictEqual(returned, ['food', 'drink']);
     // ```
     // const objetoRetornado = createMenu({ food: {}, drink: {} });
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
@@ -68,7 +69,8 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu() // Retorno: objetoQualquer
-    assert.deepStrictEqual(createMenu({ food: {}, drink: {} }).fetchMenu(), { food: {}, drink: {} });
+    returned = createMenu({ food: {}, drink: {} }).fetchMenu();
+    assert.deepStrictEqual(returned, { food: {}, drink: {} });
     // ```
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
@@ -121,7 +123,7 @@ describe('#createMenu', () => {
     test3.order('coxinha');
     test3.order('agua');
     test3.order('coxinha');
-    let returned = test3.pay();
+    returned = test3.pay();
     let expected = (11.70 + (11.70 * 0.10)).toPrecision(4);
     expected = parseFloat(expected);
     assert.strictEqual(returned, expected);

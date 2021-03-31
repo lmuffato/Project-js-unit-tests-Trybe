@@ -47,7 +47,9 @@ describe('#productDetails', () => {
     const testFinal = (arr) => {
       let returned = true;
       for (let index = 0; index < arr.length; index += 1) {
-        if (arr[index].details.productId.substring(arr[index].details.productId.length - 3, arr[index].details.productId.length) !== '123') {
+        let x = arr[index].details.productId.length - 3;
+        let y = arr[index].details.productId.length;
+        if (arr[index].details.productId.substring(x, y) !== '123') {
           returned = false;
         }
       }
