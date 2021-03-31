@@ -15,11 +15,11 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = (name) => {
-  if (typeof name !== 'string') {
+const createStudent = (element) => {
+  if (typeof element !== 'string') {
     return undefined;
   } return ({
-    name: name,
+    name: element,
     feedback: 'Eita pessoa boa!',
   });
 };
