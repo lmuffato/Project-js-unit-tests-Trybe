@@ -21,16 +21,16 @@
 
 const calculator = {
   add: (a, b) => {
-    a + b;
+    return a + b;
   },
   mult: (a, b) => {
-    a * b;
+    return a * b;
   },
   div: (a, b) => {
-    Math.trunc(a / b);
+    return Math.trunc(a / b);
   },
   sub: (a, b) => {
-    a - b;
+    return a - b;
   },
 };
 
