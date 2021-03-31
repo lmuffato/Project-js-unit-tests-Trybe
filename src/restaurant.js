@@ -86,18 +86,18 @@ const searchingForIntem = (theMenu) => {
   const menuInArr = Object.entries(menuInObj);
   return menuInArr;
 };
-// const howMuch2Pay = (consume, callMenu) => {
-//   const menuAsArr = searchingForIntem(callMenu);
-//   let count = 0;
-//   for (let i = 0; i < menuAsArr.length; i += 1) {
-//     for (let k = 0; k < consume.length; k += 1) {
-//       if (consume[k] === menuAsArr[i][0]) {
-//         count += menuAsArr[i][1];
-//       }
-//     }
-//   }
-//   return count * 1.1;
-// };
+const howMuch2Pay = (consume, callMenu) => {
+  const menuAsArr = searchingForIntem(callMenu);
+  let count = 0;
+  for (let i = 0; i < menuAsArr.length; i += 1) {
+    for (let k = 0; k < consume.length; k += 1) {
+      if (consume[k] === menuAsArr[i][0]) {
+        count += menuAsArr[i][1];
+      }
+    }
+  }
+  return count * 1.1;
+};
 
 const createMenu = (theObject) => {
   const menuModel = {
