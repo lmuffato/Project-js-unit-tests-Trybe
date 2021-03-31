@@ -38,7 +38,7 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(typeof productDetails('x', 'y')[0]
     && typeof productDetails('x', 'y')[1], 'object');
     assert.notDeepStrictEqual(productDetails('x', 'y')[0], productDetails('x', 'y')[1]);
-    assert.deepStrictEqual(productDetails('x', 'y')[0].details.productId.substr(1),
-      productDetails('x', 'y')[1].details.productId.substr(1));
+    assert.deepStrictEqual(productDetails('x', 'y')[0].details.productId.substr(1), '123');
+    assert.deepStrictEqual(productDetails('x', 'y')[1].details.productId.substr(1), '123');
   });
 });
