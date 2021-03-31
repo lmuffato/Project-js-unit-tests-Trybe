@@ -42,7 +42,8 @@ describe('#createMenu', () => {
     assert.deepStrictEqual(objetoRetornado.consumption,
       ['coxinha', 'agua', 'sopa', 'sashimi', 'sashimi']);
     // TESTE 8:
-    const objectFoodAndDrink = createMenu({ food: { coxinha: 2, sopa: 4 }, drink: { agua: 2, suco: 3 } });
+    const objectFoodAndDrink = createMenu({ food: { coxinha: 2, sopa: 4 },
+      drink: { agua: 2, suco: 3 } });
     objectFoodAndDrink.consumption = ['coxinha', 'sopa', 'agua'];
     const total = 8 + (8 * 0.10);
     assert.strictEqual(objectFoodAndDrink.pay(), total);
