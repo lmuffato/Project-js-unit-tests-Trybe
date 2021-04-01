@@ -11,7 +11,18 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const listOfNumbers = [3, 4, 5];
 
-const average = () => {};
+const average = (numbers) => {
+  let collection = numbers;
+  for (let index = 0; index < collection.length; index += 1) {
+    if (typeof collection[index] !== 'number') return undefined;
+  } if (!collection.length) return undefined;
+
+  const sum = collection.reduce((acumulador, item) => acumulador + item, 0);
+  return Math.round(sum / collection.length);
+};
+
+console.log(average(listOfNumbers));
 
 module.exports = average;
