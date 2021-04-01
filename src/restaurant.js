@@ -82,7 +82,12 @@
 const createMenu = () => ({
   // retorna um objeto q tem fetchMenu
   // fecthMenu é uma função
-  fetchMenu: () => {},
+  // fecthMenu é objeto e tem 2 entradas, food e drink
+  fetchMenu: () => ({
+    food: {},
+    drink: {},
+  }),
 });
+// const objetoRetornado = createMenu({ food: {}, drink: {} });
 
 module.exports = createMenu;

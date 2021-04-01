@@ -28,10 +28,10 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle(1), 'object', true);
     assert.strictEqual(Object.keys(circle(1)).length, 3);
     assert.strictEqual(circle(), undefined);
-    assert.strictEqual(circle(2).circumference.toFixed(2), '12.76');
-    assert.strictEqual(circle(3).area.toFixed(2), '28.27');
+    assert.strictEqual(circle(2).circumference.toFixed(2), '12.56');
+    assert.strictEqual(circle(3).area.toFixed(2), '28.26');
     // assert.strictEqual(circle(3).area === 28.27 && circle.circumference === 18.84 && circle.radius === 3);
-    assert.strictEqual(Object.values(circle(3).toFixed(2) === [28.27, 18.84, 3]));
+    assert.strictEqual(Object.values(circle(3).toFixed(2) === [28.26, 18.84, 3]));
 
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
