@@ -17,16 +17,11 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome === undefined || idade === undefined) {
-    return undefined;
+  if (nome !== undefined && idade !== undefined) {
+    const workInfo = 'trabalho na Trybe e mando muito em programação!';
+    return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\n${workInfo}\n#VQV!`;
   }
-  let result = '';
-  const workMessage = 'trabalho na Trybe e mando muito em programação!';
-  result = `'Oi, meu nome é ${nome}!
-  Tenho ${idade} anos,
-  ${workMessage}
-  #VQV!'`;
-  return result;
+  return undefined;
 };
 
 console.log(vqv('Rodrigo', 24));
