@@ -93,8 +93,9 @@ describe('#createMenu', () => {
     // objetoRetornado.order("coxinha");
     // objetoRetornado.consumption // Retorno: ["coxinha"]
     const consumptionArray = objetoRetornado.consumption;
-    const expectedResult = consumptionArray.some((order) => order === 'coxinha');
-    assert.strictEqual(objetoRetornado.order('coxinha'), true);
+    objetoRetornado.order('coxinha');
+    const checkIfCoxinhaWasOrdered = consumptionArray.some((order) => order === 'coxinha');
+    assert.strictEqual(checkIfCoxinhaWasOrdered, true);
     // ```
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
