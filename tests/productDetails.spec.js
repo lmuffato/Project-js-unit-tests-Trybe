@@ -47,7 +47,6 @@ describe('#productDetails', () => {
     let valueUm = Object.values('um');
     let valueDois = Object.values('dois');
     assert.notStrictEqual(valueUm, valueDois);
-
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.deepStrictEqual(productDetails('produtoUm',
       'produtoDois')[0].details.productId.endsWith('123'), true);
