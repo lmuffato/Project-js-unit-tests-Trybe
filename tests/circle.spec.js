@@ -22,7 +22,7 @@ const circle = require('../src/circle');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-    // Este teste foi desenvolvido com base nos testes do estudante Guilherme Prais/Sergio MArtins
+// Este teste foi desenvolvido com base nos testes do estudante Guilherme Prais/Sergio MArtins
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     // assert.fail();
