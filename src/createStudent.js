@@ -19,8 +19,7 @@ const createStudent = (parametro) => {
 return {
   name: parametro,
   feedback () {
-    const feedb = message
-    return feedb
+    return message
   }
 }
 }
