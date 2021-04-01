@@ -20,7 +20,9 @@
 
 const circle = (radius) => {
   const PI = 3.14;
-  if (!radius) { return undefined; }
+  if (!radius) {
+    return undefined;
+  }
   return {
     radius,
     area: PI * radius * radius,
@@ -28,4 +30,5 @@ const circle = (radius) => {
   };
 };
 
+console.log(typeof circle());
 module.exports = circle;
