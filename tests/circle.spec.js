@@ -39,7 +39,7 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     let areaCircle = circle(3);
     areaCircle.area = parseFloat(areaCircle.area.toFixed(2));
-    assert.strictEqual((areaCircle.area / 3), 9.42);
+    assert.strictEqual((areaCircle.area), 28.26);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     let isCorrect = circle(3);
     isCorrect.area = parseFloat(isCorrect.area.toFixed(2));
