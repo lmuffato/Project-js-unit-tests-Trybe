@@ -15,7 +15,7 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-//ajuda do Andy (turma 10A)
+// ajuda do Andy (turma 10A)
 const createStudent = (name) => ({
   name,
   feedback() {
