@@ -13,8 +13,8 @@
 */
 
 const average = (numbers) => {
-  for(let index = 0; index < numbers.length; index += 1) {
-    if (typeof numbers[index] !== Number) { return 'undefined'; }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (typeof numbers[index] !== 'number') { return 'undefined'; }
     {
       const soma = numbers.reduce((inicial, elemen) => inicial + elemen, 0);
       const media = soma / numbers.length;
@@ -24,5 +24,3 @@ const average = (numbers) => {
 };
 
 module.exports = average;
-
-console.log(average([3,4,'5']))
