@@ -81,6 +81,7 @@
 
 const createMenu = (object) => ({
   fetchMenu: () => ({ object }),
+  consumption: [],
 });
 
 console.log(createMenu('{ food: {}, drink: {} }').fetchMenu());
