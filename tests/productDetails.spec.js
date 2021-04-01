@@ -33,12 +33,28 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     // Teste que os dois objetos são diferentes entre si.
     // (Difícil) Teste que os dois productIds terminam com 123.
+
+    // https://stackoverflow.com/questions/4775722/how-to-check-if-an-object-is-an-array
+    assert.strictEqual(Array.isArray(productDetails()), true);
+
+    assert.strictEqual(productDetails('product1', 'product2').length, 2);
+
+    let types = [];
+    productDetails('product1', 'product2').forEach((product) => types.push(typeof product));
+    assert.strictEqual(types.every((type) => type === 'object'), true);
+
+    const entries = Object.entries(productDetails('product1', 'product2'));
+    assert.strictEqual(entries[0] !== entries[1], true);
+
+    const values = Object.values(productDetails('product1', 'product2'));
+    let productIds = [];
+    values.forEach((value) => productIds.push(value.details.productId.slice(-3)));
+    assert.strictEqual(productIds.every((id) => id === '123'), true);
   });
 });
