@@ -18,10 +18,12 @@
 const createStudent = (element) => {
   if (typeof element !== 'string') {
     return undefined;
-  } return ({
+  }
+  const student = {
     name: element,
     feedback: 'Eita pessoa boa!',
-  });
+  };
+  return student;
 };
 
 module.exports = createStudent;
