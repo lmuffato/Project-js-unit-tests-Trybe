@@ -113,25 +113,25 @@ const createMenu = (menuObject) => {
   return objct;
 };
 
-const menuOptions = createMenu({ food: { coxinha: 3, pizza: 5 }, drink: { refri: 2, agua: 1 } });
+// const menuOptions = createMenu({ food: { coxinha: 3, pizza: 5 }, drink: { refri: 2, agua: 1 } });
 
-console.log(menuOptions);
+/* console.log(menuOptions);
 
 console.log('FechMenu:');
 console.log(menuOptions.fetchMenu());
 
 console.log('Consuption:');
-console.log(menuOptions.consumption);
+console.log(menuOptions.consumption); */
 
-menuOptions.order('coxinha');
+/* menuOptions.order('coxinha');
 menuOptions.order('refri');
 menuOptions.order('agua');
-menuOptions.order('pizza');
+menuOptions.order('pizza'); */
 
-console.log('Consuption:');
+/* console.log('Consuption:');
 console.log(menuOptions.consumption);
 
 console.log('Pay:');
-console.log(menuOptions.pay());
+console.log(menuOptions.pay()); */
 
 module.exports = createMenu;
