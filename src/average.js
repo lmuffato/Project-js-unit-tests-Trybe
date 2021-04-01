@@ -20,17 +20,17 @@ const average = (array) => {
   if (arrayX.length <= 0) {
     return undefined;
   }
-  for (let i = 0; i < arrayX.length; i++) {
+  for (let i = 0; i < arrayX.length; i += 1) {
     if (typeof (arrayX[i]) !== 'number') {
       return undefined;
     }
-    element = element + arrayX[i];
+    element += arrayX[i];
     if (typeof element === 'number') {
       element = Math.round(element / arrayX.length);
     }
     element = undefined;
   }
-    return element
+  return element;
 };
 
-module.exports = average;//assert.fail();
+module.exports = average; // assert.fail();
