@@ -90,24 +90,30 @@ const createMenu = (menuObject) => {
     order: (orderClient) => objct.consumption.push(orderClient),
 
     pay: () => {
-      // console.log('teste pay:');
       const pedido = objct.consumption;
-      // console.log(pedido);
-      for (let index in pedido) {
-        const valorChaves = Object.values(objct.fetchMenu());
-        valorChaves.forEach((itemList) => {
-          if (Object.keys(itemList).includes(pedido[index])) {
-            totalValue += itemList[pedido[index]];
-          }
-        });
+      const foods = Object.values(objct.fetchMenu())[0];
+      const drinks = Object.values(objct.fetchMenu())[1];
+      for (let index = 0; index < pedido.length; index += 1) {
+        if (Object.keys(foods).includes(pedido[index])) {
+          totalValue += foods[pedido[index]];
+        } else {
+          totalValue += drinks[pedido[index]];
+        }
       }
+      /* const keysMenu = Object.values(objct.fetchMenu());
+        // valorChaves.forEach((itemList) => {
+        for (let indexkey in keysMenu) {
+          if (Object.keys(keysMenu[indexkey]).includes(pedido[index])) {
+            totalValue += keysMenu[indexkey][pedido[index]];
+          }
+      } */
       return totalValue;
     },
   };
   return objct;
 };
 
-const menuOptions = createMenu({ food: { coxinha: 3.00, pizza: 5.00 }, drink: { refri: 2.00, agua: 1.00 } });
+const menuOptions = createMenu({ food: { coxinha: 3, pizza: 5 }, drink: { refri: 2, agua: 1 } });
 
 console.log(menuOptions);
 
