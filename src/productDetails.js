@@ -39,4 +39,9 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
+const products = productDetails('Alcool gel', 'Máscara');
+console.log(products);
+const splicedProductId1 = [...products[0].details.productId].splice(-3);
+console.log(splicedProductId1 === ['1', '2', '3']);
+
 module.exports = productDetails;
