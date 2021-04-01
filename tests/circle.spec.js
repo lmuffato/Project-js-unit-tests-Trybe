@@ -33,16 +33,16 @@ describe('#circle', () => {
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.strictEqual(circle(), undefined, 'retorno esperado de uma função vazia é undefined');
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.strictEqual(circle(2).circumference, 12.56, 
-    'retorno esperado da circunferencia de um circulo de raio 2 é 12.56');
+    assert.strictEqual(circle(2).circumference, 12.56,
+      'retorno esperado da circunferencia de um circulo de raio 2 é 12.56');
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.strictEqual(circle(3).area, 28.259999999999998, 
-    'retorno esperado do raio de uma circunferencia de raio 3 é 28.259999999999998');
+    assert.strictEqual(circle(3).area, 28.259999999999998,
+      'retorno esperado do raio de uma circunferencia de raio 3 é 28.259999999999998');
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.strictEqual(circle(3), 
-    { radius: 3, 
-      area: 28.259999999999998, 
-      circumference: 18.84 }, 
-      'retorno esperado é {radius: 3, area: 28.259999999999998, circumference: 18.84}');
+    assert.strictEqual(circle(3),
+      { radius: 3, 
+        area: 28.259999999999998, 
+        circumference: 18.84 }, 
+        'retorno esperado é {radius: 3, area: 28.259999999999998, circumference: 18.84}');
   });
 });
