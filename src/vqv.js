@@ -25,9 +25,9 @@ const vqv = (nome, idade) => {
   result = `'Oi, meu nome é ${nome}!
   Tenho ${idade} anos,
   ${workMessage}
-  #VQV!'`
-    return result;
+  #VQV!'`;
+  return result;
 };
 
-console.log(vqv('Rodrigo', 24))
+console.log(vqv('Rodrigo', 24));
 module.exports = vqv;
