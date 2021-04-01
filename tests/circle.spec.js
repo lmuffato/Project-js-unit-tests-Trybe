@@ -37,10 +37,6 @@ describe('#circle', () => {
     assert.strictEqual(circle(), undefined);
     assert.strictEqual(Object.values(circle(2))[2], 12.56);
     assert.strictEqual(Number(parseFloat(Object.values(circle(3))[1]).toPrecision(4)), 28.26);
-    assert.strictEqual(Object.entries(circle(3)), [
-      ['radius', 3],
-      ['area', 28.259999999999998],
-      ['circumference', 18.84],
-    ]);
+    assert.strictEqual(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
   });
 });
