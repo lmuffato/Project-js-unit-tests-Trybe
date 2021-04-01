@@ -40,9 +40,9 @@ describe('#circle', () => {
       'retorno esperado do raio de uma circunferencia de raio 3 é 28.259999999999998');
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.strictEqual(circle(3),
-      { radius: 3, 
-        area: 28.259999999999998, 
-        circumference: 18.84 }, 
-        'retorno esperado é {radius: 3, area: 28.259999999999998, circumference: 18.84}');
+      { radius: 3,
+        area: 28.259999999999998,
+        circumference: 18.84 },
+      'retorno esperado é {radius: 3, area: 28.259999999999998, circumference: 18.84}');
   });
 });
