@@ -2,6 +2,8 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { BADFLAGS } = require('dns');
+const { umask } = require('process');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -33,12 +35,23 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
+    assert.ok(Array.isArray(productDetails('a', 'b')), 'falso');
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(productDetails('a', 'b').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.strictEqual(typeof Object.values(productDetails('a', 'b')), 'object');
     // Teste que os dois objetos são diferentes entre si.
+    productDetails('um', 'dois');
+    let valueUm = Object.values('um');
+    let valueDois = Object.values('dois');
+    assert.notStrictEqual(valueUm, valueDois);
+
     // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.deepStrictEqual(productDetails('produtoUm', 
+    'produtoDois')[0].details.productId.endsWith('123'),true);
+    assert.deepStrictEqual(productDetails('produtoUm', 
+    'produtoDois')[1].details.productId.endsWith('123'),true);
   });
 });
