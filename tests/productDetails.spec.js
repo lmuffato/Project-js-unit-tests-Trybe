@@ -41,7 +41,7 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof productDetails('cerveja', 'vinho')[0], 'object');
     assert.strictEqual(typeof productDetails('cerveja', 'vinho')[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(productDetails('chocolate', 'vinho')[0], productDetails('chocolate', 'vinho')[1]);
+    assert.notStrictEqual(productDetails('água', 'vinho')[0], productDetails('água', 'vinho')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });
