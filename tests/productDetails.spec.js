@@ -49,9 +49,9 @@ describe('#productDetails', () => {
     assert.notStrictEqual(valueUm, valueDois);
 
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(productDetails('produtoUm', 
-    'produtoDois')[0].details.productId.endsWith('123'),true);
-    assert.deepStrictEqual(productDetails('produtoUm', 
-    'produtoDois')[1].details.productId.endsWith('123'),true);
+    assert.deepStrictEqual(productDetails('produtoUm',
+      'produtoDois')[0].details.productId.endsWith('123'), true);
+    assert.deepStrictEqual(productDetails('produtoUm',
+      'produtoDois')[1].details.productId.endsWith('123'), true);
   });
 });
