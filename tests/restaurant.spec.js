@@ -106,7 +106,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('sopa');
     objetoRetornado.order('sashimi');
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
-    assert.strictEqual(objetoRetornado.consumption.length, 3);
+    assert.strictEqual(objetoRetornado.consumption.length, 4);
     // ```
     // Agora faça o TESTE 7 deste arquivo.
     // --------------------------------------------------------------------------------------
