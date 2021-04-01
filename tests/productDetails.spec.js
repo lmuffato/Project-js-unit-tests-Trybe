@@ -33,8 +33,10 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-
+    
     // ESCREVA SEUS TESTES ABAIXO:
+    //ajuda do Andy (turma 10A)
+    
     let func = productDetails('Alcool gel', 'Máscara');
     // Teste que o retorno da função é um array.
     assert.ok(typeof func, 'array');
