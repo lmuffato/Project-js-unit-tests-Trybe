@@ -16,8 +16,8 @@
 */
 const message = 'Eita pessoa boa!';
 const createStudent = (parametro) => {
-return { name: parametro, feedback () { return message };
+return { name: parametro, feedback () { return message }
+    };
   };
-};
 createStudent('willian');
 module.exports = createStudent;
