@@ -25,4 +25,5 @@ const createStudent = (name) => {
   }
 };
 console.log(createStudent('Douglas').feedback());
+
 module.exports = createStudent;
