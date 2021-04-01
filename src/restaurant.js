@@ -92,7 +92,7 @@ const createMenu = (object) => {
     pay: () => {
       const foodsValues = object.food;
       const drinksValues = object.drink;
-      total = 0;
+      let total = 0;
       consumption.forEach((item) => {
         if (Object.keys(foodsValues).includes(item)) {
           total += foodsValues[item];
@@ -100,9 +100,9 @@ const createMenu = (object) => {
         if (Object.keys(drinksValues).includes(item)) {
           total += drinksValues[item];
         }
-      })
+      });
       return total;
     },
-  }
+  };
 };
 module.exports = createMenu;

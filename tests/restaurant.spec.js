@@ -59,8 +59,8 @@ describe('#createMenu', () => {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
     assert.strictEqual(typeof (createMenu({}).fetchMenu()), 'object');
     // TESTE 2:
-    objectReceived = Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu());
-    objectReturned = ['food', 'drink'];
+    const objectReceived = Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu());
+    const objectReturned = ['food', 'drink'];
     // Para o seguinte teste, consultei o link a seguir para entender melhor a diferença de
     // strictEqual e deepStrictEqual:
     // https://qastack.com.br/programming/13225274/the-difference-between-assert-equal-and-assert-deepequal-in-javascript-testing-w
@@ -75,19 +75,18 @@ describe('#createMenu', () => {
     // Para o teste da função order, consultei o repositório do Sérgio da Turma 10A.
     assert.deepStrictEqual(createMenu().order('coxinha'), ['coxinha']);
     // TESTE 6:
-    const sixthTest = createMenu({ food: { coxinha: 3.9, sashimi: 1, sopa: 9.90 }, drink: { agua: 3.90, cerveja: 6.9 } });
+    const sixthTest = createMenu({ food: { coxinha: 3.9, sopa: 9.90 }, drink: { agua: 3.90 } });
     sixthTest.order('coxinha');
     sixthTest.order('agua');
     sixthTest.order('sopa');
-    sixthTest.order('sashimi');
-    assert.deepStrictEqual(sixthTest.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
+    assert.deepStrictEqual(sixthTest.consumption, ['coxinha', 'agua', 'sopa']);
     // TESTE 7: Verifique que a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
-    const seventhTest = createMenu({ food: { coxinha: 3.9, sashimi: 1, sopa: 9.90 }, drink: { agua: 3.90, cerveja: 6.9 } });
+    const seventhTest = createMenu({ food: { coxinha: 3.9 }, drink: { agua: 3.90 } });
     seventhTest.order('coxinha');
     seventhTest.order('agua');
     seventhTest.order('coxinha');
     assert.deepStrictEqual(seventhTest.consumption, ['coxinha', 'agua', 'coxinha']);
     // TESTE 8:
-    assert.strictEqual(seventhTest.pay(), 11.7)
+    assert.strictEqual(seventhTest.pay(), 11.7);
   });
 });
