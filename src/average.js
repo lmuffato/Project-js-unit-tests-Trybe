@@ -13,9 +13,8 @@
 */
 
 const average = (numbers) => {
-  if(typeof numbers !== 'number'){
-    return 'undefined';
-  }else{
+  if(typeof numbers !== 'number'){return 'undefined';} 
+  {
     const soma = numbers.reduce((inicial, elemen) => inicial + elemen , 0)
     const media = soma / numbers.length;
     return Math.round(media);
