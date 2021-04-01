@@ -27,6 +27,7 @@ const circle = (radius) => {
     circumference: 2 * PI * radius,
   };
 };
-
-console.log(circle(3));
+const mudaArea = circle(3);
+mudaArea.area = parseFloat(mudaArea.area).toPrecision(2);
+console.log(mudaArea);
 module.exports = circle;
