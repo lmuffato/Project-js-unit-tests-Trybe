@@ -17,7 +17,7 @@
 const average = (array) => {
   const arrayX = array;
   let element = 0;
-  if (arrayX.length <= 0) {
+  if (arrayX.length === 0) {
     return undefined;
   }
   for (let i = 0; i < arrayX.length; i += 1) {
@@ -25,12 +25,13 @@ const average = (array) => {
       return undefined;
     }
     element += arrayX[i];
-    if (typeof element === 'number') {
-      element = Math.round(element / arrayX.length);
-    }
-    element = undefined;
   }
+  element = Math.round(element / array.length);
   return element;
 };
+
+const teste = [];
+
+console.log(average(teste));
 
 module.exports = average; // assert.fail();
