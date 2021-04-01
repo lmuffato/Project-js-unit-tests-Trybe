@@ -83,14 +83,24 @@ const addConsumption = (value, func) => {
   func.consumption.push(value);
 };
 
+const sumPay = (func, object) => {
+  const products = func.consumption;
+  const menu = func.fetchMenu;
+  let productsValue = [];
+  products.forEach((product) => {
+    productsValue.push(menu[product].value);
+    return productsValue;
+  });
+  const reducer = (added, nexValue) => added + nexValue;
+  let total = productsValue.reduce(reducer);
+  return total + (total * 0.10);
+};
+
 const createMenu = (object) => ({
   fetchMenu: () => ({ object }),
   consumption: [],
   order: addConsumption,
+  pay: sumPay,
 });
-let obj = createMenu('{ food: {}, drink: {} }');
-
-obj.consumption.push('food');
-console.log(obj);
 
 module.exports = createMenu;
