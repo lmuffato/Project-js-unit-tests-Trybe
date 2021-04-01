@@ -12,8 +12,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // add your implementation here
+const average = (numbers) => {
+  let sum = 0;
+  const quantityOfNumbers = numbers.length;
+
+  if (quantityOfNumbers === 0) return undefined;
+
+  for (const number of numbers) {
+    if (typeof number !== 'number') {
+      console.log('not a number');
+      return undefined;
+    }
+
+    sum += number;
+  }
+
+  // Math.round consultado na doc do MDN:
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+  return Math.round(sum / quantityOfNumbers);
 };
 
 module.exports = average;
