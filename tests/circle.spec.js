@@ -43,6 +43,6 @@ describe('#circle', () => {
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     let isCorrect = circle(3);
     isCorrect.area = parseFloat(isCorrect.area.toFixed(2));
-    assert.deepStrictEqual(isCorrect, {radius: 3, area: 28.26, circumference: 18.84});
+    assert.deepStrictEqual(isCorrect, { radius: 3, area: 28.26, circumference: 18.84 });
   });
 });
