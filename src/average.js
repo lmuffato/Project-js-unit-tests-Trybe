@@ -23,10 +23,9 @@ const average = (numbers) => {
       return undefined;
     }
     sum += number;
-
-    /** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round */
-    return Math.round(sum / numbers.length);
   }
+  /** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round */
+  return Math.round(sum / numbers.length);
 };
 
 module.exports = average;
