@@ -77,7 +77,7 @@ describe('#createMenu', () => {
       },
       drink: {
         cocaCola: '2.59',
-      }
+      },
     };
     assert.strictEqual(createMenu(obj).fetchMenu(), obj);
     // ```
@@ -116,7 +116,7 @@ describe('#createMenu', () => {
     objetoRetornado6.order('agua');
     objetoRetornado6.order('sopa');
     objetoRetornado6.order('sashimi');
-    const compare6 = ["coxinha", "agua", "sopa", "sashimi"];
+    const compare6 = ['coxinha', 'agua', 'sopa', 'sashimi'];
     assert.strictEqual(JSON.stringify(objetoRetornado6.consumption), JSON.stringify(compare6));
     // Agora faça o TESTE 7 deste arquivo.
     // --------------------------------------------------------------------------------------
@@ -148,7 +148,7 @@ describe('#createMenu', () => {
       },
       drink: {
         agua: 2.00,
-      }
+      },
     };
     const objetoRetornado8 = createMenu(obj8);
     objetoRetornado8.order('coxinha');
