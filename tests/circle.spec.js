@@ -35,4 +35,4 @@ describe('#circle', () => {
     assert.deepStrictEqual(result.area, 28.26);
     assert.deepStrictEqual(result, { radius: 3, area: 28.26, circumference: 18.84 });
   });
-}); 
+});
