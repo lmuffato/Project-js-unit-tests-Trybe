@@ -26,13 +26,15 @@ const verifyNumbers = (array) => {
 
 const reducer = (accumulator, currentValue) => {
   acumulator = []
-  currentValue
+  currentValue = 0
   if (verifyNumbers(array) === true){
     for (let index = 0; index < acumulator.length; index += 1) {
-      currentValue = (accumulator.reduce(reducer) / acumulator[index]);
+      currentValue += acumulator[index];
     };
   };
+  let callbackValue = currentValue / acumulator.length
+  return Math.round (callbackValue)
 };
-console.log (Math.round(reducer([2, 4, 5, 6, 7])));
+console.log (reducer);
 module.exports = average;
 */

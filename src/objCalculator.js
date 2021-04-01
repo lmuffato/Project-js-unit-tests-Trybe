@@ -19,6 +19,13 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+// referência: https://www.dotnetfunda.com/articles/show/3173/calculator-using-arrow-function-expression-of-ecmascript-6
+
+const calculator = {
+  add: (a, b) => a + b,
+  mult: (a, b) => a * b,
+  div: (a, b) => Math.floor(a / b),
+  sub: (a, b) => a - b,
+};
 
 module.exports = calculator;
