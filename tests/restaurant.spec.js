@@ -56,7 +56,7 @@ describe('#createMenu', () => {
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
     // ```
     let objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
-    assert.strictEqual(objetoRetornado.fetchMenu, true);
+    assert.strictEqual(Object.keys(objetoRetornado).includes('fetchMenu'), true);
     // ```
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
