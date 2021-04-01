@@ -12,26 +12,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 // nao conseguindo fazer o array passar para dentro da função, mais o restante da logica eu sabia
-//dei uma olhada nesta parte no codigo do  
-//https://github.com/tryber/sd-010-a-project-js-unit-tests/blob/andrejaques-project-js-tests/src/average.js
-const average = (array)=> {
-  const arrayX= array;
+// dei uma olhada nesta parte no codigo do
+// https://github.com/tryber/sd-010-a-project-js-unit-tests/blob/andrejaques-project-js-tests/src/average.js
+const average = (array) => {
+  const arrayX = array;
   let element = 0;
-    if (arrayX.length <= 0) {
-      return element = undefined;
+  if (arrayX.length <= 0) {
+    return undefined;
+  }
+  for (let i = 0; i < arrayX.length; i++) {
+    if (typeof (arrayX[i]) !== 'number') {
+      return undefined;
     }
-   for (let i = 0; i < arrayX.length; i++) {
-      if (typeof(arrayX[i]) !== 'number') {
-        return  element = undefined; 
-      } else {
-        element = element + arrayX[i];
-      }
-    } 
+    element = element + arrayX[i];
     if (typeof element === 'number') {
-      element = Math.round(element/arrayX.length);
-    } else {
-      element = undefined;
+      element = Math.round(element / arrayX.length);
     }
+    element = undefined;
+  }
     return element
 };
 
