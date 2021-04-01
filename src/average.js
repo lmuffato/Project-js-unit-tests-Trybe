@@ -12,28 +12,27 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
+/*
 const verifyNumbers = (array) => {
   for (let index = 0; index < array.length; index += 1) {
     if (typeof (array[index]) !== 'number' || array.length === 0) {
       return false;
     }
-  }
+    else {
+      return true;
+    };
+  };
 };
 
-const average = (array) => {
-  if (verifyNumbers(array) === false) {
-    return undefined;
-  }
-
-  let avg = 0;
-
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-  for (let index = 0; index < array.length; index += 1) {
-    avg = (array.reduce(reducer) / array[index]);
-  }
-
-  return Math.round(avg);
+const reducer = (accumulator, currentValue) => {
+  acumulator = []
+  currentValue
+  if (verifyNumbers(array) === true){
+    for (let index = 0; index < acumulator.length; index += 1) {
+      currentValue = (accumulator.reduce(reducer) / acumulator[index]);
+    };
+  };
 };
-
+console.log (Math.round(reducer([2, 4, 5, 6, 7])));
 module.exports = average;
+*/
