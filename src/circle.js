@@ -23,7 +23,8 @@ const circle = (radius) => {
   if (!radius) { return undefined; }
   return {
     radius,
-    area: PI * radius * radius,
+    /** Source: https://pt.stackoverflow.com/questions/29318/javascript-gerando-float-com-v%C3%A1rias-casas-decimais */
+    area: parseFloat((PI * radius * radius).toFixed(2)),
     circumference: 2 * PI * radius,
   };
 };
