@@ -21,7 +21,10 @@ const vqv = (nome, idade) => {
   Tenho ${idade} anos,
   trabalho na Trybe e mando muito em programação!
   #VQV!`;
-  return trailText;
+  if (typeof nome === 'string' && idade === 'number') {
+    return trailText;
+  }
+  return undefined;
 };
 
 module.exports = vqv;
