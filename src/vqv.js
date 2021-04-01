@@ -17,12 +17,15 @@
 */
 
 const vqv = (nome, idade) => {
-  const trailText = `Oi, meu nome é ${nome}!
+  // const trailText = `Oi, meu nome é ${nome}!
+  // Tenho ${idade} anos,
+  // trabalho na Trybe e mando muito em programação!
+  // #VQV!`;
+  if (typeof nome === 'string' && idade === 'number') {
+    return `Oi, meu nome é ${nome}!
   Tenho ${idade} anos,
   trabalho na Trybe e mando muito em programação!
   #VQV!`;
-  if (typeof nome === 'string' && idade === 'number') {
-    return trailText;
   }
   return undefined;
 };
