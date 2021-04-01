@@ -16,15 +16,11 @@
 */
 
 const createStudent = (element) => {
-  if (typeof element === 'string') {
-    return ({
-      name: element,
-      feedback: () => {
-        'Eita pessoa boa!';
-      },
-    });
-  }
-  return undefined;
+  const student = {
+    name: element,
+    feedback: () => 'Eita pessoa boa!',
+  };
+  return student;
 };
 
 module.exports = createStudent;

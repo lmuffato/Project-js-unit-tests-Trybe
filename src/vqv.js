@@ -17,17 +17,14 @@
 */
 
 const vqv = (nome, idade) => {
-  // const trailText = `Oi, meu nome é ${nome}!
-  // Tenho ${idade} anos,
-  // trabalho na Trybe e mando muito em programação!
-  // #VQV!`;
-  if (typeof nome === 'string' && idade === 'number') {
-    return `Oi, meu nome é ${nome}!
-  Tenho ${idade} anos,
-  trabalho na Trybe e mando muito em programação!
-  #VQV!`;
-  }
-  return undefined;
+  const trailText = `Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+
+  if (nome !== 'string' && idade !== 'number') {
+    return undefined;
+  } return trailText;
 };
 
 module.exports = vqv;
