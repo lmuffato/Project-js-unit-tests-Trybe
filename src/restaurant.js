@@ -79,6 +79,13 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const createMenu = (menu) => ({
+  fetchMenu: () => menu,
+  consumption: [],
+});
 
 module.exports = createMenu;
+
+// PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
+//
+// Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
