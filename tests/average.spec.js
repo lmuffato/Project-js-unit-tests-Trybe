@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const average = require('../src/average');
+const describe = require('../node_modules/describe');
 
 /*
   A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos.
@@ -37,5 +38,3 @@ describe('#average', () => {
     assert.strictEqual(average([-11, -5, 2]), -5);
   });
 });
-
-

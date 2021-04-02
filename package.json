@@ -31,6 +31,7 @@
     "jest": "26.1.0"
   },
   "dependencies": {
+    "describe": "^1.2.0",
     "eslint-config-trybe-fundamentals": "1.1.0"
   }
 }
