@@ -15,13 +15,13 @@ const average = (accumulator) => {
   let currentValue = 0;
   let count = 0;
   if (accumulator.length === 0) {
-    return false;
+    return undefined;
   }
   for (let index = 0; index < accumulator.length; index += 1) {
     currentValue += accumulator[index];
     count += 1;
     if (typeof (accumulator[index]) !== 'number') {
-      return false;
+      return undefined;
     }
   }
   let callbackValue = currentValue / count;
