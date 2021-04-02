@@ -16,15 +16,11 @@ const average = (array) => {
   if (array.length === 0) {
     return undefined;
   }
-  let validar = array.filter((item) => {
-    if (typeof item === 'string' || item === '') {
-      return 'string';
-    }
-  });
+  let validar = array.filter((item) => typeof item === 'string');
   if (validar.length !== 0) {
     return undefined;
   }
-  const soma = array.reduce((sum, item) => { return sum + item; }, 0);
+  const soma = array.reduce((sum, item) => sum + item, 0);
   const result = soma / array.length;
   return Math.round(result);
 };
