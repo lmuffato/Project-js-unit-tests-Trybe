@@ -102,12 +102,12 @@ const createMenu = (myMenu) => {
 
 // const meuRestaurante = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 
-console.log(meuRestaurante.fetchMenu()); // Retorno: { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }
+// console.log(meuRestaurante.fetchMenu()); // Retorno: { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }
 
-console.log(meuRestaurante.order('coxinha')); // Retorno: undefined
+// console.log(meuRestaurante.order('coxinha')); // Retorno: undefined
 
-console.log(meuRestaurante.consumption); // Retorno: ['coxinha']
+// console.log(meuRestaurante.consumption); // Retorno: ['coxinha']
 
-console.log(meuRestaurante.pay()); // Retorno: 3.9
+// console.log(meuRestaurante.pay()); // Retorno: 3.9
 
 module.exports = createMenu;
