@@ -16,7 +16,7 @@ const myCounter = () => {
     myArray.push(counter);
     for (var index = 2; index <= 3; index += 1) {
       myArray.push(index);
-    }    
+    }
   }
   return myArray;
 };
