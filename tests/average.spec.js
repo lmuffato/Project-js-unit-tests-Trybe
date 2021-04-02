@@ -30,6 +30,7 @@ function avg(array) {
   }
   return Math.round(sum / array.length);
 }
+module.exports = avg;
 
 describe('#average', () => {
   it('tests function average\'s behaviour as specified', () => {
