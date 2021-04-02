@@ -72,11 +72,11 @@ describe('#createMenu', () => {
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
     // ```
     const objectReturn2 = createMenu({ food: {}, drink: {} });
-    const checkObjectKeyFood = Object.prototype.hasOwnProperty.call(objectReturn2.fetchMenu, 'food');
-    const checkObjectKeyDrink = objectReturn2.fetchMenu.drink;
+    const checkFood = Object.prototype.hasOwnProperty.call(objectReturn2.fetchMenu, 'food');
+    const checkDrink = objectReturn2.fetchMenu.drink;
 
-    assert.strictEqual(checkObjectKeyFood, true);
-    assert.strictEqual(checkObjectKeyDrink, true);
+    assert.strictEqual(checkFood, true);
+    assert.strictEqual(checkDrink, true);
     assert.fail();
     // TESTE 3: Verifique que o menu passado pra função createMenu é identico ao menu recuperado pela função 'objetoRetornado.fetchMenu'
     // ```
