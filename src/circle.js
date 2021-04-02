@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-
+const assert = require('assert');
 /*
   Essa função recebe o raio de um círculo,
   retornando um objeto contendo suas informações (Raio, Área e Circunferência).
@@ -27,5 +27,4 @@ const circle = (radius) => {
     circumference: 2 * PI * radius,
   };
 };
-
 module.exports = circle;
