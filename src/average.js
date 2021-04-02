@@ -25,4 +25,5 @@ const average = (sum) => {
   }
   return Math.round(values);
 };
+
 module.exports = average;
