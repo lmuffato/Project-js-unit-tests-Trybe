@@ -9,23 +9,25 @@
   Comportamento:
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
-    - average([1, '2']) // Retorno: undefined;    
+    - average([1, '2']) // Retorno: undefined;
+
 */
+// Ajuda na refatoração para passagem do ESlint por Carlos Sá. turma 10 -A
 
 const average = (array) => {
-  let count = 0;
   if (array.length === 0) {
     return undefined;
   }
+  let count = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof array[index] !== "number") {
+    if (typeof (array[index]) === 'number') {
+      count += array[index];
+    } else {
       return undefined;
     }
-    for (let index = 0; index < array.length; index += 1) {
-      count += array[index];
-    }
   }
-  return Math.round(count / array.length);
+  const avrgNmbrs = Math.round(count / array.length);
+  return avrgNmbrs;
 };
 
 module.exports = average;
