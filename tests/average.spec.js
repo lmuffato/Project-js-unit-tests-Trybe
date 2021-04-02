@@ -20,16 +20,16 @@ const average = require('../src/average');
 const avg = (array) => {
   let sum = 0;
   if (array[0] === undefined) {
-    return
+    return;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (typeof (array[index]) !== 'number') {
-      return
+      return;
     }
     sum += array[index];
   }
   return Math.round(sum / array.length);
-}
+};
 
 describe('#average', () => {
   it('tests function average\'s behaviour as specified', () => {
