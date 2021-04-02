@@ -42,9 +42,9 @@ describe('#productDetails', () => {
     assert.deepStrictEqual(typeof productDetails('x', 'y')[0]
     && typeof productDetails('x', 'y')[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(productDetails('x', 'y')[0], productDetails('x', 'y')[1]);
+    assert.notStrictEqual(productDetails('x', 'y')[0], productDetails('x', 'y')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(productDetails('x', 'y')[0].details.productId.substr(1), '123');
-    assert.deepStrictEqual(productDetails('x', 'y')[1].details.productId.substr(1), '123');
+    assert.strictEqual(productDetails('x', 'y')[0].details.productId.slice(-3), '123');
+    assert.strictEqual(productDetails('x', 'y')[1].details.productId.slice(-3), '123');
   });
 });
