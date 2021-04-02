@@ -18,9 +18,9 @@
 const createStudent = (parameter) => {
   const object = {
     name: parameter,
-    feedback: ()  => 'Eita pessoa boa!',
-  }
-  return object;  
+    feedback: () => 'Eita pessoa boa!',
+  };
+  return object;
 };
 
 const estudante = createStudent('Leandrão, o Lobo Solitário');
