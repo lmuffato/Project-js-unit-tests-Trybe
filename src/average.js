@@ -11,30 +11,21 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
-/*
-const verifyNumbers = (array) => {
-  for (let index = 0; index < array.length; index += 1) {
-    if (typeof (array[index]) !== 'number' || array.length === 0) {
+const average = (accumulator) => {
+  let currentValue = 0;
+  let count = 0;
+  if (accumulator.length === 0) {
+    return false;
+  }
+  for (let index = 0; index < accumulator.length; index += 1) {
+    currentValue += accumulator[index];
+    count += 1;
+    if (typeof (accumulator[index]) !== 'number') {
       return false;
     }
-    else {
-      return true;
-    };
-  };
+  }
+  let callbackValue = currentValue / count;
+  return Math.round(callbackValue);
 };
 
-const reducer = (accumulator, currentValue) => {
-  acumulator = []
-  currentValue = 0
-  if (verifyNumbers(array) === true){
-    for (let index = 0; index < acumulator.length; index += 1) {
-      currentValue += acumulator[index];
-    };
-  };
-  let callbackValue = currentValue / acumulator.length
-  return Math.round (callbackValue)
-};
-console.log (reducer);
 module.exports = average;
-*/
