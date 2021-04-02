@@ -48,8 +48,8 @@ describe('#productDetails', () => {
     assert.strictEqual(product1 === product2, false);
     const productId1 = product1.details.productId;
     const productId2 = product2.details.productId;
-    const product1End = productId1.slice(productId1.length -3);
-    const product2End = productId2.slice(productId2.length -3);
+    const product1End = productId1.slice(productId1.length - 3);
+    const product2End = productId2.slice(productId2.length - 3);
     assert.strictEqual(product1End === product2End, true);
   });
 });
