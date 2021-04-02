@@ -15,6 +15,7 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
+// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A
 
 const vqv = (nome, idade) => {
   if (!nome && !idade) {

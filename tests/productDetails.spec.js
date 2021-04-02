@@ -30,6 +30,7 @@ const productDetails = require('../src/productDetails');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
+// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {

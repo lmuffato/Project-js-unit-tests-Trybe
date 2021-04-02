@@ -18,7 +18,7 @@
   calculator.add(1, 1) // Retorno: 2;
   calculator.div(3, 2) // Retorno: 1;
 */
-
+// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A
 const calculator = {
   add: (iten1, iten2) => iten1 + iten2,
   mult: (iten1, iten2) => iten1 * iten2,

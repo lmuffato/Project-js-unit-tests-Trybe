@@ -8,6 +8,7 @@
     - numbers([2, 3, 4]); // Retorna: true
     - numbers([2, 'errado', 5]); // Retorna: false
 */
+// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A
 
 const numbers = (myArray) => {
   for (let i = 0; i < myArray.length; i += 1) {
