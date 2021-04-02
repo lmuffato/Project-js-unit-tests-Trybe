@@ -1,25 +1,27 @@
 const isNotNumber = (element) => {
-  if (typeof(element) != 'number'){
-    return true;
+  let result;
+  if (typeof (element) !== 'number') {
+    result = true;
   } else {
-    return false;
+    result = false;
   }
-}
+  return result;
+};
 const average = (array) => {
+  let result;
   if (array.length > 0 && array.some(isNotNumber) === false) {
     let acumulattor = 0;
-    let result;
     array.forEach((element) => {
       acumulattor += element;
     });
-    result = acumulattor / array.length;
-    if ((result - Math.floor(result))<0.5){
-      return Math.floor(result);
-    } else{
-      return Math.ceil(result);
+    acumulattor /= array.length;
+    acumulattor.toFixed(1);
+    if ((result - Math.floor(result)) < 0.5) {
+      result = Math.floor(acumulattor);
+    } else {
+      result = Math.ceil(acumulattor);
     }
-  } else {
-    return undefined;
   }
+  return result;
 };
 module.exports = average;
