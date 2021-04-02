@@ -95,7 +95,7 @@ const createMenu = (myMenu) => {
         if (Object.keys(food).includes(product)) sum += food[product];
         if (Object.keys(drink).includes(product)) sum += drink[product];
       });
-      return sum;
+      return sum * 1.1;
     },
   };
 };
