@@ -13,12 +13,10 @@
 */
 
 const average = (array) => {
-  debugger
   if (array.length == 0) {
     return undefined;
   } 
   var validar = array.filter((item) => {
-    debugger
       if (typeof item === 'string' || item == "") {
         return "string";
       }
