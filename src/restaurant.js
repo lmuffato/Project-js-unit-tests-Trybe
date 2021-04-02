@@ -100,16 +100,4 @@ const createMenu = (items) => ({
   },
 });
 
-const myRestaurant = createMenu({
-  food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 },
-});
-
-console.log(myRestaurant.fetchMenu());
-
-myRestaurant.order('coxinha');
-myRestaurant.order('agua');
-myRestaurant.order('coxinha');
-
-// console.log(myRestaurant.consumption);
-
 module.exports = createMenu;
