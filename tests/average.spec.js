@@ -20,11 +20,11 @@ const average = require('../src/average');
 function avg(array) {
   let sum = 0;
   if (array[0] === undefined) {
-    return;
+    return undefined;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (typeof (array[index]) !== 'number') {
-      return;
+      return undefined;
     }
     sum += array[index];
   }
