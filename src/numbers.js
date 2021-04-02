@@ -8,7 +8,6 @@
     - numbers([2, 3, 4]); // Retorna: true
     - numbers([2, 'errado', 5]); // Retorna: false
 */
-
 const numbers = (myArray) => {
   for (let i = 0; i < myArray.length; i += 1) {
     if (typeof myArray[i] !== 'number') {
@@ -17,5 +16,21 @@ const numbers = (myArray) => {
   }
   return true;
 };
+
+const assert = require('assert');
+
+describe('#numbers', () => {
+  it('should return an array and return if it has only numbers or not', () => {
+    assert.fail();
+    // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
+    assert.strictEqual(numbers([1, 2, 3, 4, 5]), true);
+    // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
+    assert.strictEqual(numbers([1, 2, '3', 4, 5]), false);
+    // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
+    assert.strictEqual(numbers([1, 'a', 3]), false);
+    // Escreva um teste em que a função recebe [' '] e retorna false
+    assert.strictEqual(numbers([' ']), false);
+  });
+});
 
 module.exports = numbers;
