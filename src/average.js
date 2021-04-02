@@ -14,14 +14,31 @@
 
 const average = (array) => {
   let sum = 0;
-  for (let index = 0; index < array.lenght; index += 1) {
-    if ((array.lenght === 0 || typeof (array[index]) !== 'number')) {
+  if (array.length === 0) {
+    return undefined;
+  } for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] === 'number') {
+      sum += array[index];
+    } else {
       return undefined;
     }
-    sum += array[index];
   }
-  const media = Math.round((sum / array.lenght));
+  let media = Math.round(sum / array.length);
   return media;
 };
 
 module.exports = average;
+
+// let sum = 0;
+//   for (let index = 0; index < array.lenght; index += 1) {
+//     if (array.lenght === 0) {
+//       return undefined;
+//     }
+//     if (typeof (array[index]) !== 'number') {
+//       return undefined;
+//     }
+//     sum += array[index];
+//   }
+//   const media = Math.round((sum / array.lenght));
+//   return media;
+// };
