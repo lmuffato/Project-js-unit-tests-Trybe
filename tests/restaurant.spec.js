@@ -71,9 +71,9 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu({ food: {}, drink: {} });
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
     // ```
-    const objetoRetornado2 = createMenu({ food: {}, drink: {} });
-    const checkObjectKeyFood = Object.prototype.hasOwnProperty.call(objetoRetornado2.fetchMenu, 'food');
-    const checkObjectKeyDrink = objetoRetornado2.fetchMenu.drink;
+    const objectReturn2 = createMenu({ food: {}, drink: {} });
+    const checkObjectKeyFood = Object.prototype.hasOwnProperty.call(objectReturn2.fetchMenu, 'food');
+    const checkObjectKeyDrink = objectReturn2.fetchMenu.drink;
 
     assert.strictEqual(checkObjectKeyFood, true);
     assert.strictEqual(checkObjectKeyDrink, true);
