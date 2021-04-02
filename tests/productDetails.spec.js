@@ -42,7 +42,7 @@ describe('#productDetails', () => {
     const produtos = productDetails('alcool', 'mascara');
     assert.strictEqual(typeof produtos[0], 'object');
     assert.strictEqual(typeof produtos[1], 'object');
-    // Teste que os dois objetos são diferentes entre si. 
+    // Teste que os dois objetos são diferentes entre si.
     assert.notDeepStrictEqual(produtos[0], produtos[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.strictEqual(produtos[0].details.productId, `${'alcool'}123`);
