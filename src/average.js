@@ -13,15 +13,25 @@
 */
 
 const average = (array) => {
+  debugger
+  if (array.length == 0) {
+    return undefined;
+  } 
+  var validar = array.filter((item) => {
+    debugger
+      if (typeof item === 'string' || item == "") {
+        return "string";
+      }
+  })
+ if(validar.length != 0){
+   return undefined;
+ }
  const soma = array.reduce((sum, item) => {
-  console.log(sum);
-   return sum + item;
- });
- const result = soma / array.length;
-
-  return result;
-
+  return sum + item;  
+ },0);
+ const result = soma / array.length ;
+ return Math.round (result);
 
 };
- console.log(average([8, 6, 7]));
+ console.log(average([1, 4]));
 module.exports = average;
