@@ -23,11 +23,11 @@ const circle = (radius) => {
   if (!radius) { return undefined; }
   return {
     radius,
-    area: Math.round(PI * radius * radius),
+    area: (PI * radius * radius).toFixed(2),
     circumference: 2 * PI * radius,
   };
 };
 
-console.log(circle(3));
+//console.log(circle(3).area.toFixed(2));
 
 module.exports = circle;
