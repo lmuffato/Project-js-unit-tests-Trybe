@@ -35,16 +35,17 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // assert.fail();
 
-    assert.strictEqual(Array.isArray(productDetails('Alco gel', 'Máscar')), true);
+    assert.strictEqual(typeof productDetails, 'function');
     // Teste que o retorno da função é um array.
 
     assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     // Teste que o array retornado pela função contém dois itens dentro.
 
-    assert.StrictEqual(typeof productDetails(), 'object', true);
+    assert.strictEqual(typeof productDetails(), 'object', true);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
 
-    assert.notStrictEqual(productDetails('G', 'M')[0] !== productDetails('M', 'G')[1], 'true');
+    const productDetail = productDetails('one', 'two');
+    assert.notDeepStrictEqual(productDetail[0], productDetail[1]);
     // Teste que os dois objetos são diferentes entre si.
 
     assert.deepStrictEqual(productDetails('Al gel', 'Másc')[0].details.productId.slice(-3), '123');
