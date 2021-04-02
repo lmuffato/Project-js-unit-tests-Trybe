@@ -13,6 +13,19 @@
     
 */
 
-const average = () => {};
-
+const average = (array) => {
+  let count = 0;
+  if (array.length === 0) {
+    return undefined;
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== "number") {
+      return undefined;
+    }
+    for (let index = 0; index < array.length; index += 1) {
+      count += array[index];
+    }
+  }
+  return Math.round(count / array.length);
+};
 module.exports = average;
