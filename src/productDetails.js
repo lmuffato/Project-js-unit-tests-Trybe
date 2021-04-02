@@ -40,4 +40,3 @@ const productDetails = (firstProduct, secondProduct) => [
 ];
 
 module.exports = productDetails;
-console.log(Array.isArray(productDetails('Alcool gel', 'Máscara'), true));
