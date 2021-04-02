@@ -21,7 +21,7 @@ describe('#numbers', () => {
     // Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
     assert.strictEqual(numbers([1, 2, 3, 4, 5]), true, 'Essa condição é verdadeira!');
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
-    assert.strictEqual(numbers([1, 2, '3', 4, 5]), false, 'Uma das suas entradas não possui o tipo primitivo "number" !');
+    assert.strictEqual(numbers([1, 2, '3', 4, 5]), false, 'Não vai dar !');
     // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
     assert.strictEqual(numbers([1, 'a', 3]), false, 'Retire a letra de sua entrada!');
     // Escreva um teste em que a função recebe [' '] e retorna false
