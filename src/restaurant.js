@@ -87,12 +87,4 @@ const createMenu = (menu) => {
   return objMenu;
 };
 
-// const menu = {
-//   food: {'coxinha': 3.90, 'sanduiche': 9.90},
-//   drinks: {'agua': 3.90, 'cerveja': 6.90},
-// };
-
-// const objetoRetornado = createMenu(menu);
-// console.log(objetoRetornado.fetchMenu());
-
 module.exports = createMenu;

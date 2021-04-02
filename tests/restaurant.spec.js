@@ -52,7 +52,12 @@ const createMenu = require('../src/restaurant');
 
 const menu = {
   food: { coxinha: 3.90, sanduiche: 9.90 },
-  drinks: { agua: 3.90, cerveja: 6.90 },
+  drink: { agua: 3.90, cerveja: 6.90 },
+};
+
+const menu2 = {
+  food: { coxinha: 2.90, sanduiche: 5.90 },
+  drink: { agua: 1.90, cerveja: 3.90 },
 };
 
 describe('#createMenu', () => {
@@ -64,13 +69,14 @@ describe('#createMenu', () => {
 
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
-    // const objetoRetornado = createMenu({ food: {}, drink: {} });
-    // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
+    const objeto = createMenu('{ food: {}, drink: {} }');
+    objeto.fetchMenu(); // Retorno: { food: {}, drink: {}}
+    assert.strictEqual(objeto.fetchMenu(), '{ food: {}, drink: {} }');
+
     // TESTE 3: Verifique que o menu passado pra função createMenu é identico ao menu recuperado pela função 'objetoRetornado.fetchMenu'
-    // ```
-    // const objetoRetornado = createMenu(objetoQualquer);
-    // objetoRetornado.fetchMenu() // Retorno: objetoQualquer
-    // ```
+    const objetoRetornado2 = createMenu(menu2);
+    objetoRetornado2.fetchMenu() // Retorno: objetoQualquer
+    assert.deepStrictEqual(menu2, objetoRetornado2.fetchMenu());
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
