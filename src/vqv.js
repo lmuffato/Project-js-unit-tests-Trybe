@@ -20,8 +20,9 @@ const vqv = (nome, idade) => {
   if ((nome || idade) === undefined) {
     return undefined;
   }
-  let firstParagraph = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
-  return firstParagraph;
+  let firstParagraph = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,`;
+  let secondParagraph = '\ntrabalho na Trybe e mando muito em programação!\n#VQV!'
+  return `firstParagraph secondParagraph`;
 };
 console.log(vqv());
 module.exports = vqv;
