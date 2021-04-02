@@ -15,6 +15,13 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+const { create } = require("eslint/lib/rules/*");
+
+const createStudent = (student) => {
+  return {
+    name: student,
+    feedback: () => 'Eita pessoa boa!',
+  }
+};
 
 module.exports = createStudent;
