@@ -9,8 +9,7 @@
   Comportamento:
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
-    - average([1, '2']) // Retorno: undefined; 
-    
+    - average([1, '2']) // Retorno: undefined;    
 */
 
 const average = (array) => {
@@ -28,4 +27,5 @@ const average = (array) => {
   }
   return Math.round(count / array.length);
 };
+
 module.exports = average;
