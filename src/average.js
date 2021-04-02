@@ -1,4 +1,3 @@
-const assert = require('assert');
 const isNotNumber = (element) => {
   if (typeof(element) != 'number'){
     return true;
