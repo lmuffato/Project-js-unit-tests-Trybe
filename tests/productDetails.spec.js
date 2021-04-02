@@ -35,7 +35,6 @@ const products = require('../src/productDetails');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
-    const products = productDetails;
     // Teste que o retorno da função é um array.
     assert.strictEqual(Array.isArray(products('Alcool', 'Máscara')), true);
     // Teste que o array retornado pela função contém dois itens dentro.
@@ -47,4 +46,3 @@ describe('#productDetails', () => {
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
 });
-
