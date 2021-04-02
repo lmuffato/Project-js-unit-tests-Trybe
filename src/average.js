@@ -28,17 +28,3 @@ const average = (array) => {
 };
 
 module.exports = average;
-
-// let sum = 0;
-//   for (let index = 0; index < array.lenght; index += 1) {
-//     if (array.lenght === 0) {
-//       return undefined;
-//     }
-//     if (typeof (array[index]) !== 'number') {
-//       return undefined;
-//     }
-//     sum += array[index];
-//   }
-//   const media = Math.round((sum / array.lenght));
-//   return media;
-// };
