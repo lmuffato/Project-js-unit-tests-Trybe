@@ -13,7 +13,7 @@
 */
 const average = (arrSoma) => {
   let soma = 0;
-  if (arrSoma.some((number) => typeof(number) === 'string' || arrSoma.length === 0)) {
+  if (arrSoma.some((number) => typeof (number) === 'string' || arrSoma.length === 0)) {
     return undefined;
   }
   for (let index = 0; index < arrSoma.length; index += 1) {
@@ -22,4 +22,4 @@ const average = (arrSoma) => {
   let media = soma / arrSoma.length;
   return Math.round(media);
 };
-module.exports = average; 
+module.exports = average;
