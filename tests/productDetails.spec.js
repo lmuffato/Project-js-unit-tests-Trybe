@@ -35,7 +35,7 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     assert.strictEqual(Array.isArray(productDetails('firstProduct', 'secondProduct')), true);
     assert.strictEqual(productDetails('firstProduct', 'secondProduct').length, 2);
-    assert.strictEqual(typeof(productDetails('firstProduct', 'secondProduct')), 'object');
+    assert.strictEqual(typeof (productDetails('firstProduct', 'secondProduct')), 'object');
     assert.notDeepStrictEqual(productDetails.firstProduct !== productDetails.secondProduct, true);
   });
 });
