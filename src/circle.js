@@ -28,9 +28,4 @@ const circle = (radius) => {
   };
 };
 
-const assert = require('assert');
-console.log(assert.deepStrictEqual(typeof circle(), 'object'));
-
-
-
 module.exports = circle;
