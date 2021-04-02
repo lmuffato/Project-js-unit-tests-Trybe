@@ -32,7 +32,6 @@ const circle = require('../src/circle');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
     assert.deepStrictEqual(typeof circle(3), 'object');
     assert.deepStrictEqual(Object.keys(circle(3)).length, 3);
     assert.deepStrictEqual(typeof circle(), undefined);
