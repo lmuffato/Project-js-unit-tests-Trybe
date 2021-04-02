@@ -15,6 +15,14 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+// lógica da função dentro do objeto vista no código do Lucas Pedroso - https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/137
+const createStudent = (name) => {
+
+  const newStudant = {
+    name,
+    feedback: () => 'Eita pessoa boa!',
+  }
+  return newStudant;
+};
 
 module.exports = createStudent;
