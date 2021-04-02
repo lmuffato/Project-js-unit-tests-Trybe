@@ -22,7 +22,7 @@ const vqv = (nome, idade) => {
   }
   let firstParagraph = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,`;
   let secondParagraph = '\ntrabalho na Trybe e mando muito em programação!\n#VQV!';
-  return `firstParagraph secondParagraph`;
+  return `${firstParagraph} ${secondParagraph}`;
 };
 console.log(vqv());
 module.exports = vqv;
