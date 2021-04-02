@@ -14,7 +14,7 @@
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
-// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A
+// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A (chamada via slack)
 
 const createStudent = (name) => {
   let student = {

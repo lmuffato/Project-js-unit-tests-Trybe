@@ -9,7 +9,7 @@
   Comportamento:
   myCounter() // Retorna: [0, 2, 3, 1, 2, 3, 2, 2, 3, 3, 2, 3];
 */
-// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A
+// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A (chamada via slack)
 
 const myCounter = () => {
   let myArray = [];

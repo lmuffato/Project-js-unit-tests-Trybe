@@ -14,6 +14,7 @@
 // nao conseguindo fazer o array passar para dentro da função, mais o restante da logica eu sabia
 // dei uma olhada nesta parte no codigo do
 // https://github.com/tryber/sd-010-a-project-js-unit-tests/blob/andrejaques-project-js-tests/src/average.js
+// codigo feito com ajuda do estudante Gabriel Pereira-turma10-tribo-A (chamada via slack)
 const average = (array) => {
   const arrayX = array;
   let element = 0;
