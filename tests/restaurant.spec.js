@@ -75,7 +75,7 @@ describe('#createMenu', () => {
 
     // TESTE 3: Verifique que o menu passado pra função createMenu é identico ao menu recuperado pela função 'objetoRetornado.fetchMenu'
     const objetoRetornado2 = createMenu(menu2);
-    objetoRetornado2.fetchMenu() // Retorno: objetoQualquer
+    objetoRetornado2.fetchMenu(); // Retorno: objetoQualquer
     assert.deepStrictEqual(menu2, objetoRetornado2.fetchMenu());
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
