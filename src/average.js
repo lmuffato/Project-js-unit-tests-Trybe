@@ -24,7 +24,7 @@ const average = (array) => {
     sumOfArrayElements += element;
   }
 
-  return Math.round(sumOfArrayElements);
+  return Math.round(sumOfArrayElements / array.length);
 };
 
 module.exports = average;
