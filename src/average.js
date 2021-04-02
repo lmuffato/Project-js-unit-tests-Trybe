@@ -14,13 +14,13 @@
 
 const average = (array) => {
   if (array.length === 0) {
-    return 'undefined';
+    return undefined;
   }
   let soma = 0;
   for (let index = 0; index < array.length; index += 1) {
     soma += array[index];
     if (typeof (array[index]) !== 'number') {
-      return 'undefined';
+      return undefined;
     }
   }
   let media = soma / array.length;
