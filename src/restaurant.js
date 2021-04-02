@@ -89,7 +89,7 @@ const createMenu = (myMenu) => {
       return consumption;
     },
     pay: () => {
-      const {food, drink} = myMenu;
+      const { food, drink } = myMenu;
       let sum = 0;
       consumption.forEach((product) => {
         if (Object.keys(food).includes(product)) sum += food[product];
@@ -100,7 +100,7 @@ const createMenu = (myMenu) => {
   };
 };
 
-const meuRestaurante = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+// const meuRestaurante = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 
 console.log(meuRestaurante.fetchMenu()); // Retorno: { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }
 
