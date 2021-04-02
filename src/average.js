@@ -13,21 +13,19 @@
 */
 
 const average = (array) => {
-  if (array.length == 0) {
-    return undefined;
-  } 
-  let validar = array.filter((item) => {
-      if (typeof item === 'string' || item == "") {
-        return "string";
-      }
-  });
-  if (validar.length != 0){
+  if (array.length === 0) {
     return undefined;
   }
-  const soma = array.reduce((sum, item) => {
-    return sum + item;  
-  },0);
-  const result = soma / array.length ;
+  let validar = array.filter((item) => {
+    if (typeof item === 'string' || item === '') {
+      return 'string';
+    }
+  });
+  if (validar.length !== 0) {
+    return undefined;
+  }
+  const soma = array.reduce((sum, item) => { return sum + item; }, 0);
+  const result = soma / array.length;
   return Math.round(result);
 };
 console.log(average([1, 4]));
