@@ -16,7 +16,7 @@ const average = (array) => {
     });
     acumulattor /= array.length;
     acumulattor.toFixed(1);
-    if ((result - Math.floor(result)) < 0.5) {
+    if ((acumulattor - Math.floor(acumulattor)) < 0.5) {
       result = Math.floor(acumulattor);
     } else {
       result = Math.ceil(acumulattor);
