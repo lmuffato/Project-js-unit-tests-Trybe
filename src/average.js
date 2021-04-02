@@ -16,20 +16,19 @@ const average = (array) => {
   if (array.length == 0) {
     return undefined;
   } 
-  var validar = array.filter((item) => {
+  let validar = array.filter((item) => {
       if (typeof item === 'string' || item == "") {
         return "string";
       }
-  })
- if(validar.length != 0){
-   return undefined;
- }
- const soma = array.reduce((sum, item) => {
-  return sum + item;  
- },0);
- const result = soma / array.length ;
- return Math.round (result);
-
+  });
+  if (validar.length != 0){
+    return undefined;
+  }
+  const soma = array.reduce((sum, item) => {
+    return sum + item;  
+  },0);
+  const result = soma / array.length ;
+  return Math.round(result);
 };
- console.log(average([1, 4]));
+console.log(average([1, 4]));
 module.exports = average;
