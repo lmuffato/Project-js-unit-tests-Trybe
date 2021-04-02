@@ -39,13 +39,13 @@ describe('#productDetails', () => {
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     // Teste que os dois objetos são diferentes entre si.
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara').forEach, 'function');
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     const result = productDetails('Alcool gel', 'Máscara');
+    assert.strictEqual(typeof result.forEach, 'function');
+    assert.strictEqual(result.length, 2);
     assert.strictEqual((typeof result[0] === 'object' && typeof result[1] === 'object'), true);
     assert.notDeepStrictEqual(result[0], result[1]);
-    const t1 = result[0].details.productId === 'Alcool gel' + '123';
-    const t2 = result[1].details.productId === 'Máscara' + '123';
-    assert.strictEqual(t1 && t2, true);
+    const t1 = result[0].details.productId;
+    const t2 = result[1].details.productId;
+    assert.strictEqual(t1.slice(-3) === '123' && t2.slice(-3) === '123', true);
   });
 });
