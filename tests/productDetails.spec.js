@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { getMaxListeners } = require('process');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -33,12 +34,17 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     // Teste que os dois objetos são diferentes entre si.
     // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.strictEqual(typeof productDetails('item1', 'item2'), 'object');
+    assert.strictEqual(productDetails('item1', 'item2').length, 2);
+    assert.strictEqual(productDetails('item1', 'item2').length, 2);
+    assert.strictEqual(typeof productDetails('item1', 'item2')[0 && 1], 'object');
+    assert.notStrictEqual(productDetails('item1', 'item2')[0], productDetails('p1', 'p2')[1]);
+    assert.strictEqual(productDetails('it1', 'it2')[0 && 1].details.productId.substr(-3, 3), '123');
   });
 });
