@@ -137,7 +137,7 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
-    objetoRetornado.consumption = [];
+    objetoRetornado.consumption.splice(0, (objetoRetornado.consumption.length - 1));
     objetoRetornado = createMenu({
       food: { coxinha: 3.90, sanduiche: 9.90 },
       drinks: { agua: 3.90, cerveja: 6.90 },
