@@ -13,14 +13,12 @@
 */
 
 const average = (numbers) => {
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (typeof numbers[index] !== 'number') { return 'undefined'; }
-    {
-      const soma = numbers.reduce((inicial, elemen) => inicial + elemen, 0);
-      const media = soma / numbers.length;
-      return Math.round(media);
-    }
+  let sum = 0;
+  if(numbers.every(index => typeof index === 'number')) {
+    sum = numbers.reduce((firstValue, elem) => firstValue + elem);
+    return Math.round(sum / numbers.length);
   }
+    return 'undefined'
 };
 
 module.exports = average;
