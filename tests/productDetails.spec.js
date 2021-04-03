@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { isArray } = require('util');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -33,12 +34,26 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
+    const details = productDetails('porta', 'livro');
+
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
+    // Como verificar se o objeto retornado é um array: https://www.tutorialrepublic.com/faq/how-to-check-if-object-is-an-array-in-javascript.php#:~:text=Answer%3A%20Use%20the%20Array.,an%20array%3B%20otherwise%20returns%20false%20.
+    assert.strictEqual(Array.isArray(details), true);
+
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(details.length, 2);
+
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.strictEqual(typeof details[0], 'object');
+    assert.strictEqual(typeof details[1], 'object');
+
     // Teste que os dois objetos são diferentes entre si.
+    assert.strictEqual(details[0] === details[1], false);
+
     // (Difícil) Teste que os dois productIds terminam com 123.
+    // Como validar o final de uma string: https://www.w3schools.com/jsref/jsref_endswith.asp
+    assert.strictEqual(details[0].details.productId.endsWith('123'), true);
+    assert.strictEqual(details[1].details.productId.endsWith('123'), true);
   });
 });
