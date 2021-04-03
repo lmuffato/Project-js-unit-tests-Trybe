@@ -59,7 +59,6 @@ describe('#createMenu', () => {
       food: {},
       drinks: {},
     });
-    let consumptionArr = objetoRetornado.consumption;
     // Retorno: { fetchMenu: () => {}
     assert.strictEqual(typeof objetoRetornado.fetchMenu, 'function');
     // ```
@@ -120,7 +119,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
-    consumptionArr = [];
+    objetoRetornado.consumption = [];
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
@@ -139,7 +138,7 @@ describe('#createMenu', () => {
       food: { coxinha: 3.90, sanduiche: 9.90 },
       drinks: { agua: 3.90, cerveja: 6.90 },
     });
-    consumptionArr = [];
+    objetoRetornado.consumption = [];
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
