@@ -59,6 +59,7 @@ describe('#createMenu', () => {
       food: {},
       drinks: {},
     });
+    let consumptionArr = objetoRetornado.consumption;
     // Retorno: { fetchMenu: () => {}
     assert.strictEqual(typeof objetoRetornado.fetchMenu, 'function');
     // ```
@@ -94,7 +95,7 @@ describe('#createMenu', () => {
     // objetoRetornado.consumption // Retorno: ["coxinha"]
     // ```
     objetoRetornado.order('coxinha');
-    let consumptionArr = objetoRetornado.consumption; // Retorno: ["coxinha"]
+    // Retorno: ["coxinha"]
     assert.strictEqual(consumptionArr.includes('coxinha'), true);
 
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
@@ -107,7 +108,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order("sashimi");
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
     // ```
-    objetoRetornado.consumption = [];
+    consumptionArr = [];
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('sopa');
@@ -123,6 +124,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
+    consumptionArr = [];
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
@@ -142,6 +144,7 @@ describe('#createMenu', () => {
       food: { coxinha: 3.90, sanduiche: 9.90 },
       drinks: { agua: 3.90, cerveja: 6.90 },
     });
+    consumptionArr = [];
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
