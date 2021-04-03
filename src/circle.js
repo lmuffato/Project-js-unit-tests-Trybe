@@ -20,7 +20,7 @@
 
 const circle = (radius) => {
   const PI = 3.14;
-  if (!radius || typeof radius !== 'number') { return undefined; }
+  if (!radius) { return undefined; }
   return {
     radius,
     area: parseFloat((PI * radius * radius).toFixed(2)),
