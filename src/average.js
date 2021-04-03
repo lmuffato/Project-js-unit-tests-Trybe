@@ -18,17 +18,14 @@ const average = (elements) => {
     return undefined;
   }
   for (let index = 0; index < elements.length; index += 1) {
-    if (typeof elements[index] == 'number') {
+    if (typeof elements[index] === 'number') {
       media += elements[index];
     } else {
       return undefined;
     }
   }
-  
+
   return Math.round(media / elements.length);
-
 };
-
-
 
 module.exports = average;
