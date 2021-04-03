@@ -14,11 +14,11 @@
 
 const average = (numbers) => {
   let sum = 0;
-  if(numbers.every(index => typeof index === 'number')) {
+  if (numbers.every((index) => typeof index === 'number')) {
     sum = numbers.reduce((firstValue, elem) => firstValue + elem);
     return Math.round(sum / numbers.length);
   }
-    return 'undefined'
+  return 'undefined';
 };
 
 module.exports = average;
