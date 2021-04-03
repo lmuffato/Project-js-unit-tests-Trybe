@@ -46,6 +46,6 @@ describe('#productDetails', () => {
     assert.strictEqual(productFunction[0] === productFunction[1], false);
     const firstObjReturned = productFunction[0].details.productId.endsWith('123');
     const secondObjReturned = productFunction[1].details.productId.endsWith('123');
-    assert.strictEqual( firstObjReturned && secondObjReturned, true);
+    assert.strictEqual(firstObjReturned && secondObjReturned, true);
   });
 });
