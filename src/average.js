@@ -24,7 +24,7 @@ const average = (elements) => {
       return undefined;
     }
   }
-
+  // Arrendondar as médias: https://www.w3schools.com/jsref/jsref_round.asp
   return Math.round(media / elements.length);
 };
 
