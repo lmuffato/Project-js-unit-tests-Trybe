@@ -22,7 +22,7 @@
 const calculator = {
   add: (paran1, paran2) => paran1 + paran2,
   mult:(paran1, paran2) => paran1 * paran2,
-  div: (paran1, paran2) => Math.round(paran1 / paran2),
+  div: (paran1, paran2) => Math.floor(paran1 / paran2),
   sub: (paran1, paran2) => paran1 - paran2,
 };
 
