@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 /* eslint-disable block-scoped-var */
 /* eslint-disable no-redeclare */
 /* eslint-disable vars-on-top */
@@ -23,6 +24,6 @@ const myCounter = () => {
     }
   }
   return myArray;
-}
+};
 
 module.exports = myCounter;
