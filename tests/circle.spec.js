@@ -36,7 +36,7 @@ describe('#circle', () => {
     assert.strictEqual(typeof (circle(1)), null);
     assert.strictEqual(circle(1).length, 3);
     assert.strictEqual(circle(), undefined);
-    assert.strictEqual(circle(2).circumference, 12,56);
+    assert.strictEqual(circle(2).circumference, 12.56);
     assert.strictEqual(circle(3).area, 28.259999999999998);
     assert.strictEqual(circle(3), circle3);
   });
