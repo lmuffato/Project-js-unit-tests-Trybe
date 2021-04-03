@@ -35,6 +35,6 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle(3), 'object');
     assert.strictEqual(circle(3).area, 3.14 * 3 * 3);
     assert.strictEqual(circle(3).circumference, 3.14 * 3 * 2);
-    assert.strictEqual(circle(3).radius, 3);
+    assert.strictEqual(circle(3).radius, 3)
   });
 });
