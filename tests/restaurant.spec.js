@@ -141,6 +141,17 @@ describe('#createMenu', () => {
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
-    assert.deepStrictEqual(objetoRetornado.pay(), '12.87');
+    assert.strictEqual(objetoRetornado.pay(), 12.87);
   });
 });
+
+// let objetoRetornado = createMenu();
+// objetoRetornado.consumption = [];
+// objetoRetornado = createMenu({
+//   food: { coxinha: 3.90, sanduiche: 9.90 },
+//   drinks: { agua: 3.90, cerveja: 6.90 },
+// });
+// objetoRetornado.order('coxinha');
+// objetoRetornado.order('agua');
+// objetoRetornado.order('coxinha');
+// console.log(objetoRetornado.pay());
