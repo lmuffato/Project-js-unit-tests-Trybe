@@ -85,7 +85,16 @@ const createMenu = (object) => {
     fetchMenu: () => object,
     consumption: [],
     order: (string) => obj.consumption.push(string),
-  };
-};
+    pay: () => {
+      const itens = obj.fetchMenu();
+      const consumptAtrib = obj.consumption;
+      const foodsArray = Object.entries(items.food);
+      const drinksArray = Object.entries(items.drinks);
+      const fullArray = foodsArray.concat(drinksArray);
+      let total = 0;
+      consumptAtrib.forEach((item) => {
+        fullArray.forEach(consume) => {
+          if (item === consume[0]) {
+
 
 module.exports = createMenu;
