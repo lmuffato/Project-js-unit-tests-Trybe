@@ -18,4 +18,14 @@ const numbers = (myArray) => {
   return true;
 };
 
+console.log(numbers([2, 3, 4]));
+console.log(numbers([2, 'errado', 5]));
+
+const assert = require('assert');
+
+assert.strictEqual([1, 2], true);
+assert.strictEqual([1, 2, 3, 4, 5], true);
+assert.strictEqual([1, 2, 'a'], false);
+assert.strictEqual([], false);
+
 module.exports = numbers;
