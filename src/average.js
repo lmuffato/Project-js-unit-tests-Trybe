@@ -14,21 +14,16 @@
 
 const average = (arr) => {
   let sum = 0;
-  let deno = arr.length;
-  if (deno === 0) {
+  if (arr.length === 0) {
     return undefined;
   }
-  for (let index = 0; index < deno; index += 1) {
-    const element = arr[index];
-    if (typeof element === 'number') {
-      sum += element;
-    }
-    if (typeof element !== 'number') {
+  for (let index = 0; index < arr.length; index += 1) {
+    if (typeof arr[index] !== 'number') {
       return undefined;
     }
   }
-
-  sum /= deno;
+  sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue);
+  sum /= arr.length;
   return Math.round(sum);
 };
 
