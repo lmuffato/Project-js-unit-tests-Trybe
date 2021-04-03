@@ -13,7 +13,10 @@
 */
 const average = (arrSoma) => {
   let soma = 0;
-  if (arrSoma.some((number) => typeof (number) === 'string' || arrSoma.length === 0)) {
+  if (arrSoma.some((number) => typeof (number) === 'string')) {
+    return undefined;
+  }
+  if (arrSoma.length === 0) {
     return undefined;
   }
   for (let index = 0; index < arrSoma.length; index += 1) {
