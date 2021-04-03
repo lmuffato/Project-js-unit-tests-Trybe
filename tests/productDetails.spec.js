@@ -37,7 +37,9 @@ describe('#productDetails', () => {
     // Teste que o retorno da função é um array.
     // https://trybecourse.slack.com/team/U01KXALE3GS
     // assert.deepStrictEqual(typeof productDetails('a', 'b'), 'array');
-    assert.deepStrictEqual(Array.isArray(productDetails('a', 'b')), 'true');
+
+    assert.deepStrictEqual((Array.isArray(productDetails('a', 'b')), 'true'));
+
     // Teste que o array retornado pela função contém dois itens dentro.
     assert.strictEqual(productDetails('a', 'b').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
