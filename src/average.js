@@ -24,7 +24,6 @@ const average = (array) => {
   }
 }
   media = soma/array.length;
-  console.log(media);
   return Math.round(media);
 };
 
