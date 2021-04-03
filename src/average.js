@@ -22,4 +22,3 @@ const average = (numbers) => {
 };
 
 module.exports = average;
-console.log(average([1, '2', 3]))
