@@ -71,6 +71,7 @@
 // const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`.
 // // Essa função deve ser associada à chave `order` de `restaurant`
 // ```
+
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -83,6 +84,7 @@ const createMenu = (object) => {
   const obj = {
     fetchMenu: () => object,
     consumption: [],
+    order: (string) => obj.consumption.push(string),
   };
 };
 
