@@ -33,7 +33,6 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     assert.strictEqual(typeof (productDetails()), 'object');
     assert.strictEqual(productDetails().length, 2);
     assert.strictEqual(typeof (productDetails('firstProduct', 'secondProduct')), 'object');
