@@ -56,7 +56,7 @@ describe('#createMenu', () => {
     assert.strictEqual(Object.keys(objetoRetornado1).includes('fetchMenu'), true);
     const objetoRetornado2 = createMenu({ food: {}, drink: {} });
     assert.deepStrictEqual(Object.keys(objetoRetornado2.fetchMenu()), ['food', 'drink']);
-    const objetoQualquer = { food: { aveia: 0.50, fruta: 1.00 }, drink: { água: 1.50, suco: 2.50 } };
+    const objetoQualquer = { food: { aveia: 0.50, fruta: 1 }, drink: { água: 1.50, suco: 2.50 } };
     const objetoRetornado3 = createMenu(objetoQualquer);
     assert.deepStrictEqual(objetoRetornado3.fetchMenu(), objetoQualquer);
     assert.deepStrictEqual(objetoRetornado3.consumption(), []);
@@ -70,7 +70,8 @@ describe('#createMenu', () => {
     assert.strictEqual((finalLength - initialLength), 3);
     assert.deepStrictEqual(objetoRetornado3.consumption(), ['fruta', 'suco', 'aveia', 'água']);
     objetoRetornado3.order('fruta');
-    assert.deepStrictEqual(objetoRetornado3.consumption(), ['fruta', 'suco', 'aveia', 'água', 'fruta']);
+    assert.deepStrictEqual(objetoRetornado3
+      .consumption(), ['fruta', 'suco', 'aveia', 'água', 'fruta']);
     let somaDosPreços = 0;
     const menu = objetoRetornado3.fetchMenu();
     for (let index = 0; index < objetoRetornado3.consumption().length; index += 1) {
