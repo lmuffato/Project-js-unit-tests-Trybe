@@ -16,14 +16,38 @@
 */
 
 const myCounter = () => {
-  var myArray = [];
-  for (var counter = 0; counter <= 3; counter += 1) {
+  let myArray = [];
+  for (let counter = 0; counter <= 3; counter += 1) {
     myArray.push(counter);
-    for (var counter = 2; counter <= 3; counter += 1) {
+    for (let counter = 2; counter <= 3; counter += 1) {
       myArray.push(counter);
     }
   }
   return myArray;
 };
 
+console.log(myCounter());
+
 module.exports = myCounter;
+
+// Perdi alguns bons minutos da minha vida desenvolvendo o código abaixo após fazer um simples console.log errado, onde por falta de atenção, esqueci de colocar "()" ao fim da função "myCounter". Decidi guardá-lo como recordação xD
+// const myCounter = () => {
+//   let myArray = [];
+//   let orderCounting = 0;
+//   for (let counter = 1; counter <= 12; counter += 1) {
+//     // myArray.push(counter);
+//     if ((counter % 2) === 0 && counter !== 0 && (orderCounting % 2) !== 0) {
+//       myArray.push(2);
+//     } else if ((counter % 2) === 0 && counter !== 0 && (orderCounting % 2) === 0) {
+//       myArray.push(2);
+//     } else if ((counter % 3) === 0 && counter !== 0) {
+//       myArray.push(3);
+//     } else {
+//       myArray.push(orderCounting);
+//       orderCounting += 1;
+//     }
+//   }
+//   return myArray;
+// };
+
+// console.log(myCounter());
