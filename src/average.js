@@ -14,8 +14,8 @@
 
 const average = (arr) => {
   let sum = 0;
-  let deno = parseInt(arr.length);
-  for (let index = 0; index < arr.length; index++) {
+  let deno = arr.length;
+  for (let index = 0; index < arr.length; index += 1) {
     const element = arr[index];
     if (typeof element === 'number') {
       sum += element;
@@ -24,7 +24,7 @@ const average = (arr) => {
       return undefined;
     }
   }
-  sum = sum / deno;
+  sum /= deno;
   return Math.ceil(sum);
 };
 
