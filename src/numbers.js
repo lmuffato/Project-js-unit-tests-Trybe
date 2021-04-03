@@ -10,7 +10,7 @@
 */
 
 const assert = require('assert');
-const numbers = require('../src/numbers');
+const numbers = require('./numbers');
 
 describe('#numbers', () => {
   it('should return an array and return if it has only numbers or not', () => {
