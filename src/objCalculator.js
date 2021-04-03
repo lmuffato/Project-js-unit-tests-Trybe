@@ -19,6 +19,13 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: (x, y) => x + y,
+  mult: (x, y) => x * y,
+  div: (x, y) => Math.floor(x / y),
+  sub: (x, y) => x - y,
+};
+
+// Math.floor pesquisado através do link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 
 module.exports = calculator;
