@@ -41,5 +41,6 @@ describe('#circle', () => {
     circle3.area = parseFloat((circle3.area).toFixed(2));
     circle3.circumference = parseFloat((circle3.circumference).toFixed(2));
     assert.deepStrictEqual(circle3, { radius: 3, area: 28.26, circumference: 18.84 });
+    // Para conseguir executar este último teste utilizei o código da colega Nathalia Zebral como referência.
   });
 });
