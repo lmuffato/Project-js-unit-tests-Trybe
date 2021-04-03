@@ -18,7 +18,8 @@ const average = (numbers) => {
     sum = numbers.reduce((firstValue, elem) => firstValue + elem);
     return Math.round(sum / numbers.length);
   }
-  return 'undefined';
+  return undefined;
 };
 
 module.exports = average;
+console.log(average([1, '2', 3]))
