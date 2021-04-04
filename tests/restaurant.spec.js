@@ -52,7 +52,7 @@ const createMenu = require('../src/restaurant');
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
-    // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui,
+    /* // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui,
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.
     // ```
     let objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
@@ -123,5 +123,6 @@ describe('#createMenu', () => {
     // ```
     assert.strictEqual(objetoRetornado.pay(), 64.24);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
+    */
   });
 });
