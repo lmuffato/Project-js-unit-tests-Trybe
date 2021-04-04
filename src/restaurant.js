@@ -83,6 +83,8 @@ const createMenu = (menu) => {
   const objMenu = {
     fetchMenu: () => menu,
     consumption: [],
+    order: (item) => objMenu.consumption.push(item),
+    pay: () => {},
   };
   return objMenu;
 };
