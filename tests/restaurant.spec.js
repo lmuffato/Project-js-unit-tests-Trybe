@@ -98,7 +98,7 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 6: Verifique que as três orders seguintes, de bebidas e comidas mescladas, somam três itens no array `objetoRetornado.consumption` conforme os itens pedidos.
     // const objetoRetornado1 = createMenu(objetoMenu);
-    const objetoRetornado1 = createMenu();  
+    const objetoRetornado1 = createMenu();
     objetoRetornado1.order('coxinha');
     objetoRetornado1.order('agua');
     objetoRetornado1.order('sopa');
