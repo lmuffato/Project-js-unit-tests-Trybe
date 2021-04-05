@@ -9,7 +9,7 @@ function totalPrice() {
   let totalFood = 0;
   let totalDrink = 0;
   let totalPercent = 0;
-  const percent = 0.10;
+  const percent = 1.10;
   const consumptionArray = this.consumption;
   const menu = this.fetchMenu();
 
@@ -25,7 +25,7 @@ function totalPrice() {
   }
 
   total = totalFood + totalDrink;
-  totalPercent = total + (total * percent);
+  totalPercent = total * percent;
   return totalPercent;
 }
 

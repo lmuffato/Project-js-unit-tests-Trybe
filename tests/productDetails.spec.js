@@ -17,13 +17,19 @@ const isEnd123 = (array) => {
   return item1 && item2;
 };
 
+const isObject = (objects) => {
+  if (objects[0].toString() === '[object Object]' && objects[1].toString() === '[object Object]') {
+    return true;
+  }
+  return false;
+};
+
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     const callFunction = productDetails('Alcool gel', 'Máscara');
     assert.strictEqual(Array.isArray(callFunction), true);
     assert.strictEqual(callFunction.length, 2);
-    assert.strictEqual(callFunction[0].toString() === '[object Object]'
-    && callFunction[1].toString() === '[object Object]', true);
+    assert.strictEqual(isObject(callFunction), true);
     assert.notDeepStrictEqual(callFunction[0], callFunction[1]);
     assert.ok(isEnd123(callFunction));
   });

@@ -22,7 +22,7 @@ const includeKeys = (object, keys) => {
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     // TESTE 1:
-    assert.deepStrictEqual(typeof (createMenu()), 'object');
+    assert.deepStrictEqual(typeof (objetoRetornado), 'object');
     // TESTE 2:
     assert.strictEqual(includeKeys(objetoRetornado, ['food', 'drink']), true);
     // TESTE 3:
@@ -45,7 +45,7 @@ describe('#createMenu', () => {
     const objectFoodAndDrink = createMenu({ food: { coxinha: 2, sopa: 4 },
       drink: { agua: 2, suco: 3 } });
     objectFoodAndDrink.consumption = ['coxinha', 'sopa', 'agua'];
-    const total = 8 + (8 * 0.10);
+    const total = 8 * 1.10;
     assert.strictEqual(objectFoodAndDrink.pay(), total);
   });
 });
