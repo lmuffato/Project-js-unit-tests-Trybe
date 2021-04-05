@@ -101,8 +101,9 @@ describe('#createMenu', () => {
     objetoRetornado4.order('agua');
     objetoRetornado4.order('sopa');
     objetoRetornado4.order('sashimi');
-    objetoRetornado4.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
-    assert.deepStrictEqual(objetoRetornado4.consumption, ['coxinha', 'coxinha', 'agua', 'sopa', 'sashimi']);
+    objetoRetornado4.consumption; // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
+    assert.deepStrictEqual(objetoRetornado4.consumption, 
+    ['coxinha', 'coxinha', 'agua', 'sopa', 'sashimi']);
     // Agora faça o TESTE 7 deste arquivo.
 
     // --------------------------------------------------------------------------------------
