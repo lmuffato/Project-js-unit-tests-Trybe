@@ -26,7 +26,7 @@ describe('#createMenu', () => {
     };
 
     assert.strictEqual(Object.keys(createMenu()).includes('fetchMenu'), true);
-    test(Object.keys(createMenu(emptyObject).fetchMenu()), ['food', 'drink']);
+    assert.strictEqual(Object.keys(createMenu(emptyObject).fetchMenu()), ['food', 'drink']);
     test(createMenu(emptyObject).fetchMenu(), emptyObject);
     test(createMenu().consumption, []);
 
