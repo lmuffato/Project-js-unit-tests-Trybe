@@ -44,7 +44,7 @@ describe('#createMenu', () => {
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
 
-    test(counter('coxinha'), 3);
+    test(objetoRetornado.filter((item) => item === 'coxinha').length, 3);
     test(createMenu(obj).pay(obj), 39.4);
   });
 });
