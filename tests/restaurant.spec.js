@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable max-len */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable no-unused-vars */
@@ -102,8 +103,8 @@ describe('#createMenu', () => {
     objetoRetornado4.order('sopa');
     objetoRetornado4.order('sashimi');
     objetoRetornado4.consumption; // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
-    assert.deepStrictEqual(objetoRetornado4.consumption, 
-    ['coxinha', 'coxinha', 'agua', 'sopa', 'sashimi']);
+    assert.deepStrictEqual(objetoRetornado4.consumption,
+      ['coxinha', 'coxinha', 'agua', 'sopa', 'sashimi']);
     // Agora faça o TESTE 7 deste arquivo.
 
     // --------------------------------------------------------------------------------------
