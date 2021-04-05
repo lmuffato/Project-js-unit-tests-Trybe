@@ -12,24 +12,20 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = (array) => {
-  if (array.length === 0) {
-    return undefined;
-  }
-  
-  let sumValues = 0;
+  const checkValues = () => {
+    const allNumbers = array.every((element) => typeof element === 'number'); // true se nao achar nao-numeros
+    const notEmpty = array.length !== 0;
 
-  for (let i = 0; i < array.length; i += 1) {
-    if ( typeof array[i] !== 'number') {
-      return undefined;
-    }
-    
-    if(typeof array[i] === 'number') {
-      sumValues += array[i];
-    }
+    if (allNumbers && notEmpty === true) return true;
   };
 
-  const media = (sumValues / array.length);
-  return Math.round(media);
+  const sumMedia = () => {
+    const sum = array.reduce((acumulator, currentValue) => (acumulator + currentValue));
+    const media = Math.round(sum / array.length);
+    return media;
+  };
+
+  return checkValues() ? sumMedia() : undefined;
 };
 
 module.exports = average;
