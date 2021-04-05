@@ -23,7 +23,7 @@ function createMenu(objeto) {
         let repeat = consumo.filter((item) => items[index] === item);
         counter += repeat.length * prices[index];
       }
-      return counter;
+      return counter * 1.1;
     },
   };
   return objetoRetornado;
