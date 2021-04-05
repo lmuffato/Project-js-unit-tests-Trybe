@@ -83,7 +83,6 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
     const objetoRetornado3 = createMenu(menu);
-    objetoRetornado3.consumption; // Retorno: []
     assert.deepStrictEqual(objetoRetornado3.consumption, []);
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
 
@@ -92,7 +91,6 @@ describe('#createMenu', () => {
     // como `objetoRetornado.order('coxinha')`, tal string é adicionada ao array retornado em `objetoRetornado.consumption
     const objetoRetornado4 = createMenu(menu);
     objetoRetornado4.order('coxinha');
-    objetoRetornado4.consumption; // Retorno: ["coxinha"]
     assert.deepStrictEqual(objetoRetornado4.consumption, ['coxinha']);
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
 
@@ -102,7 +100,6 @@ describe('#createMenu', () => {
     objetoRetornado4.order('agua');
     objetoRetornado4.order('sopa');
     objetoRetornado4.order('sashimi');
-    objetoRetornado4.consumption; // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
     assert.deepStrictEqual(objetoRetornado4.consumption,
       ['coxinha', 'coxinha', 'agua', 'sopa', 'sashimi']);
     // Agora faça o TESTE 7 deste arquivo.
