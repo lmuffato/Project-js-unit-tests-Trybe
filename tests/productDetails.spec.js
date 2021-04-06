@@ -1,5 +1,5 @@
- /* eslint-disable max-len*/
- /* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
+/* eslint-disable no-unused-vars */
 
 const assert = require('assert');
 const productDetails = require('../src/productDetails');
@@ -32,7 +32,7 @@ const productDetails = require('../src/productDetails');
 */
 
 describe('#productDetails', () => {
-  const valor = 'Alcool gel, Máscara'
+  const valor = 'Alcool gel, Máscara';
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
