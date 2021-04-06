@@ -1,5 +1,5 @@
-/* eslint-disable max-len*/
-/* eslint-disable no-unused-vars */
+ /* eslint-disable max-len*/
+ /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
 const productDetails = require('../src/productDetails');
@@ -32,16 +32,17 @@ const productDetails = require('../src/productDetails');
 */
 
 describe('#productDetails', () => {
+  const valor = 'Alcool gel, Máscara'
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.notStrictEqual(typeof (productDetails('Alcool gel', 'Máscara')), 'array');
+    assert.notStrictEqual(typeof (productDetails(valor)), 'array');
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
+    assert.strictEqual(productDetails(valor).length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.strictEqual(typeof (productDetails('Alcool gel', 'Máscara')), 'object');
+    assert.strictEqual(typeof (productDetails(valor)), 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')),('Alcool gel', 'Máscara');
+    assert.notDeepStrictEqual(productDetails(valor), valor);
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.strictEqual(productDetails()[0].details.productId.slice(-3), '123');
     assert.strictEqual(productDetails()[1].details.productId.slice(-3), '123');
