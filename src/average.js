@@ -12,18 +12,19 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (arr) => {
-  let sum = 0;
+const average = (array) => {
+  let media = 0;
+  let tamanho = array.length;
   if (arr.length === 0) {
     return undefined;
   }
-  for (let i = 0; i < arr.length; i += 1) {
-    if (typeof arr[i] !== 'number') {
+  for (let i = 0; i < tamanho; i += 1) {
+    if (typeof array[i] !== 'number') {
       return undefined;
     }
-    sum += arr[i];
+    media += array[i];
   }
-  const media = Math.round(sum / arr.length);
+  const media = Math.round(media / tamanho);
   return media;
 };
 
