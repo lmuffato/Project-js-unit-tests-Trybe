@@ -110,6 +110,7 @@ meuRestaurante.pay = () => {
     }
     return valueTopay;
   });
+  valueTopay += valueTopay * 0.10;
   return valueTopay;
 };
 console.log(meuRestaurante.order('sopa'));
