@@ -20,8 +20,7 @@ const createStudent = (nome) => {
     name: nome,
     feedback: () => 'Eita pessoa boa!',
   };
-  return `${estudante.name}, o Lobo Solitário.
-  ${estudante.feedback}`;
+  return estudante;
 };
 
 console.log(createStudent('Michael'));
