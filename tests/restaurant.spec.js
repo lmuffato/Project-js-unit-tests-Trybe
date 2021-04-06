@@ -137,12 +137,13 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
     // ```
+    // const objetoRetornado = createMenu({ food: { coxinha: 1 }, drink: { agua: 1 } });
     // objetoRetornado.order('coxinha');
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
-    // +++ assert.strictEqual(objetoRetornado.pay(), 14.3);
+    assert.deepStrictEqual(objetoRetornado.pay(), 4.29);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
