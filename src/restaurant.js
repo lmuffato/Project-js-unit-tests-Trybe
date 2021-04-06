@@ -78,7 +78,42 @@
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`,
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
-
-const createMenu = () => {};
-
+const createMenu = (object) => object;
+const meuRestaurante = createMenu({ food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } });
+meuRestaurante.consumed = [];
+meuRestaurante.fetchMenu = () => {
+  let output = {};
+  Object.entries(meuRestaurante).forEach((element) => {
+    if (element.includes('food') || element.includes('drink')) {
+      let value = element[1];
+      output[element[0]] = value;
+    }
+    return output;
+  });
+  return output;
+};
+meuRestaurante.order = (item) => {
+  if (Object.keys(meuRestaurante.food).includes(item) || Object.keys(meuRestaurante.drink).includes(item)) {
+    meuRestaurante.consumed.push(item);
+  } else {
+    return 'item não listado no cardápio';
+  }
+};
+meuRestaurante.consumption = () => meuRestaurante.consumed.join(', ');
+meuRestaurante.pay = () => {
+  let valueTopay = 0;
+  meuRestaurante.consumed.forEach((element) => {
+    if (meuRestaurante.food[element] !== undefined) {
+      valueTopay += meuRestaurante.food[element];
+    } else if (meuRestaurante.drink[element] !== undefined) {
+      valueTopay += meuRestaurante.drink[element];
+    }
+    return valueTopay;
+  });
+  return valueTopay;
+};
+console.log(meuRestaurante.order('sopa'));
+console.log(meuRestaurante.consumption());
+console.log(meuRestaurante.pay());
+console.table(meuRestaurante);
 module.exports = createMenu;
