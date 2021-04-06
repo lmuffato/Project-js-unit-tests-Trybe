@@ -22,7 +22,8 @@ const vqv = (nome, idade) => {
   if (parametroNome === undefined && parametroIdade === undefined) {
     return undefined;
   }
-  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
+  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,
+  trabalho na Trybe e mando muito em programação!\n#VQV!`;
 };
 console.log(vqv('Tunico', 29));
 
