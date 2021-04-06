@@ -16,11 +16,11 @@ const average = (array) => {
   let soma = 0;
   let tamanho = array.length;
   if (array.length === 0) {
-    return 'undefined';
+    return undefined;
   }
   for (let i = 0; i < tamanho; i += 1) {
     if (typeof array[i] !== 'number') {
-      return 'undefined';
+      return undefined;
     }
     soma += array[i];
   }
