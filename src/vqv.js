@@ -17,13 +17,10 @@
 */
 
 const vqv = (nome, idade) => {
-  let parametroNome = typeof (nome);
-  let parametroIdade = typeof (idade);
-  if (parametroNome === undefined && parametroIdade === undefined) {
+   if (nome === undefined && idade === undefined) {
     return undefined;
   }
-  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,
-  trabalho na Trybe e mando muito em programação!\n#VQV!`;
+  return `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
 };
 console.log(vqv('Tunico', 29));
 
