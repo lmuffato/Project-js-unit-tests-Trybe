@@ -8,30 +8,10 @@
     - Um array. Exemplos: [1, 2]; [1, 2, 3, 4, 5]; [1, 2, '3']; [];
   Comportamento:
     - average([2, 2]) // Retorno: 2;
-    - average([1, 2]) // Retorno: 1;
+    - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (array) => {
-  let total = 0;
-  let tamanho = array.length;
-  let media = 0
-  
-  for (let i = 0; i < array.length; i+=1){
-    if (typeof(array[i]) !== 'number'){
-      media = 'undefined'
-      return media
-    }
-    else {
-      total += array[i]; 
-    }
-  }
-    
-  return media = Math.round(total / tamanho);
-};
-const array = [1, 2.2, null, 4, 5.8];
-const chamarFunction = (average(array))
-console.log(chamarFunction);
-
+const average = () => {};
 
 module.exports = average;
