@@ -13,18 +13,18 @@
 */
 
 const average = (array) => {
-  let media = 0;
+  let soma = 0;
   let tamanho = array.length;
   if (arr.length === 0) {
     return undefined;
   }
   for (let i = 0; i < tamanho; i += 1) {
-    if (typeof array[i] !== 'number') {
+    if (typeof arr[i] !== 'number') {
       return undefined;
     }
-    media += array[i];
+    soma += array[i];
   }
-  const media = Math.round(media / tamanho);
+  const media = Math.round(soma / tamanho);
   return media;
 };
 
