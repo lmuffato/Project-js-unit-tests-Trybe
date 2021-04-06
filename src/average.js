@@ -18,8 +18,8 @@ const average = (array) => {
   let media = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (typeof (array[i]) !== 'number') {
-       media = 'undefined';
-       return  media;
+      media = 'undefined';
+      return  media;
     }
     total += array[i];
   }
