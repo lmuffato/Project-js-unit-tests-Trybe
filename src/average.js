@@ -15,7 +15,7 @@
 const average = () => {
   let total = 0;
   let tamanho = array.length;
-  let media = 0
+  let media = 0;
   
   for (let i = 0; i < array.length; i+=1){
     if (typeof(array[i]) !== 'number'){
@@ -29,5 +29,9 @@ const average = () => {
     
   return media = Math.round(total / tamanho);
 };
+
+const array = [1, 2.2, null, 4, 5.8];
+const chamarFunction = (average(array))
+console.log(chamarFunction);
 
 module.exports = average;
