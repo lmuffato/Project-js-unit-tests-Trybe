@@ -148,4 +148,4 @@ describe('#createMenu', () => {
   });
 });
 
-// agradeço aos colegas, Murilo gonçalvez,lucas pedroso e ao plantoes no auxilio para concluir o projeto!
+// agradeço aos colegas, Murilo gonçalvez,lucas pedroso no auxilio para concluir o projeto!
