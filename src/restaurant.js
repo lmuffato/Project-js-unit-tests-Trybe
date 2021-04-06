@@ -4,29 +4,23 @@ function createOrder(items) {
   this.consumption.push(items);
 }
 
-function totalPrice() {
-  let total = 0;
-  let totalFood = 0;
-  let totalDrink = 0;
-  let totalPercent = 0;
-  const percent = 1.10;
-  const consumptionArray = this.consumption;
-  const menu = this.fetchMenu();
-
-  for (let index = 0; index < consumptionArray.length; index += 1) {
-    const element = consumptionArray[index];
-
+function getValues(menu, consumptionArray) {
+  // eslint-disable-next-line array-callback-return
+  return consumptionArray.map((element) => {
     if (menu.food[element] !== undefined) {
-      totalFood += menu.food[element];
+      return menu.food[element];
     }
     if (menu.drink[element] !== undefined) {
-      totalDrink += menu.drink[element];
+      return menu.drink[element];
     }
-  }
+  });
+}
 
-  total = totalFood + totalDrink;
-  totalPercent = total * percent;
-  return totalPercent;
+function totalPrice() {
+  const consumptionArray = this.consumption;
+  const percent = 1.1;
+  const menu = this.fetchMenu();
+  return getValues(menu, consumptionArray).reduce((valueA, valueB) => (valueA + valueB)) * percent;
 }
 
 const createMenu = (objectMenu) => {
