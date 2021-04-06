@@ -1,14 +1,10 @@
 /* eslint-disable max-len */
 
-let objetoRetornado = {};
-
-const orderFunction = (string) => objetoRetornado.consumption.push(string);
-
 function createMenu(objeto) {
-  objetoRetornado = {
+  let objetoRetornado = {
     fetchMenu: () => objeto,
     consumption: [],
-    order: orderFunction,
+    order: (string) => objetoRetornado.consumption.push(string),
     pay: (consumo) => {
       let counter = 0;
       let items = [];

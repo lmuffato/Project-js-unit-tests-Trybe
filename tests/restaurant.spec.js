@@ -5,13 +5,14 @@
 const assert = require('assert');
 const createMenu = require('../src/restaurant');
 
+const emptyObject = { food: {}, drink: {} };
+
+let objetoRetornado = createMenu();
+console.log(objetoRetornado);
+
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
-    const test = assert.notDeepStrictEqual;
-
-    const emptyObject = { food: {}, drink: {} };
-
-    let objetoRetornado = {};
+    const test = assert.deepStrictEqual;
 
     const obj = {
       food: {
@@ -26,11 +27,11 @@ describe('#createMenu', () => {
     };
 
     assert.strictEqual(Object.keys(createMenu()).includes('fetchMenu'), true);
-    assert.strictEqual(Object.keys(createMenu(emptyObject).fetchMenu()), ['food', 'drink']);
+    assert.deepStrictEqual(Object.keys(createMenu(emptyObject).fetchMenu()), ['food', 'drink']);
     test(createMenu(emptyObject).fetchMenu(), emptyObject);
     test(createMenu().consumption, []);
 
-    createMenu().order('coxinha');
+    objetoRetornado.order('coxinha');
 
     test(objetoRetornado.consumption.includes('coxinha'), true);
 
@@ -44,7 +45,7 @@ describe('#createMenu', () => {
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
 
-    test(objetoRetornado.filter((item) => item === 'coxinha').length, 3);
-    test(createMenu(obj).pay(obj), 39.4);
+    test(objetoRetornado.consumption.filter((item) => item === 'coxinha').length, 3);
+    test(createMenu(obj).pay(objetoRetornado.consumption), 43.34);
   });
 });
