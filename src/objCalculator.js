@@ -19,16 +19,16 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 const calculator = (num1, num2) => {
-  calculator = {
+  const calc = {
     add: num1 + num2,
     sub: num1 - num2,
     mult: num1 * num2,
     div: num1 / num2,
   };
-  return `Adiçâo: ${calculator.add}
-  Subtração: ${calculator.sub}
-  Mutiplicação: ${calculator.mult}
-  Divisâo: ${Math.floor(calculator.div)}`;
+  return `Adiçâo: ${calc.add}
+  Subtração: ${calc.sub}
+  Mutiplicação: ${calc.mult}
+  Divisâo: ${Math.floor(calc.div)}`;
 };
 const chamaFunction = (calculator(4, 2));
 console.log(chamaFunction);
