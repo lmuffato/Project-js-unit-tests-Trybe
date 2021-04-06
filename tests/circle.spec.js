@@ -40,7 +40,7 @@ describe('#circle', () => {
     const objectCompare = { radius: 3, area: 28.26, circumference: 18.84 };
     const objReturn = circle([3]);
     objReturn.area = parseFloat(objReturn.area.toPrecision(5));
-    objReturn.radius = parseInt(objReturn.radius);
+    objReturn.radius = parseInt(objReturn.radius, 10);
     assert.deepStrictEqual(circle([3]), objectCompare);
   });
 });
