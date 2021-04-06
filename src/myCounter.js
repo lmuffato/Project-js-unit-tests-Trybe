@@ -14,8 +14,8 @@ const myCounter = () => {
   let array = [];
   for (let i = 0; i <= 3; i += 1) {
     array.push(i);
-    for (let i = 2; i <= 3; i += 1) {
-      array.push(i);
+    for (let j = 2; j <= 3; j += 1) {
+      array.push(j);
     }
   }
   return array;
