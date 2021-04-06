@@ -27,7 +27,5 @@ const average = (array) => {
   media = Math.round(total / tamanho);
   return media;
 };
-const array = [11.2, 5.5, 2.7];
-// const chamarFunction = (average(array));
-// console.log(chamarFunction);
+
 module.exports = average;
