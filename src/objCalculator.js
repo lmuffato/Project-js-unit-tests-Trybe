@@ -18,7 +18,19 @@
   calculator.add(1, 1) // Retorno: 2;
   calculator.div(3, 2) // Retorno: 1;
 */
-
-const calculator = {};
+const calculator = (num1, num2) => {
+  const calculator = {
+    add: num1 + num2,
+    sub: num1 - num2,
+    mult: num1 * num2,
+    div: num1 / num2,
+  };
+  return `Adiçâo: ${calculator.add}
+  Subtração: ${calculator.sub}
+  Mutiplicação: ${calculator.mult}
+  Divisâo: ${Math.floor(calculator.div)}`
+};
+const chamaFunction = (calculator(4,2))
+console.log(chamaFunction);
 
 module.exports = calculator;
