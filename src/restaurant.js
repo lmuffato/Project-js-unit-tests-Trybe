@@ -96,6 +96,9 @@ const createMenu = (menu) => ({
 
 /* let newMenu = createMenu({ food: {}, drink: {} });
 newMenu.order('coxinha');
+newMenu.order('agua');
+newMenu.order('sopa');
+newMenu.order('sashimi');
 console.log(newMenu.consumption); */
 
 module.exports = createMenu;
