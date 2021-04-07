@@ -26,6 +26,6 @@ const sub = (one, two) => Math.floor(one - two);
 
 const calculator = { add, mult, div, sub };
 
-console.log(calculator.div(6,5));
+console.log(calculator.div(6, 5));
 
 module.exports = calculator;
