@@ -90,13 +90,14 @@ const createMenu = (received) => {
     },
     pay: () => {
       const { food, drink } = received;
+      console.log(({ food, drink }));
       let total = 0;
       for (let i = 0; i < consumption.length; i += 1) {
-        if (Object.keys(food).includes(i)) {
+        if (Object.keys(food) === i) {
           total += food[i];
         }
-        if (Object.keys(drink).includes(i)) {
-          total += food[i];
+        if (Object.keys(drink) === i) {
+          total += drink[i];
         }
       }
       return total;
@@ -106,6 +107,8 @@ const createMenu = (received) => {
 };
 
 const objetoRetornado = createMenu();
-console.log(objetoRetornado.fetchMenu());
+objetoRetornado.pay();
+
+console.log(objetoRetornado);
 
 module.exports = createMenu;
