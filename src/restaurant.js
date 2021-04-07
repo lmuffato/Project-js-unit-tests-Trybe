@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-one-iteration-loop */
 /* eslint-disable max-len */
 
 /*
@@ -79,6 +80,23 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
+// Passo 4
+function payOrder() {
+  const consumido = this.consumption;
+  const { food, drink } = this.fetchMenu();
+  const keyFood = Object.keys(food);
+  const keyDrink = Object.keys(drink);
+  let total = 0;
+
+  for (let index = 0; index < consumido.length; index += 1) {
+    const item = consumido[index];
+    if (keyFood.includes(item)) total += food[item];
+    if (keyDrink.includes(item)) total += drink[item];
+  }
+  return total * 1.1;
+}
+
+// Passo 3
 function orderFromMenu(request) {
   this.consumption.push(request);
 }
@@ -89,6 +107,7 @@ const createMenu = (menu) => {
     fetchMenu: () => menu,
     consumption: [], // Passo 2
     order: orderFromMenu,
+    pay: payOrder,
   };
   return objMenu;
 };
