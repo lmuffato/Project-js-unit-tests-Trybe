@@ -8,7 +8,6 @@ const createMenu = require('../src/restaurant');
 const emptyObject = { food: {}, drink: {} };
 
 let objetoRetornado = createMenu();
-console.log(objetoRetornado);
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
