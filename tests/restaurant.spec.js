@@ -57,8 +57,8 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
 
-      assert.deepStrictEqual(createMenu({ objetoQuallquer: 150 }).fetchMenu,
-      { objetoQuallquer: 150 });
+    assert.deepStrictEqual(createMenu({ objetoQuallquer: 150 }).fetchMenu,
+    { objetoQuallquer: 150 });
 
     // ```
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
