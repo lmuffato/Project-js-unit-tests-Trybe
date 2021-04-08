@@ -51,6 +51,7 @@ const createMenu = require('../src/restaurant');
 */
 const values = { food: { coxinha: 3.90, sanduiche: 9.90 }, drink: { agua: 3.90, cerveja: 6.90 } };
 const obj = createMenu(values);
+const obj1 = createMenu(values);
 const objetoRetornado = createMenu({ food: {}, drink: {} });
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
@@ -115,7 +116,10 @@ describe('#createMenu', () => {
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha'); */
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
-    assert.strictEqual(objetoRetornado.pay(), 11.70);
+    obj1.order('coxinha');
+    obj1.order('agua');
+    obj1.order('coxinha');
+    assert.strictEqual(obj1.pay(), 12.87);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
