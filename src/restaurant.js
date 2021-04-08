@@ -81,12 +81,18 @@
 
 const createMenu = (menu) => {
   const nmenu = {
-    fetchMenu: () => ({
-      food: {},
-      drink: {},
-    }),
+    fetchMenu: () => menu,
     consumption: [],
     order: (item) => nmenu.consumption.push(item),
+    // Solução Obtida com ajuda do Rafael Medeiros Gomes e Tiago Santos;
+    pay: () => { 
+      let valorTotal = 0;
+      const obj = { ...menu.food, ...menu.drinks }; // {coxinha:3.9, sopa:9.9, agua:3.9, cerveja:6.9}
+      nmenu.consumption.forEach(item => {
+        valorTotal += obj[item];
+      });
+      return (valorTotal * 1.1).toFixed(2);
+    },
   };
   return nmenu;
 };
