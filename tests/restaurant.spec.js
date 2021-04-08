@@ -98,10 +98,10 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.order("coxinha");
     // objetoRetornado.consumption // Retorno: ["coxinha"]
-      
+
     const objetoqualquer5 = createMenu({
-    food: { 'coxinha': 3.90, 'sopa': 9.9 },
-    drink: { 'agua': 3.9, 'cerveja': 6.9 } });
+      food: { 'coxinha': 3.90, 'sopa': 9.9 },
+      drink: { 'agua': 3.9, 'cerveja': 6.9 } });
     objetoqualquer5.order('coxinha');
     const entrada5 = objetoqualquer5.consumption;
     const saida5 = ['coxinha'];
@@ -119,7 +119,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order("sashimi");
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
 
-    const objetoRetornado6= createMenu({
+    const objetoRetornado6 = createMenu({
       food: { 'coxinha': 3.90, 'sopa': 9.9, 'sashimi': 10.90 },
       drink: { 'agua': 3.9, 'cerveja': 6.9 } });
     objetoRetornado6.order('coxinha');
@@ -139,7 +139,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
-    
+
     const objetoRetornado7 = createMenu({
       food: { 'coxinha': 3.90, 'sopa': 9.9, 'sashimi': 10.90 },
       drink: { 'agua': 3.9, 'cerveja': 6.9 } });
@@ -149,9 +149,9 @@ describe('#createMenu', () => {
     const entrada7 = objetoRetornado7.consumption;
     const saida7 = ['coxinha', 'agua', 'coxinha'];
 
-    assert.deepStrictEqual(entrada7, saida7)
+    assert.deepStrictEqual(entrada7, saida7);
 
-      // ```
+    // ```
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
@@ -171,7 +171,7 @@ describe('#createMenu', () => {
     const output8 = 11.7;
 
     assert.deepStrictEqual(entrada8, output8);
-        
+
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
