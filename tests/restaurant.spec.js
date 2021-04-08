@@ -100,8 +100,7 @@ describe('#createMenu', () => {
     // objetoRetornado.consumption // Retorno: ["coxinha"]
 
     const objetoqualquer5 = createMenu({
-      food: { 'coxinha': 3.90, 'sopa': 9.9 },
-      drink: { 'agua': 3.9, 'cerveja': 6.9 } });
+       food: {}, drink: {} }).fetchMenu;
     objetoqualquer5.order('coxinha');
     const entrada5 = objetoqualquer5.consumption;
     const saida5 = ['coxinha'];
