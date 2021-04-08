@@ -57,7 +57,8 @@ const createMenu = require('../src/restaurant');
     // ```
     // const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
 
-    // assert.deepStrictEqual(createMenu({objetoQualquer: 150}),{objetoQualquer: 150});
+
+    assert.deepStrictEqual(createMenu({objetoQuallquer: 150}).fetchMenu,{objetoQuallquer: 150});
 
     // ```
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
@@ -66,11 +67,9 @@ const createMenu = require('../src/restaurant');
     // const objetoRetornado = createMenu({ food: {}, drink: {} });
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
     // ```
-   
-    const entradaTest2 = Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu);
-    const saidaTest2 = ['food', 'drink'];
+       
 
-    assert.deepStrictEqual(entradaTest2, saidaTest2);
+    assert.deepStrictEqual(Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu), ['food', 'drink']);
 
 
     // TESTE 3: Verifique que o menu passado pra função createMenu é identico ao menu recuperado pela função 'objetoRetornado.fetchMenu'
@@ -78,13 +77,21 @@ const createMenu = require('../src/restaurant');
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu() // Retorno: objetoQualquer
     // ```
-    // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
+    
+    
+    assert.deepStrictEqual(createMenu({ food: {'coxinha': 3.90, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }).fetchMenu, { food: {'coxinha': 3.90, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+    
+    // Agora faça o PASSO 1 no arquivo `src/restaurant.js`
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.consumption // Retorno: []
     // ```
+   
+    assert.deepStrictEqual(createMenu({ food: {}, drink: {} }).consumption, []);
+   
+    
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 5: Verifique que chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro,
@@ -146,6 +153,14 @@ const createMenu = require('../src/restaurant');
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
+    const objetoRetornado8 = createMenu({ food: {'coxinha': 3.90, 'sopa': 9.90, 'sashimi': 10.90}, drink: {'agua': 3.90, 'cerveja': 6.90} });
+    objetoRetornado8.order('coxinha');
+    objetoRetornado8.order('agua');
+    objetoRetornado8.order('coxinha');
+    const entrada8 = objetoRetornado8.pay();
+    const output8 = 11.7;
+
+    assert.deepStrictEqual(entrada8, output8);
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
 //   });

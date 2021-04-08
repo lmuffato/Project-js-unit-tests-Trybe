@@ -77,35 +77,34 @@
 //--------------------------------------------------------------------------------------------------------------------
 
 
-
-// PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
-//
-// Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
-
 const restaurant = {}
 
 const orderFromMenu = ((request) => {
   return restaurant.consumption.push(request);
 });
 
+const valorAPagar = (menu, j) => {
+  for (let index = 0; index < menu.length; index += 1) {
+    if (restaurant.consumption[j] === menu[index][0]) {
+      return menu[index][1];
+    }
+  }
+  return 0;
+};
+
+const toPay = (menu) => {
+  let pay = 0;
+  for (let j = 0; j < restaurant.consumption.length; j += 1) {
+    pay += valorAPagar(menu, j);
+  }
+  return pay;
+};
 const createMenu = objeto => Object.assign(restaurant, {
   fetchMenu: objeto,
   consumption: [],
   order: ((request) => orderFromMenu(request)),
+  pay: (() => toPay(Object.entries(restaurant.fetchMenu.food))  + toPay(Object.entries(restaurant.fetchMenu.drink))),
 });
-
-
-// const objetoRetornado6= createMenu({ food: {'coxinha': 3.90, 'sopa': 9.9, 'sashimi': 10.90}, drink: {'agua': 3.9, 'cerveja': 6.9} });
-// objetoRetornado6.order("coxinha");
-// objetoRetornado6.order("agua");
-// objetoRetornado6.order("sopa");
-// objetoRetornado6.order("sashimi");
-// console.log(objetoRetornado6.order('coxinha'))
-// console.log(objetoRetornado6.consumption)
-
-//createMenu()
-
-
 
 
 module.exports = createMenu;
