@@ -73,9 +73,8 @@ describe('#createMenu', () => {
     const menu = {
       food: { coxinha: 3.90, sanduiche: 9.90 },
       drinks: { agua: 3.90, cerveja: 6.90 },
-      };
+    };
     const objetoQualquer = createMenu(menu);
-      
     assert.deepStrictEqual(objetoQualquer.fetchMenu(), menu);
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu() // Retorno: objetoQualquer
@@ -123,7 +122,6 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
     // ```assert.strictEqual(objetoQueVoCeCriou.pay(), SomaDoItens);
-    
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     const objetoRetornado3 = createMenu(menu);
