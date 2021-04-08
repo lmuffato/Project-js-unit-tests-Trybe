@@ -14,7 +14,7 @@
 
 const average = (array) => {
   let result = 0;
-  if (array.lenght === 0 || array === undefined) {
+  if (array.length === 0 || array === undefined) {
     return undefined;
   }
 
@@ -28,7 +28,5 @@ const average = (array) => {
   result = Math.round(result / array.length);
   return result;
 };
-
-console.log(average([1, '1']));
 
 module.exports = average;
