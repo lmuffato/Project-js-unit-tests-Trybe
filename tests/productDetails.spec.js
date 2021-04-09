@@ -31,9 +31,8 @@ const productDetails = require('../src/productDetails');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-// describe('#productDetails', () => {
-//   it('tests the function has the correct behaviour', () => {
-    
+describe('#productDetails', () => {
+  it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     const objeto1 = {}
@@ -54,5 +53,5 @@ const productDetails = require('../src/productDetails');
     const tresUltimasLetra1 = resposta1.details.productId.slice(-3) 
     const tresUltimasLetra2 = resposta2.details.productId.slice(-3)
     assert.strictEqual(tresUltimasLetra1, tresUltimasLetra2);
-//   });
-// });
+  });
+});
