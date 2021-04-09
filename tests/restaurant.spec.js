@@ -98,7 +98,7 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.order("coxinha");
     // objetoRetornado.consumption // Retorno: ["coxinha"]
-    
+  
     const objetoqualquer5 = createMenu({
       food: { coxinha: 3.90, sopa: 9.9 },
       drink: { agua: 3.9, cerveja: 6.9 } });
@@ -120,8 +120,8 @@ describe('#createMenu', () => {
     // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
 
     const objetoRetornado6 = createMenu({
-      food: { 'coxinha': 3.90, 'sopa': 9.9, 'sashimi': 10.90 },
-      drink: { 'agua': 3.9, 'cerveja': 6.9 } });
+      food: { coxinha: 3.90, sopa: 9.9, sashimi: 10.90 },
+      drink: { agua: 3.9, cerveja: 6.9 } });
     objetoRetornado6.order('coxinha');
     objetoRetornado6.order('agua');
     objetoRetornado6.order('sopa');
@@ -141,8 +141,8 @@ describe('#createMenu', () => {
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
 
     const objetoRetornado7 = createMenu({
-      food: { 'coxinha': 3.90, 'sopa': 9.9, 'sashimi': 10.90 },
-      drink: { 'agua': 3.9, 'cerveja': 6.9 } });
+      food: { coxinha: 3.90, sopa: 9.9, sashimi: 10.90 },
+      drink: { agua: 3.9, cerveja: 6.9 } });
     objetoRetornado7.order('coxinha');
     objetoRetornado7.order('agua');
     objetoRetornado7.order('coxinha');
@@ -162,8 +162,8 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
 
     const objetoRetornado8 = createMenu({
-      food: { 'coxinha': 3.90, 'sopa': 9.90, 'sashimi': 10.90 },
-      drink: { 'agua': 3.90, 'cerveja': 6.90 } });
+      food: { coxinha: 3.90, sopa: 9.90, sashimi: 10.90 },
+      drink: { agua: 3.90, cerveja: 6.90 } });
     objetoRetornado8.order('coxinha');
     objetoRetornado8.order('agua');
     objetoRetornado8.order('coxinha');
