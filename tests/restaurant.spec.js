@@ -98,7 +98,6 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.order("coxinha");
     // objetoRetornado.consumption // Retorno: ["coxinha"]
-  
     const objetoqualquer5 = createMenu({
       food: { coxinha: 3.90, sopa: 9.9 },
       drink: { agua: 3.9, cerveja: 6.9 } });
