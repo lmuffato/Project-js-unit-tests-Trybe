@@ -109,6 +109,8 @@ const createMenu = (menu) => ({
   consumption: [],
   order: orderFromMenu,
   pay: totalPayment,
-};
+});
 
 module.exports = createMenu;
+
+// Source: consulta ao repositório do Anderson Silva: https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/120 //
