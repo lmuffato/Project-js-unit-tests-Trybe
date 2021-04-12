@@ -49,8 +49,9 @@ const createMenu = require('../src/restaurant');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-const values = { food: { coxinha: 3.90, sanduiche: 9.90 }, drink: {agua: 3.90, cerveja: 6.90 } };
+const values = { food: { coxinha: 3.90, sanduiche: 9.90 }, drink: { agua: 3.90, cerveja: 6.90 } };
 const object = createMenu(values);
+const objetoRetornado = createMenu({ food: {}, drink: {} });
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
@@ -134,3 +135,5 @@ describe('#createMenu', () => {
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
+
+// Source: consulta ao repositório do Anderson Silva: https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/120 //
