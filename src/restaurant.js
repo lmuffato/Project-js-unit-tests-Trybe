@@ -98,7 +98,7 @@ function totalPayment() {
       total += drink[consumo[index]];
     }
   }
-  return total + (total * 0.1);
+  return total + (0.1 * total);
 }
 
 const createMenu = (menu) => ({
