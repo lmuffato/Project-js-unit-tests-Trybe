@@ -36,15 +36,21 @@ describe('#productDetails', () => {
     // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
+    // Exercicio resolvido baseado no codigo de Michael Petterson
+    const obj1 = {};
+    const obj2 = {};
+    assert.strictEqual(Array.isArray(productDetails(obj1, obj2)), true);
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(Object.keys(productDetails('Alcool gel', 'Máscara')).length, 2);
+    assert.strictEqual(Object.keys(productDetails(obj1, obj2)).length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.strictEqual(typeof Object.keys(productDetails('Alcool gel', 'Máscara')), 'object');
+    assert.strictEqual(typeof Object.keys(productDetails(obj1, obj2)), 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(Object.keys(productDetails('Alcool gel', 'Máscara'))[0], Object.keys(productDetails('Alcool gel', 'Máscara'))[1]);
+    assert.notStrictEqual(Object.keys(productDetails(obj1, obj2))[0],
+      Object.keys(productDetails(obj1, obj2))[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.endsWith(123), true);
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.endsWith(123), true);
+    assert.strictEqual(productDetails(obj1, obj2)[0]
+      .details.productId.endsWith(123), true);
+    assert.strictEqual(productDetails(obj1, obj2)[1]
+      .details.productId.endsWith(123), true);
   });
 });
