@@ -17,7 +17,7 @@ const average = (array) => {
   }
   var soma = 0;
   for (var i = 0; i < array.length; i += 1) {
-    if (Number.isNaN(array[i]) !== true) {
+    if (Number.isInteger(array[i]) !== true) {
       return undefined;
     }
     soma += array[i];
