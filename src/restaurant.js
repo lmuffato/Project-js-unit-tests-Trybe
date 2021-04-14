@@ -88,8 +88,7 @@ const createMenu = (menu) => {
     fetchMenu: () => menu,
     consumption: [],
     order: orderFromMenu,
-    pay: () => {}
-  }
+    pay: () => {},
+  };
 }
-      
 module.exports = createMenu;
