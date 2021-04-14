@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = (array) => {
-  if (isNaN(array)) {
+  if (Number.isNaN(array)) {
     return undefined;
   }
   var soma = 0;
