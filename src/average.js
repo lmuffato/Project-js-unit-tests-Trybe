@@ -14,7 +14,7 @@
 //testando1 2
 const average = () => {
   var soma = 0
-  for(i = 0; i < array.length; i++){
+  for( i = 0; i < array.length; i++ ){
     if(typeof array[i] != 'number'){
       return undefined
     }
