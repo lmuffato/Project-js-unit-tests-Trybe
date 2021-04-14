@@ -20,13 +20,13 @@
 */
 
 const calculator = {
-  add: (a,b) => a + b,
-  mult: (a,b) => a * b,
-  div: (a,b) => { 
-    const division = a / b
-    return Math.floor(division) 
+  add: (a, b) => a + b,
+  mult: (a, b) => a * b,
+  div: (a, b) => {
+    const division = a / b;
+    return Math.floor(division);
   },
-  sub: (a,b) => a - b
+  sub: (a, b) => a - b,
 };
 
 module.exports = calculator;
