@@ -14,6 +14,10 @@
 
 const average = (numbers) => {
   let sum = 0;
+  if (numbers.length === 0) {
+    return undefined;
+  }
+
   if (numbers.every((index) => typeof index === 'number')) {
     sum = numbers.reduce((firstValue, elem) => firstValue + elem, 0);
     return Math.round(sum / numbers.length);
