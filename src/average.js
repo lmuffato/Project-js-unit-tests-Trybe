@@ -11,8 +11,8 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-const average = (array) => { 
-  var soma = 0
+const average = (array) => {
+  var soma = 0;
   for(var i = 0; i < array.length; i++){
     if(typeof array[i] != 'number'){
       return undefined
