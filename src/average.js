@@ -12,8 +12,16 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // add your implementation here
+const assert = require('assert');
+
+const average = (arr) => {
+  let total = 0;
+  for(let i in arr) total += arr[i];
+  return total / arr.length;
 };
+
+const expected = average([2, 2])
+
+assert.strictEqual(expected, 2);
 
 module.exports = average;
