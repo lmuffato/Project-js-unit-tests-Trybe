@@ -12,12 +12,12 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = (array) => {
-  if (Number.isNaN(array)) {
+  if (array.length === 0) {
     return undefined;
   }
   var soma = 0;
   for (var i = 0; i < array.length; i += 1) {
-    if (typeof array[i] !== 'number') {
+    if (Number.isNaN(array) !== true) {
       return undefined;
     }
     soma += array[i];
