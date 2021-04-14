@@ -90,5 +90,5 @@ const createMenu = (menu) => {
     order: orderFromMenu,
     pay: () => {},
   };
-}
+};
 module.exports = createMenu;
