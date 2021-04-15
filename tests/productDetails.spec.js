@@ -32,21 +32,21 @@ const productDetails = require('../src/productDetails');
 */
 
 const productWith123 = () => {
-  const returnHolder = productDetails('x', 'y');
-  const match1 = returnHolder[0].details.productId.match(/123/);
-  const match2 = returnHolder[1].details.productId.match(/123/);
-  if (match1 && match2) {return true;}
+  const holder = productDetails('x', 'y');
+  const match1 = holder[0].details.productId.match(/123/);
+  const match2 = holder[1].details.productId.match(/123/);
+  if (match1 && match2) { return true; }
   return false;
 };
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    const returnHolder = productDetails('x', 'y');
+    const holder = productDetails('x', 'y');
     const areObjectDifferent = productDetails('x', 'y')[0] !== productDetails('x', 'y')[1];
     assert.deepStrictEqual(typeof productDetails('x', 'y'), 'object');
     assert.deepStrictEqual(productDetails('x', 'y').length, 2);
     assert.deepStrictEqual(typeof Object.entries(returnHolder), 'object');
     assert.deepStrictEqual(areObjectDifferent, true);
-    assert.deepStrictEqual(areProductIdsWith123(), true);
+    assert.deepStrictEqual(productWith123(), true);
   });
 });
