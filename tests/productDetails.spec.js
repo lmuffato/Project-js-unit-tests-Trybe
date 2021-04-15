@@ -44,7 +44,8 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notStrictEqual(func[0], func[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(func[0].details.productId, 'Alcool gel123');
-    assert.strictEqual(func[1].details.productId, 'Máscara123');
+    const strKey1 = func[0].details.productId.substring(func[0].details.productId.length - 3);
+    const strKey2 = func[1].details.productId.substring(func[1].details.productId.length - 3);
+    assert.strictEqual(strKey1 && strKey2, '123');
   });
 });
