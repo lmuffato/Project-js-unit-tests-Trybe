@@ -34,7 +34,7 @@ describe('#circle', () => {
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.strictEqual(circle(), undefined);
     assert.strictEqual(circle(1), [1, 3.14, 6.28]);
-    assert.strictEqual(circle(7), [7,153.86, 43.96]);
+    assert.strictEqual(circle(7), [7, 153.86, 43.96]);
     assert.strictEqual(circle(3), [3, 28.26, 18.84]);
   });
 });
