@@ -45,13 +45,53 @@
   IMPORTANTE: COMECE PELO TESTE 1 DO ARQUIVO `tests/restaurant.spec.js` E NÃO PELO PASSO 1 DESTE ARQUIVO!
 */
 
-// PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: () => objetoPassadoPorParametro }.
-//
+// PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato:
+// RETORNA { fetchMenu: () => objetoPassadoPorParametro }.
+const objetoRetornado = {};
+
+const pagar = () => {
+  let sum = 0;
+  for (let index = 0; index < objetoRetornado.consumption.length; index += 1) {
+    if (Object.keys(objetoRetornado.fetchMenu.drink).includes(objetoRetornado.consumption[index])) {
+      sum += objetoRetornado.fetchMenu.drink[objetoRetornado.consumption[index]];
+    }
+    if (Object.keys(objetoRetornado.fetchMenu.food).includes(objetoRetornado.consumption[index])) {
+      sum += objetoRetornado.fetchMenu.food[objetoRetornado.consumption[index]];
+    }
+  }
+  return sum * 1.1;
+};
+
+const createMenu = (param) => {
+  objetoRetornado.fetchMenu = param;
+  objetoRetornado.consumption = [];
+  objetoRetornado.order = (request) => {
+    objetoRetornado.consumption.push(request);
+  };
+  objetoRetornado.pay = pagar;
+  return objetoRetornado;
+};
+
+// }
+// const createMenu = (menu) => {
+//   const objetoRetornado = {
+//     fetchMenu: menu,
+//     consumption: [],
+//     order: function adicionaPedido(pedido) {
+//       this.consumption.push(pedido);
+//     },
+//     pay: () => Object.keys(objetoRetornado.fetchMenu).reduce((acc, value) =>
+//       acc + Object.keys(objetoRetornado.fetchMenu)[value] + Object.keys(objetoRetornado.fetchMenu)[value] * 0.1, 0),
+//   };
+//   return objetoRetornado;
+// };
+
 // Agora faça o TESTE 4 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
+
 //
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
@@ -79,6 +119,6 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+// const createMenu = () => {};
 
 module.exports = createMenu;
