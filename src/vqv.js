@@ -17,10 +17,10 @@
 */
 
 const vqv = (nome, idade) => {
-  var all = ` Oi, meu nome é ${nome}!\n
-  Tenho ${idade} anos,\n
-  trabalho na Trybe e mando muito em programação!\n
-  #VQV!`;
+  var all = `" Oi, meu nome é ${nome}!
+  Tenho ${idade} anos,
+  trabalho na Trybe e mando muito em programação!
+  #VQV!"`;
   return all;
 };
 
