@@ -122,7 +122,9 @@ describe('#createMenu', () => {
   // --------------------------------------------------------------------------------------
   // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
   // const fechaConta = createMenu(objetoRetornado.pay);
-  const pedidoFechado = createMenu({ food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } });
+  const pedidoFechado = createMenu(
+    { food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } },
+  );
   objetoRetornado.order('coxinha');
   objetoRetornado.order('agua');
   objetoRetornado.order('coxinha');
