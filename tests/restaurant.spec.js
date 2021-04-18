@@ -61,7 +61,8 @@ describe('#createMenu', () => {
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
     // ```
-    assert.strictEqual(Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu), ['food', 'drink']);
+    assert.strictEqual(Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu),
+    ['food', 'drink']);
     // const objetoRetornado = createMenu({ food: {}, drink: {} });
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
     // ```
