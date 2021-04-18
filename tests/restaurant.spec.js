@@ -62,7 +62,7 @@ describe('#createMenu', () => {
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
     // ```
     assert.strictEqual(Object.keys(createMenu({ food: {}, drink: {} }).fetchMenu),
-    ['food', 'drink']);
+      ['food', 'drink']);
     // const objetoRetornado = createMenu({ food: {}, drink: {} });
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
     // ```
