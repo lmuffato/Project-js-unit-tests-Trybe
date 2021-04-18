@@ -79,7 +79,6 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-
 const restaurant = {};
 const orderFromMenu = ((request) => restaurant.consumption.push(request));
 
@@ -105,7 +104,6 @@ const createMenu = (obj) => Object.assign(restaurant, {
   pay: (() => toPay(Object.entries(restaurant.fetchMenu.food))
   + toPay(Object.entries(restaurant.fetchMenu.drink))),
 });
-
 //Source: consulta a este repositorio: https://github.com/tryber/sd-010-a-project-js-unit-tests/blob/michael-pett/src/restaurant.js, refiz o andamento inteiro dele, com algumas adaptações.
 
 module.exports = createMenu;
