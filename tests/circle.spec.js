@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
-
 const assert = require('assert');
 const circle = require('../src/circle');
 
@@ -25,13 +24,21 @@ const circle = require('../src/circle');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
-    // ESCREVA SEUS TESTES ABAIXO:
-    // Teste se circle retorna um objeto.
-    // Teste se o objeto retornado tem 3 entradas.
-    // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    const radius3 = circle(3);
+    assert.strictEqual(typeof radius3, 'object', 'valor esperado é um objeto');
+    assert.strictEqual(Object.entries(radius3).length, 3, 'objeto retornado deve ter 3 chaves');
+    assert.strictEqual(circle(), undefined);
+    const radius2 = circle(2);
+    assert.strictEqual(radius2.circumference, '12.56');
+    assert.strictEqual(radius3.circumference, '18.84');
+    const radius7 = circle(7);
+    assert.strictEqual(radius7.circumference, '43.96');
   });
 });
+// ESCREVA SEUS TESTES ABAIXO:
+// Teste se circle retorna um objeto. DONE
+// Teste se o objeto retornado tem 3 entradas. DONE
+// Teste se a função, quando não recebe nenhum parâmetro, retorna undefined. DONE
+// Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2. DONE
+// Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3. DONE
+// Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3. DONE
