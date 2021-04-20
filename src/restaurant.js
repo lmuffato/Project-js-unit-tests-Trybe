@@ -86,13 +86,13 @@ const createMenu = (table) => {
     Object.values(menuPrice.food).forEach((element) => itemsPrice.push(element));
     Object.values(menuPrice.drink).forEach((element) => itemsPrice.push(element));
     return itemsPrice;
-  }
+  };
   const menu = (menuObject) => {
     const itemsTable = [];
     Object.keys(menuObject.food).forEach((element) => itemsTable.push(element));
     Object.keys(menuObject.drink).forEach((element) => itemsTable.push(element));
     return itemsTable;
-  }
+  };
   const neworder = {
     fetchMenu: () => table,
     comsumption: () => consumption,
@@ -103,14 +103,14 @@ const createMenu = (table) => {
       let orderprice = 0;
       consumption.forEach((element) => {
         menuItems.forEach((elementMenu, index) => {
-          if (element === elementMenu){
+          if (element === elementMenu) {
             orderprice += menuPrice[index];
           }
-        })
-      })
+        });
+      });
       return orderprice * 1.1;
-    }
-  }
+    },
+  };
   return neworder;
 };
 
