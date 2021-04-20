@@ -17,9 +17,11 @@
 
 const createStudent = (studentName) => {
   let student = { name: studentName,
-    message: 'Eita pessoa boa!',
+    feedback: () => 'Eita pessoa boa!',
   };
   return student;
 };
 
 module.exports = createStudent;
+
+/* usei o código da colega natalia zebral para entender a parte do feedback */
