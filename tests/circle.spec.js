@@ -38,6 +38,6 @@ describe('#circle', () => {
     assert.strictEqual(circle(), undefined);
     assert.strictEqual(Object.values(circle(2))[2], (2 * 2 * 3.14));
     assert.strictEqual(Object.values(circle(3))[1], 3.14 * 3 * 3);
-    assert.strictEqual(Object.values(circle(3)), [3, (3.14 * 3 * 3), (2 * 3 * 3.14)]);
+    assert.deepStrictEqual(Object.values(circle(3)), [3, (3.14 * 3 * 3), (2 * 3 * 3.14)]);
   });
 });
