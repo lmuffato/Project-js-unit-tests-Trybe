@@ -29,10 +29,10 @@ describe('#circle', () => {
     assert.strictEqual(Object.entries(radius3).length, 3, 'objeto retornado deve ter 3 chaves');
     assert.strictEqual(circle(), undefined);
     const radius2 = circle(2);
-    assert.strictEqual(radius2.circumference, '12.56');
-    assert.strictEqual(radius3.circumference, '18.84');
+    assert.strictEqual(radius2.circumference, 12.56);
+    assert.strictEqual(radius3.circumference, 18.84);
     const radius7 = circle(7);
-    assert.strictEqual(radius7.circumference, '43.96');
+    assert.strictEqual(radius7.circumference, 43.96);
   });
 });
 // ESCREVA SEUS TESTES ABAIXO:
