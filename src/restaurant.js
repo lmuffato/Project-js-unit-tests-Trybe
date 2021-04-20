@@ -95,7 +95,7 @@ const createMenu = (table) => {
   };
   const neworder = {
     fetchMenu: () => table,
-    comsumption: () => consumption,
+    comsumption: consumption,
     order: (string) => consumption.push(string),
     pay: () => {
       const menuItems = menu(table);
