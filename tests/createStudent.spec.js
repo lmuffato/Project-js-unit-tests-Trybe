@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
 const assert = require('assert');
+const createStudent = require('../src/createStudent');
 
 /*
   Dada uma função chamada createStudent que recebe como parâmetro um nome, retorne um objeto que contenha duas chaves:
@@ -21,7 +22,7 @@ const assert = require('assert');
 */
 const createStudent = (studentName) => {
   let student = { name: studentName,
-    feedback: () => 'Eita pessoa boa!',
+    message = 'Eita pessoa boa!';,
   };
   return student;
 };
