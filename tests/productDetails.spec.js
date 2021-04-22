@@ -33,7 +33,7 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    //assert.fail();
+    // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     assert.strictEqual(Array.isArray(productDetails()), true);
@@ -47,6 +47,6 @@ describe('#productDetails', () => {
     // (Difícil) Teste que os dois productIds terminam com 123.
     productDetails('Alcool gel', 'Máscara')[0].details.productId.includes('123'), true;
     productDetails('Alcool gel', 'Máscara')[1].details.productId.includes('123'), true;
-    //.includes estudado em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/contains
+    // .includes estudado em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/contains
   });
 });
