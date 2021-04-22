@@ -1,5 +1,9 @@
 /* eslint-disable max-len */
 
+// const { create } = require("eslint/lib/rules/*");
+
+// const { create } = require("eslint/lib/rules/*");
+
 /*
   Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema,
   cadastrar um menu. Dado que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
@@ -79,6 +83,39 @@
 // soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso,
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const createMenu = (objectItens) => {
+  const getPrices = Object.assign(objectItens.food, objectItens.drink);
+  const arrayPrices = Object.entries(getPrices);
 
+  const getTotal = (arrayConsumption) => {
+    return arrayConsumption.map((consumedItem) => {
+     let price = arrayPrices.find((itenPrice)=> consumedItem === itenPrice[0]);
+     return price[1];
+    })
+    .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+  };
+
+  const menu = {
+    fetchMenu: () => objectItens,
+    order: (iten) => menu.consumption.push(iten),
+    consumption: [],
+    pay: () => getTotal(menu.consumption),
+  }
+
+  return menu
+}
+
+// const returnedObject = createMenu({
+//   food: { coxinha: 2.9, pastel: 4.5}, 
+//   drink: { cola: 2 },
+// });
+// console.log(returnedObject.fetchMenu());
+// returnedObject.order('pastel');
+// returnedObject.order('pastel');
+// returnedObject.order('coxinha');
+// returnedObject.order('cola');
+
+// console.log(returnedObject.consumption);
+
+// console.log(returnedObject.pay());
 module.exports = createMenu;
