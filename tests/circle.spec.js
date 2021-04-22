@@ -23,6 +23,12 @@ const circle = require('../src/circle');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
+const correctCircle = {
+  radius: 3,
+  area: 3.14 * 3 * 3,
+  circumference: 2 * 3.14 * 3,
+};
+
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
     assert.deepStrictEqual(typeof circle(1), 'object');
