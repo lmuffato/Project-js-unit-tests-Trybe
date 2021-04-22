@@ -12,18 +12,18 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (numbersPack) => {
+const average = (numbers) => {
   let sum = 0;
-  if (numbersPack.length === 0) {
+  if (numbers.length === 0) {
     return undefined;
   }
-  for (let index = 0; index < numbersPack.length; index += 1) {
-    if (typeof (numbersPack)[index] !== 'number') {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (typeof (numbers)[index] !== 'number') {
       return undefined;
     }
-    sum += numbersPack[index];
+    sum += numbers[index];
   }
-  return Math.round(sum / numbersPack.length);
+  return Math.round(sum / numbers.length);
 };
 
 module.exports = average;
