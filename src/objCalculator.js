@@ -19,6 +19,19 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const objCalculator = (numb1, numb2) =>{
+  const adicao =  math.trunc(numb1 + numb2);
+  const mul =  math.trunc(numb1 * numb2);
+  const divi =  math.trunc(numb1 / numb2);
+  const subt =  math.trunc(numb1 - numb2);
+};
+  const calculator = {
+    add: adicao,
+    mult: mul,
+    div: divi,
+    sub: subt
+  };
+
+
 
 module.exports = calculator;
