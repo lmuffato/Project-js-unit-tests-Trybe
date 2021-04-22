@@ -82,8 +82,8 @@ const createMenu = (menu) => {
   let restaurant = {
     fetchMenu: () => menu,
     consumption: [],
-    order: request => restaurant.consumption.push(request),
-    pay:  () => {
+    order: restaurant.consumption.push(request),
+    pay: () => {
       let sum = 0;
       restaurant.consumption.forEach((elemento) => {
         sum += (menu.food[elemento] || 0) + (menu.drink[elemento] || 0);
