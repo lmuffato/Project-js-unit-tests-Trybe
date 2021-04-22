@@ -16,6 +16,7 @@
 
 const vqv = (nome, idade) => {
   if (!nome || !idade) {
+    // "!" antes da variavel é um NOT pra existencia da variavel
     return undefined;
   }
   return `Oi, meu nome é ${nome}!
