@@ -131,11 +131,11 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
-    const testPay = createMenu({ food: { pastel: 3.5 }, drink: { refri: 3 } });
+    const testPay = createMenu({ food: { coxinha 3.5 }, drink: { agua: 3 } });
     objetoRetornado.consumption = [];
-    objetoRetornado.order('pastel');
-    objetoRetornado.order('refri');
-    objetoRetornado.order('pastel');
+    objetoRetornado.order('coxinha');
+    objetoRetornado.order('agua');
+    objetoRetornado.order('coxinha');
     assert.strictEqual(testPay.pay(), 11);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
