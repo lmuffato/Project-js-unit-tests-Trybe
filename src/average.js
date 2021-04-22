@@ -12,7 +12,6 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = (numArray) => {
-  // add your implementation here
   let result = 0;
   if (numArray.length < 1) {
     return undefined;

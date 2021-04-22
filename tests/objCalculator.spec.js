@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 const assert = require('assert');
 const calculator = require('../src/objCalculator');
 
