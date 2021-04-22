@@ -105,4 +105,4 @@ const createMenu = (menu) => {
     pay: adicionaPorcentagemAoValorFinal,
   };
 
-module.exports = createMenu;
+module.exports = createMenu}
