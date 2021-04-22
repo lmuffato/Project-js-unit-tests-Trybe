@@ -80,32 +80,30 @@
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const createMenu = (menu) => {
-  restaurant = {
+  let restaurant = {
     fetchMenu: () => menu,
-    consumption: ['coxinha','coxinha','coxinha','coxinha'],
+    consumption: ['coxinha', 'coxinha', 'coxinha', 'coxinha'],
     order: request => restaurant.consumption.push(request),
     pay: () => {
-      const consumption = restaurant.consumption
-      let precoTotal = 0
-      const todosOsPrecos = {}
-      const arrayDeOpcoesDoMenu = Object.values(menu)
-      for( let index = 0; index < arrayDeOpcoesDoMenu.length; index += 1) {
-        Object.assign(todosOsPrecos, arrayDeOpcoesDoMenu[index]) 
+      const consumption = restaurant.consumption;
+      let precoTotal = 0;
+      const todosOsPrecos = {};
+      const arrayDeOpcoesDoMenu = Object.values(menu);
+      for(let index = 0; index < arrayDeOpcoesDoMenu.length; index += 1) {
+        Object.assign(todosOsPrecos, arrayDeOpcoesDoMenu[index]);
       }
       for (let produto in todosOsPrecos) {
-        for(let item of consumption) {
+        for (let item of consumption) {
           if (item === produto) {
-            precoTotal += todosOsPrecos[produto]
+            precoTotal += todosOsPrecos[produto];
           }
         }
       }
-      const precoComGorjeta = precoTotal * 1.1   
+      const precoComGorjeta = precoTotal * 1.1;
       return precoComGorjeta;
     },
   };
   return restaurant;
 };
-          
 
-createMenu({food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }).pay()
 module.exports = createMenu;
