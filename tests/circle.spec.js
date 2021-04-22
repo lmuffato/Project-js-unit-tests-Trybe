@@ -47,6 +47,11 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     assert.strictEqual(circle(3).area, 28.259999999999998);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.strictEqual(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
+    assert.deepStrictEqual(Object.values(circle(3)), [3, (3.14 * 3 * 3), (2 * 3.14 * 3)]);
+    /*
+    acima eu usei o conceito de hierarquia baseado no projeto de Britosl1
+    além do conceito coloquei no mesma linha seu conceito de colocar a formula ao invés
+    do resultado que gerava muitos digitos e o Eslint chorava
+    */
   });
 });
