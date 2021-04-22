@@ -131,7 +131,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
-    const testPay = createMenu({ food: { coxinha 3.5 }, drink: { agua: 3 } });
+    const testPay = createMenu({ food: { coxinha: 3.5 }, drink: { agua: 3 } });
     objetoRetornado.consumption = [];
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
