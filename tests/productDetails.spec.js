@@ -25,9 +25,9 @@ const productDetails = require('../src/productDetails');
     }
   ]
 
-  OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
+/*
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // assert.fail();
@@ -45,3 +45,4 @@ describe('#productDetails', () => {
     assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.endsWith(123), true);
   });
 });
+*/
