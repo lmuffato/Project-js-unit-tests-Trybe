@@ -45,9 +45,7 @@ describe('#productDetails', () => {
     strct(typeof productDetails(alc, msk)[0], 'object');
     strct(typeof productDetails(alc, msk)[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(
-      productDetails(alc, msk)[0], productDetails(alc, msk)[1]
-    );
+    assert.notDeepStrictEqual(productDetails(alc, msk)[0], productDetails(alc, msk)[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     strct(Object.values(Object.values(productDetails(alc, msk)[0])[1])[0].endsWith('123'), true);
     strct(Object.values(Object.values(productDetails(alc, msk)[1])[1])[0].endsWith('123'), true);
