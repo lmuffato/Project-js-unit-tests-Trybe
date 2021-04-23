@@ -38,13 +38,13 @@ describe('#productDetails', () => {
     // Teste que o retorno da função é um array.
     assert.deepStrictEqual(Array.isArray(productDetails()), true);
     // Teste que o array retornado pela função contém dois itens dentro.
-    const outPut = productDetails();
+    const outPut = productDetails('Alcool gel', 'Máscara');
     assert.deepStrictEqual(outPut.length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.strictEqual(typeof productDetails()[0], 'object');
     assert.strictEqual(typeof productDetails()[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
-    assert.notDeepStrictEqual(Object.values(outPut)[0], Object.values(outPut)[1]);
+    assert.notDeepStrictEqual(outPut[0], outPut[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.deepStrictEqual(outPut[0].details.productId, `${'Alcool gel'}123`);
     assert.deepStrictEqual(outPut[1].details.productId, `${'Máscara'}123`);
