@@ -49,7 +49,7 @@ describe('#productDetails', () => {
     );
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.strictEqual(
-      Object.values(Object.values(productDetails(alcoll, mask)[0])[1])[0].endsWith('123'), true;
+      Object.values(Object.values(productDetails(alcoll, mask)[0])[1])[0].endsWith('123'), true
     );
     assert.strictEqual(
       Object.values(Object.values(productDetails(alcoll, mask)[1])[1])[0].endsWith('123'), true;
