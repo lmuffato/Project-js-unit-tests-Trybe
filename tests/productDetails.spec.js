@@ -31,17 +31,23 @@ const productDetails = require('../src/productDetails');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-/* describe('#productDetails', () => {
+describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(typeof (productDetails(produto, prod2)), 'array');
+    assert.strictEqual(typeof (productDetails('produto', 'prod2')), 'object');
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(productDetails.name.length, 2);
+    assert.strictEqual(productDetails('pao', 'bolo').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    // .. Para este teste e o seguinte a idéia é do repositório da Nathy Zebral
+    assert.strictEqual(typeof productDetails('pao', 'bolo')[0], 'object');
+    assert.strictEqual(typeof productDetails('pao', 'bolo')[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
+    assert.notStrictEqual(productDetails('pao', 'bolo')[0], productDetails('pao', 'bolo')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
+    // .. A idéia das constantes foi da Ana Ventura.
+    const productOne = productDetails('pao', 'bolo')[0].details.productId.substr(-3);
+    const productTwo = productDetails('pao', 'bolo')[1].details.productId.substr(-3);
+    assert.strictEqual(productOne, productTwo);
   });
 });
-*/
