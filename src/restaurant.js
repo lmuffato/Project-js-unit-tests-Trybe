@@ -88,11 +88,12 @@ const createMenu = (objectItens) => {
   const arrayPrices = Object.entries(getPrices);
 
   const getTotal = (arrayConsumption) => {
-    return arrayConsumption.map((consumedItem) => {
-     let price = arrayPrices.find((itenPrice)=> consumedItem === itenPrice[0]);
-     return price[1];
-    })
-    .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+    const total = arrayConsumption.map((consumedItem) => {
+      let price = arrayPrices.find((itenPrice) => consumedItem === itenPrice[0]);
+      return price[1];
+    });
+
+    return total.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
   };
 
   const menu = {
@@ -100,14 +101,14 @@ const createMenu = (objectItens) => {
     order: (iten) => menu.consumption.push(iten),
     consumption: [],
     pay: () => getTotal(menu.consumption),
-  }
+  };
 
-  return menu
-}
+  return menu;
+};
 
 // const returnedObject = createMenu({
-//   food: { coxinha: 2.9, pastel: 4.5}, 
-//   drink: { cola: 2 },
+//   food: { coxinha: 2.9, pastel: 4.5},
+//   drink: {cola: 2},
 // });
 // console.log(returnedObject.fetchMenu());
 // returnedObject.order('pastel');
@@ -118,4 +119,5 @@ const createMenu = (objectItens) => {
 // console.log(returnedObject.consumption);
 
 // console.log(returnedObject.pay());
+
 module.exports = createMenu;

@@ -65,7 +65,7 @@ describe('#createMenu', () => {
     assert.strictEqual(objectItem, returnedObject.fetchMenu());
 
     assert.deepStrictEqual(returnedObject.consumption, []);
-  
+
     const stringTest = 'coxinha';
     const expectedEntrie = returnedObject.order(stringTest);
     assert.ok(returnedObject.consumption.some((iten) => iten === stringTest), true);
@@ -73,10 +73,16 @@ describe('#createMenu', () => {
     returnedObject.order('agua');
     returnedObject.order('sopa');
     returnedObject.order('sashimi');
-    assert.deepStrictEqual(returnedObject.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
+    const expectedInsertion = ['coxinha', 'agua', 'sopa', 'sashimi'];
+    assert.deepStrictEqual(returnedObject.consumption, expectedInsertion);
 
     returnedObject.order('agua');
-    const expectedRepeated = ['coxinha', 'agua', 'sopa', 'sashimi', 'agua'];
-    assert.deepStrictEqual(returnedObject.consumption, expectedRepeated);
+    const repIten = ['coxinha', 'agua', 'sopa', 'sashimi', 'agua'];
+    assert.deepStrictEqual(returnedObject.consumption, repIten);
+
+    const paymentAction = returnedObject.pay();
+    const { food, drink } = objectItem;
+    const sumRepIten = (food.coxinha + drink.agua + food.sopa + food.sashimi + drink.agua);
+    assert.strictEqual(paymentAction, sumRepIten);
   });
 });
