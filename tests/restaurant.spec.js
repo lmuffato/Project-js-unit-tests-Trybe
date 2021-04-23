@@ -81,7 +81,7 @@ describe('#createMenu', () => {
       const passadoPraCreate = { food: {}, drink: {} };
       const objretRetorna = objetoRetornado.fetchMenu(passadoPraCreate);
       assert.deepStrictEqual(passadoPraCreate === objretRetorna);
-    }
+    };
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
     // ```
