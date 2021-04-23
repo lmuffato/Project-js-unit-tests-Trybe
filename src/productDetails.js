@@ -38,5 +38,6 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+productDetails('Alcool gel', 'Máscara');
 
 module.exports = productDetails;
