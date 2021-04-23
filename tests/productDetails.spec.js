@@ -35,24 +35,21 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    const mask = 'Máscara';
-    const alcoll = 'Alcool gel';
-    assert.strictEqual(Array.isArray(productDetails(alcoll, mask)), true);
+    const msk = 'Máscara';
+    const alc = 'Alcool gel';
+    const strct = assert.strictEqual;
+    strct(Array.isArray(productDetails(alc, msk)), true);
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(productDetails(alcoll, mask).length, 2);
-    // Teste que os dois itens dentro do array retornado pela função são objetos.
-    assert.strictEqual(typeof productDetails(alcoll, mask)[0], 'object');
-    assert.strictEqual(typeof productDetails(alcoll, mask)[1], 'object');
+    strct(productDetails(alc, msk).length, 2);
+    // Teste que os dois itens dentro do array retornado pela função são objetsk
+    strct(typeof productDetails(alc, msk)[0], 'object');
+    strct(typeof productDetails(alc, msk)[1], 'object');
     // Teste que os dois objetos são diferentes entre si.
     assert.notDeepStrictEqual(
-      productDetails(alcoll, mask)[0], productDetails(alcoll, mask)[1]
+      productDetails(alc, msk)[0], productDetails(alc, msk)[1]
     );
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.strictEqual(
-      Object.values(Object.values(productDetails(alcoll, mask)[0])[1])[0].endsWith('123'), true
-    );
-    assert.strictEqual(
-      Object.values(Object.values(productDetails(alcoll, mask)[1])[1])[0].endsWith('123'), true
-    );
+    strct(Object.values(Object.values(productDetails(alc, msk)[0])[1])[0].endsWith('123'), true);
+    strct(Object.values(Object.values(productDetails(alc, msk)[1])[1])[0].endsWith('123'), true);
   });
 });
