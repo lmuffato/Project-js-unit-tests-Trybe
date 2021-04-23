@@ -18,12 +18,19 @@
   calculator.add(1, 1) // Retorno: 2;
   calculator.div(3, 2) // Retorno: 1;
 */
-/* const calculator = {
-    add,
-    mult,
-    div,
-    sub,
-  };
-
+// O idéia de como montar o objeto é do repositório da Ana Ventura.
+const calculator = {
+  add(numb1, numb2) {
+    return Math.trunc(numb1 + numb2);
+  },
+  mult(numb1, numb2) {
+    return Math.trunc(numb1 * numb2);
+  },
+  div(numb1, numb2) {
+    return Math.trunc(numb1 / numb2);
+  },
+  sub(numb1, numb2) {
+    return Math.trunc(numb1 - numb2);
+  },
+};
 module.exports = calculator;
-*/
