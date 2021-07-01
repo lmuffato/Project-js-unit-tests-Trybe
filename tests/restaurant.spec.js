@@ -5,6 +5,7 @@
 // https://github.com/tryber/sd-010-a-project-js-unit-tests/blob/rafaelmg-js-unit-tests/tests/restaurant.spec.js
 const assert = require('assert');
 const createMenu = require('../src/restaurant');
+
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     const parse = (num) => parseFloat(num).toFixed(2);
