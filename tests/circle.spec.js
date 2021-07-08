@@ -50,6 +50,8 @@
 /* eslint-disable no-unused-vars */
 const assert = require('assert');
 const circle = require('../src/circle');
+
+const erro = 'Erro: Resultado incorreto';
 /*
   Essa função recebe o raio de um círculo e retorna um objeto contendo suas informações (Raio, Área e Circunferência).
   Se não for especificado um raio, a função retorna undefined.
@@ -68,19 +70,19 @@ const circle = require('../src/circle');
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
     // ESCREVA SEUS TESTES ABAIXO:
-    const output = circle(3,14)
+    const output = circle(3, 14);
     // Teste se circle retorna um objeto.
-    assert.strictEqual(typeof output, 'object', 'Erro: Não foi retornado um objeto')
+    assert.strictEqual(typeof output, 'object', 'Erro: Não foi retornado um objeto');
     // Teste se o objeto retornado tem 3 entradas.
     // assert.
-    assert.strictEqual(Object.keys(output).length, 3, 'Erro: O objeto não contem três entradas.')
+    assert.strictEqual(Object.keys(output).length, 3, 'Erro: O objeto não contem três entradas.');
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    assert.strictEqual(circle(), undefined, 'Erro: Não foi retornado undefined.')
+    assert.strictEqual(circle(), undefined, 'Erro: Não foi retornado undefined.');
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.strictEqual(circle(2).circumference, 12.56, 'Erro: Resultado incorreto')
+    assert.strictEqual(circle(2).circumference, 12.56, erro);
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.strictEqual(output.area, 28.259999999999998, 'Erro: Resultado incorreto')
+    assert.strictEqual(output.area, 28.259999999999998, erro);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.strictEqual(output.radius, 3, 'Erro: Resultado incorreto');
+    assert.strictEqual(output.radius, 3, erro);
   });
 });
