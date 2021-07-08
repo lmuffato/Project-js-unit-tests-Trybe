@@ -22,7 +22,7 @@ const createStudent = require('../src/createStudent');
 */
 const message = 'Eita pessoa boa!';
 
-describe('#createStudent', () => {
+describe('5 - Implemente a função `createStudent`', () => {
   it('returns the object as specified', () => {
     const estudante = createStudent('Leandrão, o Lobo Solitário');
     assert.strictEqual(typeof estudante, 'object');
