@@ -68,7 +68,7 @@ const erro = 'Erro: Resultado incorreto';
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
-  it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
+  it('Verifica se ao receber um raio, a função `circle` retorna um objeto esperados', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     const output = circle(3, 14);
     // Teste se circle retorna um objeto.
